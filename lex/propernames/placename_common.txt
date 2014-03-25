@@ -1,0 +1,820 @@
+Abidjan
+Abilene
+Abu Dhabi
+Abuja
+Accra
+Addis Ababa
+Afghanistan
+Africa
+Ahmedabad
+Akron
+Alabama
+Alaska
+Albania
+Albuquerque
+Alexandria
+Algeria
+Algiers
+Allentown
+Amarillo
+America
+Amman
+Amsterdam
+Anaheim
+Anchorage
+Andorra
+Andorra la Vella
+Angola
+Ankara
+Ann Arbor
+Antananarivo
+Antigua
+Antioch
+Apia
+Arabia
+Argentina
+Arizona
+Arkansas
+Arlington
+Armenia
+Arvada
+Ashgabat
+Asia
+Asmara
+Astana
+Asuncion
+Athens
+Atlanta
+Auckland
+Augusta
+Aurora
+Austin
+Australia
+Austria
+Azerbaijan
+Baghdad
+Bahamas
+Bahrain
+Bakersfield
+Baku
+Baltimore
+Bamako
+Bandar Seri Begawan
+Bandung
+Bangkok
+Bangladesh
+Bangui
+Banjul
+Barbados
+Barbuda
+Barcelona
+Barnet
+Basseterre
+Baton Rouge
+Beaumont
+Bedfordshire
+Beijing
+Beirut
+Belarus
+Belgium
+Belgrade
+Belize
+Bellevue
+Belmopan
+Belo Horizonte
+Bengaluru
+Benin
+Berkeley
+Berkshire
+Berlin
+Berne
+Bexley
+Bhutan
+Billings
+Birmingham
+Bishkek
+Bissau
+Bogota
+Boise
+Bolivia
+Bombay
+Bosnia
+Boston
+Botswana
+Boulder
+Brasilia
+Bratislava
+Brazil
+Brazzaville
+Brent
+Bridgeport
+Bridgetown
+Bristol
+Britain
+Bromley
+Brownsville
+Brunei
+Brussels
+Bucharest
+Buckinghamshire
+Budapest
+Buenos Aires
+Buffalo
+Bujumbura
+Bulgaria
+Burbank
+Burkina Faso
+Burundi
+Cairo
+Calcutta
+California
+Cambodia
+Cambridge
+Cambridgeshire
+Camden
+Cameroon
+Canada
+Canberra
+Canterbury
+Cape Coral
+Cape Verde
+Caracas
+Carlsbad
+Carrollton
+Cary
+Castries
+Cedar Rapids
+Central African Republic
+Chad
+Chandler
+Charleston
+Charlotte
+Chattanooga
+Chelsea
+Chengdu
+Chennai
+Chesapeake
+Chicago
+Chile
+China
+Chisinau
+Chongqung
+Chula Vista
+Cincinnati
+Clarksville
+Clearwater
+Cleveland
+Colombia
+Colorado
+Colorado Springs
+Columbia
+Columbus
+Comoros
+Conakry
+Concord
+Congo
+Connecticut
+Copenhagen
+Coral Springs
+Cornwall
+Corona
+Corpus Christi
+Costa Mesa
+Costa Rica
+Cote d'Ivoire
+Croatia
+Croydon
+Cuba
+Cumberland
+Cumbria
+Cyprus
+Czech Republic
+Dagenham
+Dakar
+Dakota
+Dalian
+Dallas
+Damascus
+Davenport
+Dayton
+Delaware
+Delhi
+Denmark
+Denton
+Denver
+Derbyshire
+Des Moines
+Detroit
+Devon
+Dhaka
+Dili
+Djibouti
+Dodoma
+Doha
+Dominica
+Dominican Republic
+Dongguan
+Dorset
+Downey
+Dublin
+Durham
+Dushanbe
+Ealing
+East Timor
+Ecuador
+Edinburgh
+Egypt
+El Aaiun
+El Monte
+El Paso
+El Salvador
+Elgin
+Elizabeth
+Elk Grove
+Enfield
+England
+Equatorial Guinea
+Eritrea
+Escondido
+Essen
+Essex
+Estonia
+Ethiopia
+Eugene
+Europe
+Evansville
+Everett
+Fairfield
+Fargo
+Fayetteville
+Fiji
+Finland
+Florida
+Fontana
+Fort Collins
+Fort Lauderdale
+Fort Wayne
+Fort Worth
+France
+Freetown
+Fremont
+Fresno
+Frisco
+Fulham
+Fullerton
+Funafuti
+Fuzhou
+Gabon
+Gaborone
+Gainesville
+Gambia
+Georgetown
+Georgia
+Germany
+Ghana
+Gilbert
+Glasgow
+Glendale
+Gloucester
+Gloucestershire
+Grand Prairie
+Grand Rapids
+Greece
+Green Bay
+Greensboro
+Greenwich
+Grenada
+Gresham
+Guadalajara
+Guangzhou
+Guatemala
+Guatemala City
+Guinea
+Guinea-Bissau
+Guyana
+Hackney
+Haiti
+Hammersmith
+Hampshire
+Hampton
+Hangzhou
+Hanoi
+Harare
+Harbin
+Haringey
+Harrow
+Hartford
+Havana
+Havering
+Hawaii
+Hayward
+Helsinki
+Henderson
+Hertfordshire
+Herzegovina
+Hialeah
+High Point
+Hillingdon
+Holland
+Hollywood
+Honduras
+Hong Kong
+Honiara
+Honolulu
+Hounslow
+Houston
+Hungary
+Huntsville
+Hyderabad
+Iceland
+Idaho
+Illinois
+Independence
+India
+Indiana
+Indianapolis
+Indonesia
+Inglewood
+Iowa
+Iran
+Iraq
+Ireland
+Irvine
+Irving
+Islamabad
+Islington
+Israel
+Istanbul
+Italy
+Jackson
+Jacksonville
+Jakarta
+Jamaica
+Japan
+Jersey City
+Jerusalem
+Johannesburg
+Joliet
+Jordan
+Juba
+Kabul
+Kampala
+Kansas
+Kansas City
+Karachi
+Kathmandu
+Kazakhstan
+Kenosha
+Kensington
+Kent
+Kentucky
+Kenya
+Khartoum
+Kiev
+Kigali
+Killeen
+Kingston
+Kingstown
+Kinshasa
+Kiribati
+Knoxville
+Korea
+Kuala Lumpur
+Kuwait
+Kuwait City
+Kyrgyzstan
+Lafayette
+Lagos
+Lahore
+Lakewood
+Lambeth
+Lancashire
+Lancaster
+Lansing
+Laos
+Laredo
+Las Vegas
+Latvia
+Lebanon
+Leicester
+Leicestershire
+Lesotho
+Lewisham
+Lexington
+Liberia
+Libreville
+Libya
+Liechtenstein
+Lilongwe
+Lima
+Lincoln
+Lincolnshire
+Lisbon
+Lithuania
+Liverpool
+Ljubljana
+London
+Los Angeles
+Louisiana
+Louisville
+Lowell
+Luanda
+Lubbock
+Lusaka
+Luxembourg
+Macedonia
+Madagascar
+Madison
+Madrid
+Maine
+Majuro
+Malabo
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Managua
+Manama
+Manchester
+Manila
+Maputo
+Marshall Islands
+Maryland
+Maseru
+Massachusetts
+Mauritania
+Mauritius
+Mbabane
+McAllen
+McKinney
+Medellin
+Melbourne
+Memphis
+Merton
+Mesquite
+Mexico
+Mexico City
+Miami
+Miami Gardens
+Michigan
+Micronesia
+Middlesex
+Milan
+Milwaukee
+Minneapolis
+Minnesota
+Minsk
+Miramar
+Mississippi
+Missouri
+Modesto
+Mogadishu
+Moldova
+Monaco
+Mongolia
+Monrovia
+Montana
+Montenegro
+Monterrey
+Montevideo
+Montgomery
+Moreno Valley
+Morocco
+Moroni
+Moscow
+Mozambique
+Mumbai
+Murfreesboro
+Murrieta
+Muscat
+Myanmar
+N'Djamena
+Nagoya
+Nairobi
+Namibia
+Nanjing
+Naperville
+Naples
+Nashville
+Nassau
+Nauru
+Nay Pyi Taw
+Nebraska
+Nepal
+Netherlands
+Nevada
+New Delhi
+New Hampshire
+New Haven
+New Jersey
+New Mexico
+New Orleans
+New York
+New Zealand
+Newark
+Newcastle
+Newham
+Ngerulmud
+Niamey
+Nicaragua
+Nicosia
+Niger
+Nigeria
+Norfolk
+North Carolina
+North Dakota
+Northamptonshire
+Northumberland
+Northumbria
+Norwalk
+Norway
+Norwich
+Nottinghamshire
+Nouakchott
+Nukuʻalofa
+Oakland
+Odessa
+Ohio
+Oklahoma
+Oklahoma City
+Olathe
+Omaha
+Oman
+Ontario
+Oregon
+Orlando
+Osaka
+Oslo
+Ottawa
+Ouagadougou
+Overland Park
+Oxford
+Oxfordshire
+Oxnard
+Pakistan
+Palau
+Palestine
+Palikir
+Palm Bay
+Palmdale
+Panama
+Panama City
+Papua New Guinea
+Paraguay
+Paramaribo
+Paris
+Pasadena
+Paterson
+Pembroke Pines
+Pennsylvania
+Peoria
+Peru
+Petersburg
+Philadelphia
+Phillipines
+Phnom Penh
+Phoenix
+Pittsburgh
+Plano
+Plymouth
+Podgorica
+Poland
+Pomona
+Port Louis
+Port Moresby
+Port Vila
+Port-au-Prince
+Port-of-Spain
+Portland
+Porto Alegre
+Portsmouth
+Portugal
+Prague
+Praia
+Providence
+Provo
+Pune
+Pyongyang
+Qatar
+Qingdao
+Quanzhou
+Quito
+Rabat
+Raleigh
+Rancho Cucamonga
+Recife
+Redbridge
+Reno
+Reykjavik
+Rhode Island
+Rialto
+Richmond
+Riga
+Riverside
+Riyadh
+Rhodesia
+Rochester
+Rockford
+Romania
+Rome
+Roseau
+Roseville
+Round Rock
+Russia
+Rwanda
+Sacramento
+Sahara
+Saint Kitts & Nevis
+Saint Lucia
+Saint Paul
+Salem
+Salinas
+Salisbury
+Salt Lake City
+Salvador
+Samoa
+San Antonio
+San Bernardino
+San Buenaventura
+San Diego
+San Francisco
+San Jose
+San Marino
+San Salvador
+Sana'a
+Santa Ana
+Santa Clara
+Santa Clarita
+Santa Rosa
+Santiago
+Santo Domingo
+Sao Tome
+Sao Tome & Principe
+Sarajevo
+Saudi Arabia
+Savannah
+Scandinavia
+Scotland
+Scottsdale
+Seattle
+Senegal
+Seoul
+Serbia
+Seychelles
+Shanghai
+Shenyang
+Shenzhen
+Shreveport
+Shropshire
+Siberia
+Sierra Leone
+Simi Valley
+Singapore
+Sioux Falls
+Skopje
+Slovakia
+Slovenia
+Sofia
+Solomon Islands
+Somalia
+Somerset
+South Africa
+South Carolina
+South Dakota
+South Tarawa
+Southampton
+Southwark
+Spain
+Spokane
+Springfield
+Sri Jayawardenapura Kotte
+Sri Lanka
+St. Louis
+St. Petersburg
+St. Vincent & the Grenadines
+Staffordshire
+Stamford
+Sterling Heights
+Stockholm
+Stockton
+Sudan
+Suffolk
+Sunnyvale
+Surabaya
+Surat
+Suriname
+Surprise
+Surrey
+Sussex
+Sutton
+Suva
+Suzhou
+Swaziland
+Sweden
+Switzerland
+Sydney
+Syracuse
+Syria
+Tacoma
+Taipei
+Tajikstan
+Tallahassee
+Tallinn
+Tampa
+Tanzania
+Tashkent
+Tbilisi
+Tegucigalpa
+Tehran
+Temecula
+Tempe
+Tennessee
+Texas
+Thailand
+Thimphu
+Thornton
+Thousand Oaks
+Tianjin
+Tirane
+Tobago
+Togo
+Tokyo
+Toledo
+Tonga
+Topeka
+Toronto
+Torrance
+Trinidad
+Tripoli
+Tucson
+Tulsa
+Tunis
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+Ulan Bator
+United Arab Emirates
+United Kingdom
+United States of America
+Uruguay
+Utah
+Uzbekistan
+Vaduz
+Vallejo
+Valletta
+Vancouver
+Vanuatu
+Vatican City
+Venezuela
+Vermont
+Victoria
+Victorville
+Vienna
+Vientiane
+Vietnam
+Vilnius
+Virginia
+Visalia
+Waco
+Wales
+Wandsworth
+Warren
+Warsaw
+Warwickshire
+Washington
+Waterbury
+Wellington
+Wessex
+West Covina
+West Jordan
+West Valley City
+West Virginia
+Westminster
+Wichita
+Wichita Falls
+Wilmington
+Winchester
+Windhoek
+Winston–Salem
+Wisconsin
+Worcester
+Worcestershire
+Wuhan
+Wyoming
+Xi'an-Xianyang
+Yamoussoukro
+Yangoon
+Yaounde
+Yaren
+Yemen
+Yerevan
+Yonkers
+Yorkshire
+Zagreb
+Zambia
+Zhengzhou
+Zimbabwe

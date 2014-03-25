@@ -1,0 +1,15 @@
+#=====================================================================
+# This file specifies which totalcounts file should be used
+#   for which n-grams set. e.g. '2: 20090715' specifies that
+#   totalcounts_20090715 will be used for 2-grams.
+#
+# The file specified for 'default' will be used when the n-gram
+#   set is not known or not accounted for.
+#=====================================================================
+
+default: 20120701
+1: 20120701
+2: 20120701
+3: 20090715
+4: 20120701
+5: 20120701

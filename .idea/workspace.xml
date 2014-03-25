@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d62635eb-ede6-4b31-a357-707617a5e161" name="Default" comment="" />
+    <ignored path="lib-3.x.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="lib-3.x">
+      <favorite_root url="file://$PROJECT_DIR$" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/gls" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/gls/hindi" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+          <favorite_root url="file://$PROJECT_DIR$/gls/utils" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/gls/utils/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/gls/utils/charactercounter" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/gls/utils/charactercounter/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/utils/charactercounter/~WRL0003.tmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/utils/charactercounter/variances.csv" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/utils/charactercounter/variances.xlsx" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/utils/charactercounter/charactercounter.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/utils/charactercounter/character_counter.docx" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/utils/charactercounter/~$aracter_counter.docx" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/gls/synonyms" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/gls/synonyms/count_synonyms.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/gls/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/gls/german_morph" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/reducer.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/splitter.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/xeldaentry.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/pluralfixer.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/concatenator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/missingforms.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/oxmorphentry.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/oxfordformset.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/oxfordformsmanager.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/lib/pluralfixer.py.old.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/gls/german_morph/pipeline.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/lex" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/lex/gbn" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/lex/gbn/data" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/data/totalsmap.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/data/totalcounts_20090715.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/data/totalcounts_20120701.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/lex/gbn/build" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/build/filter.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/build/sorter.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/build/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/build/stopwords.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/build/downloader.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/build/autocorrection.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/build/sourceprocessor.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gbn/build/fixlongs.defunct.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/lex/gbn/ngram.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gbn/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gbn/frequency.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gbn/ngramfinder.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gbn/highfrequency.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gbn/tableiterator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gbn/googlebooksapi.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/lex/gel" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel/build" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/wordclass" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/wordclass/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/wordclass/utilities.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/wordclass/wordclassmodel.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/wordclass/ngramsetmanager.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/wordclass/wordclassratios.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/wordclass/corpusprobability.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/gapfiller.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/calculator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/lemmalister.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/frequencyentry.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/homographscorer.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/frequencyiterator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/frequencyaggregator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/frequencyregression.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/frequency/ngramvaluesinserter.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/alphasort.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/buildindex.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/generatebase.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/mergeentries.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/odoadditions.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/addinflections.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/indextempfiles.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/cleanattributes.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/insertfrequency.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/computefrequency.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/linktableupdater.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/processors/addmissinginflections.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/pipeline.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/gelconfig.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel/build/idgenerator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel/dataiterator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel/fileiterator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel/gelcomponents.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/lex/mmh" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/lex/mmh/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/mmh/mmhcache.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/mmh/mmhwriter.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/lex/odo" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/entry.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/sense.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/morphset.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/subentry.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/distiller.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/etymology.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/linkmanager.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/odecomponent.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/findmorelinks.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/wordclassblock.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/odo/semanticcomponent.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/lex/oed" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/entry.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/sense.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/parsers" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/parsers/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/parsers/utilities.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/parsers/parserrevised.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/parsers/parserunrevised.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/combiner.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/formslist.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/detruncator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/variantform.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/variantscache.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/variantsconfig.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/variantslister.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/variants/variantscomputer.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/resources" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/resources/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/resources/odolinks.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/resources/pipeline.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/resources/vitalstatistics.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/resources/frequencyiterator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/models.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/populator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/queryengine.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/subjectmapper.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/equivalentclass.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/thesaurusdbconfig.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/subject_to_thesaurus_mapping.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/treemap.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/thesaurusdb.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/thesaurusclass.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/contentiterator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/oed/thesaurus/taxonomymanager.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/s1block.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/daterange.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/etymology.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/quotation.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/oedcomponent.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/crossreference.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/languagetaxonomy.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/lemmawithvariants.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/semanticcomponent.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/quotationparagraph.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/oed/multisensecomponent.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/lex/gel2" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel2/shared" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel2/shared/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel2/processors" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel2/processors/topics.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel2/processors/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel2/processors/soundfiles.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/gel2/processors/fixturebuilder.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel2/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel2/pipeline.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/gel2/gel2config.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/lex/lemma.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/lex/wordclass" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/lex/wordclass/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/wordclass/wordclass.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/wordclass/wordclass_map.csv" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/wordclass/inflection_map_max.csv" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/wordclass/inflection_map_min.csv" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/lex/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/lex/inflections" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/lex/inflections/data" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/lex/inflections/data/singulars.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/inflections/data/us_mappings.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/inflections/data/plural_stems.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/lex/inflections/data/us_mappings.txt.bk" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/lex/inflections/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/inflections/inflection.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/inflections/singularizer.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/inflections/spellingconverter.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/lex/propernames" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/lex/propernames/brand.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/propernames/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/propernames/surname.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/propernames/firstname.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/propernames/placename.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/propernames/propernames.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/propernames/surname_common.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/propernames/firstname_common.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/lex/propernames/placename_common.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/lex/lexconfig.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/lex/definition.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/lex/entryiterator.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/lex/entrycomponent.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/lex/frequencytable.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/nlp" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/nlp/data" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/nlp/data/tokenization" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/nlp/data/tokenization/names.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/nlp/data/tokenization/places.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/nlp/data/tokenization/titles.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/nlp/data/tokenization/plurals.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/nlp/data/tokenization/downcase.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/nlp/data/tokenization/adjectives.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/nlp/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/nlp/named_entities.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/nlp/smarttokenizer.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/blog" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/blog/url.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/blog/pageset.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/blog/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/blog/blogpage.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/.idea" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/.idea/.name" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/scopes" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/.idea/scopes/scope_settings.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/.idea/vcs.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/misc.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/lib-3.x.iml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/modules.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/encodings.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/workspace.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/.project" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/gutenberg" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/gutenberg/metadata" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/gutenberg/metadata/catalog.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/gutenberg/metadata/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/gutenberg/metadata/rdfcatalog.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/gutenberg/metadata/catalog.py.old" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/gutenberg/metadata/sourcelocations.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/gutenberg/chunker.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/gutenberg/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/gutenberg/decrufter.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/gutenberg/filemanager.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/gutenberg/genredetector.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/gutenberg/gutenbergtext.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/gutenberg/frequencydistribution.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/linkeddata" module="lib-3.x" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/linkeddata/dbpedia.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/linkeddata/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/linkeddata/wikipage.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/linkeddata/dbpedialookup.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/linkeddata/lexicalizations.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/.pydevproject" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/stringtools.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/regexcompiler.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="lexconfig.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lex/lexconfig.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="66" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1368">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vitalstatistics.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lex/oed/resources/vitalstatistics.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="130" column="28" selection-start="5023" selection-end="5023" vertical-scroll-proportion="0.85405403" vertical-offset="1582" max-vertical-offset="4590">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="entryrank.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lex/oed/resources/entryrank.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="33" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="2178">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gelcomponents.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lex/gel/gelcomponents.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="268" column="22" selection-start="7730" selection-end="7744" vertical-scroll-proportion="0.0" vertical-offset="4824" max-vertical-offset="7812">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/thesaurusdbconfig.py" />
+        <option value="$PROJECT_DIR$/lex/entrycomponent.py" />
+        <option value="$PROJECT_DIR$/lex/oed/multisensecomponent.py" />
+        <option value="$PROJECT_DIR$/lex/oed/findmainsense.py" />
+        <option value="$PROJECT_DIR$/lex/oed/thesaurus/contentiterator.py" />
+        <option value="$PROJECT_DIR$/blog/blogpage.py" />
+        <option value="$PROJECT_DIR$/lex/oed/s1block.py" />
+        <option value="$PROJECT_DIR$/lex/inflections/inflection.py" />
+        <option value="$PROJECT_DIR$/lex/inflections/mmh/mmhwriter.py" />
+        <option value="$PROJECT_DIR$/lex/oed/resources/mainsenses.py" />
+        <option value="$PROJECT_DIR$/lex/oed/mainsensecalculator.py" />
+        <option value="$PROJECT_DIR$/lex/oed/thesaurus/thesaurusclass.py" />
+        <option value="$PROJECT_DIR$/stringtools.py" />
+        <option value="$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/queryengine.py" />
+        <option value="$PROJECT_DIR$/lex/oed/quotation.py" />
+        <option value="$PROJECT_DIR$/lex/oed/thesaurus/thesaurusdb.py" />
+        <option value="$PROJECT_DIR$/lex/oed/daterange.py" />
+        <option value="$PROJECT_DIR$/lex/oed/thesaurus/taxonomymanager.py" />
+        <option value="$PROJECT_DIR$/lex/oed/variants/formslist.py" />
+        <option value="$PROJECT_DIR$/lex/oed/sense.py" />
+        <option value="$PROJECT_DIR$/lex/oed/resources/test.py" />
+        <option value="$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/models.py" />
+        <option value="$PROJECT_DIR$/lex/gel/dataiterator.py" />
+        <option value="$PROJECT_DIR$/lex/gel/fileiterator.py" />
+        <option value="$PROJECT_DIR$/lex/frequencytable.py" />
+        <option value="$PROJECT_DIR$/lex/oed/resources/entryrank.py" />
+        <option value="$PROJECT_DIR$/lex/definition.py" />
+        <option value="$PROJECT_DIR$/lex/oed/semanticcomponent.py" />
+        <option value="$PROJECT_DIR$/lex/lexconfig.py" />
+        <option value="$PROJECT_DIR$/lex/oed/etymology.py" />
+        <option value="$PROJECT_DIR$/lex/oed/resources/odolinks.py" />
+        <option value="$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/populator.py" />
+        <option value="$PROJECT_DIR$/lex/gel/gelcomponents.py" />
+        <option value="$PROJECT_DIR$/lex/oed/resources/frequencyiterator.py" />
+        <option value="$PROJECT_DIR$/lex/inflections/mmh/mmhcache.py" />
+        <option value="$PROJECT_DIR$/lex/oed/resources/vitalstatistics.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="76" />
+    <option name="y" value="205" />
+    <option name="width" value="1234" />
+    <option name="height" value="843" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib-3.x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../django/oedfrequency" />
+    <property name="FullScreen" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="SearchEverywhereHistory" value="" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lib-3.x" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lib-3.x" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lib-3.x" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lib-3.x" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lib-3.x" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lib-3.x" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lib-3.x" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d62635eb-ede6-4b31-a357-707617a5e161" name="Default" comment="" />
+      <created>1389978035695</created>
+      <updated>1389978035695</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="76" y="205" width="1234" height="843" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19717315" sideWeight="0.55594003" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25688818" sideWeight="0.44405997" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19717315" sideWeight="0.55594003" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19717315" sideWeight="0.44405997" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/lex/gel/gelcomponents.py</url>
+          <line>246</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lex/oed/resources/vitalstatistics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="57" selection-start="3091" selection-end="3132" vertical-scroll-proportion="0.0" vertical-offset="1440" max-vertical-offset="4734" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/s1block.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="47" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/entry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="277" column="64" selection-start="10057" selection-end="10062" vertical-scroll-proportion="0.0" vertical-offset="4986" max-vertical-offset="5310" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/thesaurusdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="0" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2322" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/multisensecomponent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="21" selection-start="3393" selection-end="3393" vertical-scroll-proportion="0.0" vertical-offset="1656" max-vertical-offset="1800" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/semanticcomponent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="11952" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/definition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="46" selection-start="5479" selection-end="5492" vertical-scroll-proportion="0.0" vertical-offset="2754" max-vertical-offset="7308" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/mainsensecalculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="220" column="32" selection-start="7556" selection-end="7556" vertical-scroll-proportion="0.0" vertical-offset="3253" max-vertical-offset="4104" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/sense.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="23" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="5976" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/sense.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="23" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="5976" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/oedcomponent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="851" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/contentiterator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="42" selection-start="263" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1944" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/equivalentclass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2304" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blogpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="5" selection-start="998" selection-end="998" vertical-scroll-proportion="0.33206832" vertical-offset="185" max-vertical-offset="6408" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/multisensecomponent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="21" selection-start="3393" selection-end="3393" vertical-scroll-proportion="0.0" vertical-offset="922" max-vertical-offset="1800" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/s1block.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="0" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1278" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/inflections/mmh/mmhwriter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="30" selection-start="2780" selection-end="2780" vertical-scroll-proportion="0.0" vertical-offset="599" max-vertical-offset="1476" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/inflections/inflection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="30" selection-start="4823" selection-end="4823" vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="3330" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/mainsensecalculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="78" selection-start="2314" selection-end="2314" vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="5562" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/thesaurusclass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="219" column="23" selection-start="6676" selection-end="6682" vertical-scroll-proportion="0.0" vertical-offset="3942" max-vertical-offset="7200" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/quotation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="0" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.7919144" vertical-offset="882" max-vertical-offset="6804" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stringtools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="316" column="28" selection-start="7897" selection-end="7897" vertical-scroll-proportion="0.07966706" vertical-offset="5477" max-vertical-offset="6318" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/entryiterator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.0178359" vertical-offset="1697" max-vertical-offset="3780" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/taxonomymanager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="21" selection-start="2138" selection-end="2143" vertical-scroll-proportion="0.3329223" vertical-offset="1026" max-vertical-offset="2502" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/wordclass/wordclass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2070" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/daterange.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="381" column="0" selection-start="12949" selection-end="12949" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="7146" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/variants/formslist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="14" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.33206832" vertical-offset="365" max-vertical-offset="6498" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/thesaurusdbconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="37" selection-start="118" selection-end="362" vertical-scroll-proportion="0.23543401" vertical-offset="0" max-vertical-offset="841" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/queryengine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="274" column="0" selection-start="9520" selection-end="9520" vertical-scroll-proportion="0.87158144" vertical-offset="4001" max-vertical-offset="4842" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/sense.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="303" column="53" selection-start="9957" selection-end="9957" vertical-scroll-proportion="0.0" vertical-offset="5063" max-vertical-offset="5904" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/resources/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="28" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/crossreference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="8" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1728" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/entrycomponent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="45" selection-start="4381" selection-end="4396" vertical-scroll-proportion="0.87990487" vertical-offset="1924" max-vertical-offset="2790" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="44" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/entry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="34" selection-start="5784" selection-end="5784" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="5166" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/gel/fileiterator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="64" selection-start="3833" selection-end="3833" vertical-scroll-proportion="-0.049006622" vertical-offset="1873" max-vertical-offset="2628" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/frequencytable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="11" selection-start="2344" selection-end="2344" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="10656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/resources/entryrank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="33" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="2178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/definition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="19" selection-start="4648" selection-end="4655" vertical-scroll-proportion="0.0" vertical-offset="1820" max-vertical-offset="7470" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/resources/mainsenses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="237" column="20" selection-start="8409" selection-end="8409" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7488" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/thesaurusdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="15" selection-start="489" selection-end="489" vertical-scroll-proportion="0.38013244" vertical-offset="91" max-vertical-offset="2250" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/semanticcomponent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="35" selection-start="6062" selection-end="6062" vertical-scroll-proportion="-0.27272728" vertical-offset="3060" max-vertical-offset="12006" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/inflections/mmh/mmhcache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="8" selection-start="4351" selection-end="4351" vertical-scroll-proportion="0.10285714" vertical-offset="2070" max-vertical-offset="4392">
+          <folding>
+            <element signature="e#66#75#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/resources/frequencyiterator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="0" selection-start="3278" selection-end="3278" vertical-scroll-proportion="-0.17671809" vertical-offset="1890" max-vertical-offset="3204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/thesaurus/dbbackend/populator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="43" selection-start="5050" selection-end="5050" vertical-scroll-proportion="-0.25245443" vertical-offset="2520" max-vertical-offset="4770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/resources/odolinks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="23" selection-start="430" selection-end="430" vertical-scroll-proportion="-0.20196353" vertical-offset="360" max-vertical-offset="1296">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/gel/dataiterator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="8" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.41935483" vertical-offset="547" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/gel/gelcomponents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="268" column="22" selection-start="7730" selection-end="7744" vertical-scroll-proportion="0.0" vertical-offset="4824" max-vertical-offset="7812">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/etymology.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="200" column="58" selection-start="5981" selection-end="5981" vertical-scroll-proportion="0.7804878" vertical-offset="2952" max-vertical-offset="3690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/lexconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="66" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lex/oed/resources/vitalstatistics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="28" selection-start="5023" selection-end="5023" vertical-scroll-proportion="0.85405403" vertical-offset="1582" max-vertical-offset="4590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

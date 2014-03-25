@@ -1,0 +1,34 @@
+Penn,base,CLAWS5,OEDps,OEDchar,ODE,OEClempos,Description,Example
+CC,CC,CJC,conj.,conjunction,conjunction,c,coordinating conjunction,and
+CD,CD,CRD,,,number,,cardinal number,"1, three"
+DT,DT,AT0,,,,,determiner,the
+EX,EX,EX0,,,,,existential there,there is
+FW,FW,UNC,,,,,foreign word,d'hoevre
+IN,IN,PRP,prep.,preposition,preposition,i,preposition,"in, of, like, after, that"
+JJ,JJ,AJ0,adj.,adjective,adjective,j,adjective,green
+JJR,JJ,AJC,,,,,comparative adjective,greener
+JJS,JJ,AJS,,,,,superlative adjective,greenest
+MD,MD,VM0,,,,,modal,"could, will"
+NN,NN,NN1,n.,noun,noun,n,noun,table
+NNS,NN,NN2,,,,,plural noun,tables
+NP,NP,NP0,,,,e,proper noun,John
+PDT,PDT,,,,,,predeterminer,both the boys
+POS,POS,POS,,,,,possessive ending,friend's
+PP,PP,PNP,pron.,pronoun,pronoun,p,personal pronoun,"I, he, it"
+PP$,PP$,DPS,,,,,possessive pronoun,"my, his"
+RB,RB,AV0,adv.,adverb,adverb,r,adverb,"however, usually, naturally, here, good"
+RBR,RB,,,,,,comparative adverb,better
+RBS,RB,,,,,,superlative adverb,best
+RP,RP,AVP,,,,,particle,give up
+SYM,SYM,PUN,,,,,symbol,"$, %"
+TO,TO,TO0,,,,,infinitive to,"to go, to him"
+UH,UH,ITJ,int.,interjection,exclamation,,interjection,uh
+VB,VB,VVB,v.,verb,verb,v,"verb, base form",take
+VBD,VB,VVD,,,,,"verb, past tense",took
+VBG,VB,VVG,,,,,"verb, present participle",taking
+VBN,VB,VVN,,,,,"verb, past participle",taken
+VBZ,VB,VVZ,,,,,"verb, 3rd person singular present",takes
+WDT,WDT,DTQ,,,,,wh-determiner,which
+WP,WP,PNQ,,,,,wh-pronoun,"who, what"
+WP$,WP$,,,,,,possessive wh-pronoun,whose
+WRB,WRB,AVQ,,,,,wh-adverb,"where, when"

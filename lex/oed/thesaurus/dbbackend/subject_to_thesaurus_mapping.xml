@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="style.xsl" ?>
+
+<classes>
+
+<class name="Accounting">
+  <branch id="220894">society » occupation » trade and commerce » management of money</branch>
+</class>
+
+
+<class name="Acoustics">
+  <branch id="76679">the external world » matter » physical science » electromagnetic radiation » science of sound</branch>
+</class>
+
+
+<class name="Agriculture">
+  <branch id="51923">the external world » the living world » food and drink » farming</branch>
+  <branch id="54702" negated="true">the external world » the living world » food and drink » farming » keeping birds</branch>
+  <branch id="54878" negated="true">the external world » the living world » food and drink » farming » keeping dogs or cats</branch>
+  <branch id="54940" negated="true">the external world » the living world » food and drink » farming » keeping or breeding other animals</branch>
+  <branch id="54959" negated="true">the external world » the living world » food and drink » farming » zoo</branch>
+</class>
+
+
+<class name="Air Force">
+  <branch id="160439">society » armed hostility</branch>
+</class>
+
+
+<class name="Alchemy">
+  <branch id="67134">the external world » matter</branch>
+</class>
+
+
+<class name="Alternative Medicine">
+  <branch id="13283">the external world » the living world » health » healing or cure</branch>
+</class>
+
+
+<class name="American Football">
+  <branch id="236225">society » leisure » sport and outdoor games » types of sport or game » ball game » American football</branch>
+  <branch id="236056">society » leisure » sport and outdoor games » types of sport or game » ball game » characteristics of team ball games</branch>
+</class>
+
+
+<class name="Anatomy">
+  <branch id="25507">the external world » the living world » body</branch>
+</class>
+
+
+<class name="Anglican Church" redirect="Christianity"/>
+
+
+<class name="Angling">
+  <branch id="55747">the external world » the living world » food and drink » hunting » fishing</branch>
+</class>
+
+
+<class name="Animals">
+  <branch id="29205">the external world » the living world » animal</branch>
+  <branch id="17696">the external world » the living world » living creature</branch>
+  <branch id="29778" negated="true">the external world » the living world » animal » domestic animal</branch>
+  <branch id="29898" negated="true">the external world » the living world » animal » animals hunted</branch>
+</class>
+
+
+<class name="Archery">
+  <branch id="235106">society » leisure » sport and outdoor games » types of sport or game » competitive shooting » archery</branch>
+  <branch id="164378">society » armed hostility » military equipment » operation and use of weapons » action of propelling missile » use of bow and arrow</branch>
+  <branch id="163396">society » armed hostility » military equipment » weapon » device for discharging missiles » archer's weapons</branch>
+</class>
+
+
+<class name="Architecture">
+  <branch id="228745">society » leisure » the arts » visual arts » architecture</branch>
+</class>
+
+
+<class name="Armour">
+  <branch id="163958">society » armed hostility » military equipment » armour</branch>
+</class>
+
+
+<class name="Arts">
+  <branch id="224508">society » leisure » the arts</branch>
+</class>
+
+
+<class name="Association Football" redirect="Football"/>
+
+
+<class name="Astrology">
+  <branch id="1548">the external world » the universe » astrology</branch>
+  <branch id="288">the external world » the universe » heavenly body » as influence on mankind</branch>
+  <branch id="436">the external world » the universe » planet » position of planet » aspect</branch>
+  <branch id="71">the external world » the universe » celestial sphere » zone of celestial sphere</branch>
+</class>
+
+
+<class name="Astronautics">
+  <branch id="206909">society » travel » travel by air or in space</branch>
+</class>
+
+
+<class name="Astronomy">
+  <branch id="2">the external world » the universe</branch>
+  <branch id="170" negated="true">the external world » the universe » sky, heavens</branch>
+</class>
+
+
+<class name="Athletics">
+  <branch id="234644">society » leisure » sport and outdoor games » types of sport or game » athletics</branch>
+  <branch id="235189">society » leisure » sport and outdoor games » types of sport or game » racing or race » racing on foot</branch>
+</class>
+
+
+<class name="Australian Rules Football" redirect="Football"/>
+
+
+<class name="Aviation">
+  <branch id="206909">society » travel » travel by air or in space</branch>
+</class>
+
+
+<class name="Backgammon" redirect="Board Games"/>
+
+
+<class name="Bacteria">
+  <branch id="17709">the external world » the living world » living creature » organism » micro-organism</branch>
+</class>
+
+
+<class name="Badminton">
+  <branch id="236810">society » leisure » sport and outdoor games » types of sport or game » ball game » racket games</branch>
+</class>
+
+
+<class name="Baking">
+  <branch id="45970">the external world » the living world » food and drink » food</branch>
+</class>
+
+
+<class name="Ballet">
+  <branch id="237244">society » leisure » dancing</branch>
+</class>
+
+
+<class name="Banking">
+  <branch id="221652">society » occupation » trade and commerce » dealing in money or finance</branch>
+</class>
+
+
+<class name="Baseball">
+  <branch id="236371">society » leisure » sport and outdoor games » types of sport or game » ball game » baseball</branch>
+  <branch id="237164">society » leisure » sport and outdoor games » types of sport or game » ball game » noun</branch>
+  <branch id="237157">society » leisure » sport and outdoor games » types of sport or game » ball game » adjective</branch>
+  <branch id="237188">society » leisure » sport and outdoor games » types of sport or game » ball game » vt</branch>
+  <branch id="236056">society » leisure » sport and outdoor games » types of sport or game » ball game » characteristics of team ball games</branch>
+</class>
+
+
+<class name="Basket-making">
+  <branch id="209041">society » occupation » industry » manufacturing processes » basket-making</branch>
+  <branch id="213478">society » occupation » equipment for work » receptacle or container » basket</branch>
+</class>
+
+
+<class name="Basketball">
+  <branch id="236114">society » leisure » sport and outdoor games » types of sport or game » ball game » basketball</branch>
+  <branch id="237164">society » leisure » sport and outdoor games » types of sport or game » ball game » noun</branch>
+  <branch id="237157">society » leisure » sport and outdoor games » types of sport or game » ball game » adjective</branch>
+  <branch id="237188">society » leisure » sport and outdoor games » types of sport or game » ball game » vt</branch>
+  <branch id="236056">society » leisure » sport and outdoor games » types of sport or game » ball game » characteristics of team ball games</branch>
+</class>
+
+
+<class name="Bee-keeping">
+  <branch id="54845">the external world » the living world » food and drink » farming » animal husbandry » bee-keeping</branch>
+  <branch id="36054">the external world » the living world » animal » Invertebrata » phylum Arthropoda » class Insecta » order Hymenoptera  suborder Apocrita, Petiolata, or Heterophaga » group Aculeata (stinging) » superfamily Apoidea (bees)</branch>
+</class>
+
+
+<class name="Beer">
+  <branch id="50526">the external world » the living world » food and drink » beverage » intoxicating liquor » ale or beer</branch>
+  <branch id="51032">the external world » the living world » food and drink » beverage » manufacture of alcoholic drink » brewing</branch>
+</class>
+
+
+<class name="Billiards, Pool, and Snooker">
+  <branch id="222723">society » leisure » amusement or entertainment » pastimes » game » billiards, pool, or snooker</branch>
+</class>
+
+
+<class name="Birds">
+  <branch id="38285">the external world » the living world » animal » birds</branch>
+</class>
+
+
+<class name="Bleaching">
+  <branch id="81538">the external world » matter » colour » named colours » white or whiteness » whitener » bleaching agent</branch>
+</class>
+
+
+<class name="Blood Sports">
+  <branch id="235008">society » leisure » sport and outdoor games » types of sport or game » fighting or baiting animals</branch>
+</class>
+
+
+<class name="Board Games">
+  <branch id="222517">society » leisure » amusement or entertainment » pastimes » game » board game</branch>
+</class>
+
+
+<class name="Bookbinding">
+  <branch id="196709">society » communication » book » manufacture or production of books » book-binding</branch>
+</class>
+
+
+<class name="Bowling">
+  <branch id="237124">society » leisure » sport and outdoor games » types of sport or game » ball game » ninepins/ten-pins</branch>
+</class>
+
+
+<class name="Bowls">
+  <branch id="237084">society » leisure » sport and outdoor games » types of sport or game » ball game » bowls or bowling</branch>
+</class>
+
+
+<class name="Boxing">
+  <branch id="234759">society » leisure » sport and outdoor games » types of sport or game » fighting sports</branch>
+</class>
+
+
+<class name="Bricklaying">
+  <branch id="209588">society » occupation » industry » building or constructing</branch>
+</class>
+
+
+<class name="Brickmaking">
+  <branch id="212821">society » occupation » equipment for work » brick-making equipment</branch>
+  <branch id="215833">society » occupation » material worked with or upon » derived or manufactured material » clay compositions » baked clay » brick</branch>
+  <branch id="211034">society » occupation » worker » workers according to type of work » manual or industrial worker » producer » maker of bricks or tiles</branch>
+</class>
+
+
+<class name="Bridge" redirect="Cards"/>
+
+
+<class name="British Politics" redirect="Politics"/>
+
+
+<class name="Broadcasting">
+  <branch id="197157">society » communication » broadcasting</branch>
+</class>
+
+
+<class name="Buddhism">
+  <branch id="184796">society » religion » sect » non-Christian religions » Buddhism</branch>
+</class>
+
+
+<class name="Building">
+  <branch id="159241">society » inhabiting or dwelling » inhabited place » a building » parts of building » framework of building</branch>
+  <branch id="209588">society » occupation » industry » building or constructing</branch>
+  <branch id="213040">society » occupation » equipment for work » building and constructing equipment</branch>
+  <branch id="211295">society » occupation » worker » workers according to type of work » manual or industrial worker » builder</branch>
+</class>
+
+
+<class name="Bullfighting">
+  <branch id="235009">society » leisure » sport and outdoor games » types of sport or game » fighting or baiting animals » bullfighting or bullfight</branch>
+</class>
+
+
+<class name="Economics and Commerce">
+  <branch id="217325">society » occupation » trade and commerce</branch>
+  <branch id="208746">society » occupation » business or transactions » a business or company</branch>
+</class>
+
+
+<class name="Handwriting and Calligraphy">
+  <branch id="193940">society » communication » action or process of writing</branch>
+</class>
+
+
+<class name="Bell-ringing">
+  <branch id="226295">society » leisure » the arts » music » performing music » playing instruments » bell-ringing</branch>
+  <branch id="227179">society » leisure » the arts » music » musical instrument » percussion instrument » bell</branch>
+  <branch id="226686">society » leisure » the arts » music » musician » instrumentalist » bell-ringer</branch>
+</class>
+
+
+<class name="Cambridge University" redirect="University"/>
+
+
+<class name="Cards">
+  <branch id="222794">society » leisure » amusement or entertainment » pastimes » game » card game</branch>
+  <branch id="223275">society » leisure » amusement or entertainment » pastimes » game » games of chance » games of chance played with cards</branch>
+</class>
+
+
+<class name="Carriage-building">
+  <branch id="201615">society » travel » means of travel or transport » a conveyance » vehicle » cart, carriage, or wagon</branch>
+</class>
+
+
+<class name="Cartography">
+  <branch id="7317">the external world » the earth » earth science » geography » map-making</branch>
+</class>
+
+
+<class name="Caving">
+  <branch id="235664">society » leisure » sport and outdoor games » types of sport or game » potholing and caving</branch>
+</class>
+
+
+<class name="Cell Biology">
+  <branch id="17930">the external world » the living world » living creature » substance » cell</branch>
+</class>
+
+
+<class name="Ceramics">
+  <branch id="215875">society » occupation » material worked with or upon » derived or manufactured material » clay compositions » baked clay » pottery or ceramics</branch>
+  <branch id="208969">society » occupation » industry » manufacturing processes » pottery-making/ceramics</branch>
+  <branch id="212835">society » occupation » equipment for work » pottery manufacturing equipment</branch>
+  <branch id="211047">society » occupation » worker » workers according to type of work » manual or industrial worker » producer » potter</branch>
+</class>
+
+
+<class name="Cheese">
+  <branch id="46434">the external world » the living world » food and drink » food » dairy produce</branch>
+  <branch id="48394">the external world » the living world » food and drink » food » food manufacture and preparation » preparation of dairy produce</branch>
+</class>
+
+
+<class name="Chemistry">
+  <branch id="67134">the external world » matter</branch>
+  <branch id="71649" negated="true">the external world » matter » alchemy</branch>
+</class>
+
+
+<class name="Chess" redirect="Board Games"/>
+
+
+<class name="Christianity">
+  <branch id="183692">society » religion » sect » Christianity</branch>
+  <branch id="121161">the external world » the supernatural » deity or deities » Christian God</branch>
+  <branch id="182081">society » religion » faith » Bible, Scripture</branch>
+  <branch id="182470" negated="true">society » religion » faith » Bible, Scripture » non-Judaeo-Christian scriptures</branch>
+  <branch id="186824">society » religion » worship</branch>
+</class>
+
+
+<class name="Church Architecture">
+  <branch id="189677">society » religion » artefacts » division of building (general)</branch>
+  <branch id="189857" negated="true">society » religion » artefacts » division of building (general) » other parts</branch>
+</class>
+
+
+<class name="Cider">
+  <branch id="50587">the external world » the living world » food and drink » beverage » intoxicating liquor » cider</branch>
+  <branch id="50983">the external world » the living world » food and drink » beverage » manufacture of alcoholic drink » cider-making</branch>
+</class>
+
+
+<class name="Civil Engineering">
+  <branch id="213292">society » occupation » equipment for work » earth-moving and excavating equipment</branch>
+  <branch id="210223">society » occupation » industry » earth-moving, etc.</branch>
+  <branch id="209997">society » occupation » industry » building or constructing » paving and road-building</branch>
+</class>
+
+
+<class name="Classical Mythology">
+  <branch id="121524">the external world » the supernatural » deity or deities » classical deity</branch>
+</class>
+
+
+<class name="Climbing">
+  <branch id="235630">society » leisure » sport and outdoor games » types of sport or game » mountaineering or climbing</branch>
+</class>
+
+
+<class name="Clocks and Watches">
+  <branch id="95387">the external world » abstract properties » time » instruments for measuring time</branch>
+</class>
+
+
+<class name="Coal Mining">
+  <branch id="217193">society » occupation » material worked with or upon » fuel » coal or types of coal</branch>
+  <branch id="210289">society » occupation » industry » mining</branch>
+  <branch id="211854">society » occupation » workplace » places where raw materials are extracted » mine</branch>
+  <branch id="211370">society » occupation » worker » workers according to type of work » manual or industrial worker » miner</branch>
+</class>
+
+
+<class name="Cockfighting">
+  <branch id="235040">society » leisure » sport and outdoor games » types of sport or game » fighting or baiting animals » fighting between animals</branch>
+</class>
+
+
+<class name="Coins and Banknotes">
+  <branch id="219138">society » occupation » trade and commerce » money » coining</branch>
+  <branch id="218782">society » occupation » trade and commerce » money » medium of exchange or currency</branch>
+</class>
+
+
+<class name="Computing">
+  <branch id="116218">the external world » relative properties » number » computing or information technology</branch>
+</class>
+
+
+<class name="Conjuring">
+  <branch id="233767">society » leisure » the arts » performance arts » legerdemain, etc.</branch>
+</class>
+
+
+<class name="Coopering">
+  <branch id="209022">society » occupation » industry » manufacturing processes » cask-making</branch>
+  <branch id="213569">society » occupation » equipment for work » receptacle or container » vessel » barrel or cask</branch>
+  <branch id="211069">society » occupation » worker » workers according to type of work » manual or industrial worker » producer » makers of containers or receptacles » maker of casks or cooper</branch>
+</class>
+
+
+<class name="Cosmetics">
+  <branch id="142018">the mind » aesthetics » beautification » beautification of the person</branch>
+</class>
+
+
+<class name="Costume">
+  <branch id="58436">the external world » the living world » clothing</branch>
+</class>
+
+
+<class name="Cribbage" redirect="Cards"/>
+
+
+<class name="Cricket">
+  <branch id="236499">society » leisure » sport and outdoor games » types of sport or game » ball game » cricket</branch>
+  <branch id="237164">society » leisure » sport and outdoor games » types of sport or game » ball game » noun</branch>
+  <branch id="237157">society » leisure » sport and outdoor games » types of sport or game » ball game » adjective</branch>
+  <branch id="237188">society » leisure » sport and outdoor games » types of sport or game » ball game » vt</branch>
+  <branch id="236056">society » leisure » sport and outdoor games » types of sport or game » ball game » characteristics of team ball games</branch>
+</class>
+
+
+<class name="Croquet">
+  <branch id="237057">society » leisure » sport and outdoor games » types of sport or game » ball game » croquet</branch>
+</class>
+
+
+<class name="Cryptography">
+  <branch id="127187">the mind » mental capacity » faculty of knowing » secrecy, concealment » code, cipher</branch>
+</class>
+
+
+<class name="Crystals">
+  <branch id="70589">the external world » matter » general chemistry » crystallography (general)</branch>
+</class>
+
+
+<class name="Cultural Anthropology">
+  <branch id="43775">the external world » the living world » people » science of mankind</branch>
+  <branch id="153073">society » the community</branch>
+</class>
+
+
+<class name="Curling">
+  <branch id="235943">society » leisure » sport and outdoor games » types of sport or game » winter sports » curling</branch>
+</class>
+
+
+<class name="Cycling">
+  <branch id="199767">society » travel » conveyance of people or goods » cycling</branch>
+  <branch id="235464">society » leisure » sport and outdoor games » types of sport or game » racing or race » racing with vehicles » bicycle race</branch>
+</class>
+
+
+<class name="Dance">
+  <branch id="237244">society » leisure » dancing</branch>
+</class>
+
+
+<class name="Darts">
+  <branch id="222780">society » leisure » amusement or entertainment » pastimes » game » darts</branch>
+</class>
+
+
+<class name="Decorative Arts">
+  <branch id="229197">society » leisure » the arts » visual arts » ornamental art and craft</branch>
+</class>
+
+
+<class name="Dentistry">
+  <branch id="16345">the external world » the living world » health » healing or cure » dentistry</branch>
+  <branch id="27717">the external world » the living world » body » digestive or excretive organs » digestive organs » mouth » substance or parts of teeth</branch>
+</class>
+
+
+<class name="Dice">
+  <branch id="223314">society » leisure » amusement or entertainment » pastimes » game » games of chance » dice-playing</branch>
+  <branch id="223312">society » leisure » amusement or entertainment » pastimes » game » games of chance » game of dice</branch>
+</class>
+
+
+<class name="Distilling">
+  <branch id="51114">the external world » the living world » food and drink » beverage » manufacture of alcoholic drink » distilling</branch>
+  <branch id="50266">the external world » the living world » food and drink » beverage » intoxicating liquor</branch>
+</class>
+
+
+<class name="Diving">
+  <branch id="235744">society » leisure » sport and outdoor games » types of sport or game » water sports except racing » skin-diving</branch>
+</class>
+
+
+<class name="Dominoes">
+  <branch id="222679">society » leisure » amusement or entertainment » pastimes » game » table game » dominoes</branch>
+</class>
+
+
+<class name="Draughts" redirect="Board Games"/>
+
+
+<class name="Drawing">
+  <branch id="227682">society » leisure » the arts » visual arts » painting and drawing</branch>
+</class>
+
+
+<class name="Dressmaking">
+  <branch id="60395">the external world » the living world » clothing » tailoring or making clothes » dressmaking</branch>
+</class>
+
+
+<class name="Drink">
+  <branch id="50266">the external world » the living world » food and drink » beverage » intoxicating liquor</branch>
+</class>
+
+
+<class name="Dyeing">
+  <branch id="81318">the external world » matter » colour » colouring » dyeing</branch>
+  <branch id="81621">the external world » matter » colour » named colours » black or blackness » blackening agent » dye</branch>
+  <branch id="81704">the external world » matter » colour » named colours » red or redness » red colouring matter » dyes and dyestuffs</branch>
+  <branch id="81773">the external world » matter » colour » named colours » green or greenness » green colouring matter » pigment or dye » dyes and dyestuffs</branch>
+  <branch id="81835">the external world » matter » colour » named colours » yellow or yellowness » colouring matter » dyes and dyestuffs</branch>
+  <branch id="81888">the external world » matter » colour » named colours » blue or blueness » blue colouring matter » dyes and dyestuffs</branch>
+  <branch id="82070">the external world » matter » colour » named colours » purple or purpleness » purple dye or pigment</branch>
+  <branch id="82094">the external world » matter » colour » named colours » orange » colouring matter » dyes</branch>
+  <branch id="24925">the external world » the living world » plant » particular plants » particular cultivated/valued plants » plants used in dyeing</branch>
+</class>
+
+
+<class name="Dynamics">
+  <branch id="75927">the external world » matter » physical science » mechanics » kinematics</branch>
+  <branch id="75737">the external world » matter » physical science » mechanics » dynamics</branch>
+</class>
+
+
+<class name="Earth Sciences">
+  <branch id="7301">the external world » the earth » earth science</branch>
+</class>
+
+
+<class name="Ecclesiastical">
+  <branch id="189211">society » religion » worship » benefice</branch>
+  <branch id="185113">society » religion » church government</branch>
+</class>
+
+
+<class name="Ecclesiastical Law">
+  <branch id="182543">society » religion » faith » law » canon law</branch>
+  <branch id="185221">society » religion » church government » ecclesiastical discipline</branch>
+</class>
+
+
+<class name="Ecology">
+  <branch id="19466">the external world » the living world » living creature » balance of nature</branch>
+</class>
+
+
+<class name="Economics">
+  <branch id="217325">society » occupation » trade and commerce</branch>
+</class>
+
+
+<class name="Education">
+  <branch id="180277">society » education</branch>
+</class>
+
+
+<class name="Electrical">
+  <branch id="76804">the external world » matter » physical science » electromagnetic radiation » electricity</branch>
+</class>
+
+
+<class name="Electrical Engineering">
+  <branch id="77682">the external world » matter » physical science » electromagnetic radiation » electricity » electrical engineering</branch>
+  <branch id="77892">the external world » matter » physical science » electromagnetic radiation » electricity » electrical power, electricity</branch>
+</class>
+
+
+<class name="Electronics">
+  <branch id="78195">the external world » matter » physical science » electromagnetic radiation » electronics</branch>
+  <branch id="78725">the external world » matter » physical science » solid state physics » semiconductivity</branch>
+</class>
+
+
+<class name="Embryology">
+  <branch id="18658">the external world » the living world » living creature » biological processes » procreation or reproduction</branch>
+</class>
+
+
+<class name="Enamelling">
+  <branch id="229210">society » leisure » the arts » visual arts » ornamental art and craft » enamelling</branch>
+</class>
+
+
+<class name="Engineering">
+  <branch id="208881">society » occupation » industry</branch>
+</class>
+
+
+<class name="English Law" redirect="Law"/>
+
+
+<class name="Engraving and Etching">
+  <branch id="228280">society » leisure » the arts » visual arts » printmaking</branch>
+</class>
+
+
+<class name="Insects">
+  <branch id="34062">the external world » the living world » animal » Invertebrata » phylum Arthropoda » class Insecta</branch>
+</class>
+
+
+<class name="Espionage">
+  <branch id="129774">the mind » mental capacity » curiosity » enquiry, questioning » investigation, inspection » secret observation, spying</branch>
+</class>
+
+
+<class name="Euchre" redirect="Cards"/>
+
+
+<class name="Faro" redirect="Cards"/>
+
+
+<class name="Farriery">
+  <branch id="54484">the external world » the living world » food and drink » farming » animal husbandry » keeping or management of horses » shoeing of horses</branch>
+</class>
+
+
+<class name="Fencing">
+  <branch id="234943">society » leisure » sport and outdoor games » types of sport or game » fighting sports » fencing</branch>
+</class>
+
+
+<class name="Film">
+  <branch id="233894">society » leisure » the arts » performance arts » cinematography</branch>
+</class>
+
+
+<class name="Finance">
+  <branch id="217325">society » occupation » trade and commerce</branch>
+</class>
+
+
+<class name="Gunnery and Firearms">
+  <branch id="163208">society » armed hostility » military equipment » weapon</branch>
+  <branch id="164257">society » armed hostility » military equipment » operation and use of weapons</branch>
+</class>
+
+
+<class name="Fireworks">
+  <branch id="80830">the external world » matter » light » firework</branch>
+</class>
+
+
+<class name="Food and Cooking">
+  <branch id="45970">the external world » the living world » food and drink » food</branch>
+</class>
+
+
+<class name="Football">
+  <branch id="236138">society » leisure » sport and outdoor games » types of sport or game » ball game » football</branch>
+  <branch id="236056">society » leisure » sport and outdoor games » types of sport or game » ball game » characteristics of team ball games</branch>
+</class>
+
+
+<class name="Forestry">
+  <branch id="53723">the external world » the living world » food and drink » farming » forestry or arboriculture</branch>
+</class>
+
+
+<class name="Fortification">
+  <branch id="161091">society » armed hostility » defence » defensive work(s)</branch>
+</class>
+
+
+<class name="Freemasonry">
+  <branch id="155276">society » the community » social relations » an association, society, or organization » secret society » the Freemasons</branch>
+</class>
+
+
+<class name="Fungi">
+  <branch id="23703">the external world » the living world » plant » particular plants » fungi</branch>
+  <branch id="25344">the external world » the living world » plant » particular plants » plants perceived as weeds/harmful plants » poisonous or harmful plants » harmful or parasitic fungi</branch>
+  <branch id="22114">the external world » the living world » plant » part of plant » reproductive part(s) » spore or sporule » cryptogam or plant having spores</branch>
+</class>
+
+
+<class name="Fur Trade">
+  <branch id="215296">society » occupation » material worked with or upon » raw material » skin or hide</branch>
+  <branch id="209224">society » occupation » industry » working with specific materials » working with skins</branch>
+</class>
+
+
+<class name="Gambling">
+  <branch id="223241">society » leisure » amusement or entertainment » pastimes » game » games of chance</branch>
+  <branch id="223668">society » leisure » amusement or entertainment » pastimes » betting</branch>
+</class>
+
+
+<class name="Games">
+  <branch id="222516">society » leisure » amusement or entertainment » pastimes » game</branch>
+</class>
+
+
+<class name="Genetics">
+  <branch id="19054">the external world » the living world » living creature » biological processes » genetic activity</branch>
+</class>
+
+
+<class name="Geology">
+  <branch id="4696">the external world » the earth » structure of the earth</branch>
+</class>
+
+
+<class name="Geometry">
+  <branch id="115620">the external world » relative properties » number » geometry</branch>
+</class>
+
+
+<class name="Gilding">
+  <branch id="229404">society » leisure » the arts » visual arts » ornamental art and craft » gilding and silvering</branch>
+</class>
+
+
+<class name="Glass-making">
+  <branch id="212852">society » occupation » equipment for work » glass-making equipment</branch>
+  <branch id="208986">society » occupation » industry » manufacturing processes » glass-making</branch>
+  <branch id="211053">society » occupation » worker » workers according to type of work » manual or industrial worker » producer » glass-maker</branch>
+  <branch id="216214">society » occupation » material worked with or upon » derived or manufactured material » glass and glass-like materials</branch>
+</class>
+
+
+<class name="Glazing">
+  <branch id="159410">society » inhabiting or dwelling » inhabited place » a building » parts of building » window or door » parts of windows</branch>
+  <branch id="211193">society » occupation » worker » workers according to type of work » manual or industrial worker » workers with specific materials » worker with glass</branch>
+</class>
+
+
+<class name="Gloves">
+  <branch id="59260">the external world » the living world » clothing » types or styles of clothing » clothing for hands » glove</branch>
+  <branch id="60544">the external world » the living world » clothing » tailoring or making clothes » making other clothing » making gloves</branch>
+</class>
+
+
+<class name="Gold-mining" redirect="Mining"/>
+
+
+<class name="Golf">
+  <branch id="236931">society » leisure » sport and outdoor games » types of sport or game » ball game » golf</branch>
+</class>
+
+
+<class name="Grammar">
+  <branch id="149852">the mind » language » study of language » study of grammar</branch>
+</class>
+
+
+<class name="Gymnastics">
+  <branch id="234710">society » leisure » sport and outdoor games » types of sport or game » gymnastics</branch>
+  <branch id="234711" negated="true">society » leisure » sport and outdoor games » types of sport or game » gymnastics » exercise</branch>
+</class>
+
+
+<class name="Hairdressing">
+  <branch id="142124">the mind » aesthetics » beautification » beautification of the person » beautification of the hair</branch>
+</class>
+
+
+<class name="Hats">
+  <branch id="60411">the external world » the living world » clothing » tailoring or making clothes » making headgear</branch>
+  <branch id="58619">the external world » the living world » clothing » types or styles of clothing » headgear</branch>
+</class>
+
+
+<class name="Hawking and Falconry">
+  <branch id="55631">the external world » the living world » food and drink » hunting » hawking</branch>
+  <branch id="39838">the external world » the living world » animal » birds » order Falconiformes (falcons, etc.)</branch>
+</class>
+
+
+<class name="Heraldry">
+  <branch id="191973">society » communication » indication » insignia » heraldic devices collective</branch>
+</class>
+
+
+<class name="Herbalism">
+  <branch id="24553">the external world » the living world » plant » particular plants » particular cultivated/valued plants » particular medicinal plants or parts</branch>
+</class>
+
+
+<class name="Hinduism">
+  <branch id="184854">society » religion » sect » non-Christian religions » Hinduism</branch>
+  <branch id="184875" negated="true">society » religion » sect » non-Christian religions » Hinduism » Hindu sects and groups » Sikhism</branch>
+</class>
+
+
+<class name="Hockey">
+  <branch id="236316">society » leisure » sport and outdoor games » types of sport or game » ball game » hockey</branch>
+  <branch id="237164">society » leisure » sport and outdoor games » types of sport or game » ball game » noun</branch>
+  <branch id="237157">society » leisure » sport and outdoor games » types of sport or game » ball game » adjective</branch>
+  <branch id="237188">society » leisure » sport and outdoor games » types of sport or game » ball game » vt</branch>
+  <branch id="236056">society » leisure » sport and outdoor games » types of sport or game » ball game » characteristics of team ball games</branch>
+</class>
+
+
+<class name="Horse Racing">
+  <branch id="235230">society » leisure » sport and outdoor games » types of sport or game » racing or race » horse racing</branch>
+  <branch id="199472">society » travel » conveyance of people or goods » riding on horse (or other animal)</branch>
+  <branch id="54483">the external world » the living world » food and drink » farming » animal husbandry » keeping or management of horses</branch>
+  <branch id="41663">the external world » the living world » animal » mammals » group Ungulata (hoofed) » family Equidae (general equines)</branch>
+</class>
+
+ 
+<class name="Horses and Riding">
+  <branch id="54483">the external world » the living world » food and drink » farming » animal husbandry » keeping or management of horses</branch>
+  <branch id="41663">the external world » the living world » animal » mammals » group Ungulata (hoofed) » family Equidae (general equines)</branch>
+  <branch id="42370" negated="true">the external world » the living world » animal » mammals » group Ungulata (hoofed) » family Equidae (general equines) » equus asinus (ass)</branch>
+  <branch id="42366" negated="true">the external world » the living world » animal » mammals » group Ungulata (hoofed) » family Equidae (general equines) » equus burchellii (zebra)</branch>
+  <branch id="199472">society » travel » conveyance of people or goods » riding on horse (or other animal)</branch>
+  <branch id="235673">society » leisure » sport and outdoor games » types of sport or game » equestrian sports except racing</branch>
+  <branch id="235230">society » leisure » sport and outdoor games » types of sport or game » racing or race » horse racing</branch>
+  <branch id="12026">the external world » the living world » health » ill health » animal disease or disorder » disorders of horses</branch>
+</class>
+
+
+<class name="Horticulture">
+  <branch id="53351">the external world » the living world » food and drink » farming » gardening</branch>
+  <branch id="25030">the external world » the living world » plant » particular plants » particular cultivated/valued plants » particular cultivated or ornamental plants</branch>
+</class>
+
+
+<class name="Hunting">
+  <branch id="55074">the external world » the living world » food and drink » hunting</branch>
+  <branch id="29898">the external world » the living world » animal » animals hunted</branch>
+  <branch id="40162">the external world » the living world » animal » mammals » group Unguiculata/clawed mammal » family Canidae » hound</branch>
+</class>
+
+
+<class name="Hydraulics">
+  <branch id="75679">the external world » matter » physical science » mechanics » fluid mechanics</branch>
+</class>
+
+
+<class name="Ice Hockey">
+  <branch id="235982">society » leisure » sport and outdoor games » types of sport or game » winter sports » ice hockey</branch>
+</class>
+
+
+<class name="Fish">
+  <branch id="36520">the external world » the living world » animal » fish</branch>
+</class>
+
+
+<class name="Immunology">
+  <branch id="18102">the external world » the living world » living creature » substance » process stimulators or inhibitors » antibody</branch>
+  <branch id="18081">the external world » the living world » living creature » substance » process stimulators or inhibitors » immunogen or antigen</branch>
+  <branch id="18128">the external world » the living world » living creature » substance » process stimulators or inhibitors » other immunological substances or particles</branch>
+  <branch id="18257">the external world » the living world » living creature » biological processes » immunogenesis</branch>
+</class>
+
+
+<class name="Inland Waterways">
+  <branch id="2733">the external world » the earth » water » body of water » channel of water » navigable waterway</branch>
+</class>
+
+
+<class name="Insurance">
+  <branch id="221974">society » occupation » trade and commerce » dealing in money or finance » insurance</branch>
+</class>
+
+
+<class name="Invertebrates">
+  <branch id="31384">the external world » the living world » animal » Invertebrata</branch>
+</class>
+
+
+<class name="Islam">
+  <branch id="184926">society » religion » sect » non-Christian religions » Islam</branch>
+  <branch id="182629">society » religion » faith » law » Islamic Law</branch>
+  <branch id="187718">society » religion » worship » liturgical year » feast, festival » other seasons and feasts » Muslim</branch>
+</class>
+
+
+<class name="Jazz">
+  <branch id="225405">society » leisure » the arts » music » type of music » jazz</branch>
+</class>
+
+
+<class name="Jewellery">
+  <branch id="141715">the mind » aesthetics » beautification » types of ornamentation » jewellery</branch>
+</class>
+
+
+<class name="Journalism">
+  <branch id="196824">society » communication » journalism</branch>
+</class>
+
+
+<class name="Judaism">
+  <branch id="183620">society » religion » sect » Judaism</branch>
+  <branch id="182573">society » religion » faith » law » Jewish law</branch>
+  <branch id="182433">society » religion » faith » Bible, Scripture » Hebrew scripture</branch>
+  <branch id="185364">society » religion » church government » council » Jewish</branch>
+  <branch id="187653">society » religion » worship » liturgical year » feast, festival » Jewish seasons and feasts</branch>
+</class>
+
+
+<class name="Knitting">
+  <branch id="58136">the external world » the living world » textile material » textile manufacture » manufacture textile fabric/that which consists of » manufacture of textile fabric » knitting</branch>
+  <branch id="58048">the external world » the living world » textile material » textile manufacture » manufacture textile fabric/that which consists of » manufacture of textile fabric » knitting</branch>
+  <branch id="56891">the external world » the living world » textile material » textile fabric/an article of textile fabric » textile or fabric » textile fabric manufactured in specific way » consisting of loops/looped stitches » knitted fabric</branch>
+</class>
+
+
+<class name="Lace">
+  <branch id="58159">the external world » the living world » textile material » textile manufacture » manufacture textile fabric/that which consists of » manufacture of textile fabric » lacemaking</branch>
+  <branch id="57460">the external world » the living world » textile material » textile fabric/an article of textile fabric » ornamental textiles » ornamental trimmings » lace</branch>
+  <branch id="57501">the external world » the living world » textile material » textile fabric/an article of textile fabric » ornamental textiles » ornamental trimmings » lace</branch>
+  <branch id="56822">the external world » the living world » textile material » textile fabric/an article of textile fabric » textile or fabric » textile fabric manufactured in specific way » lace</branch>
+  <branch id="56906">the external world » the living world » textile material » textile fabric/an article of textile fabric » textile or fabric » textile fabric manufactured in specific way » consisting of loops/looped stitches » lace</branch>
+</class>
+
+
+<class name="Lacrosse">
+  <branch id="236353">society » leisure » sport and outdoor games » types of sport or game » ball game » lacrosse</branch>
+  <branch id="237164">society » leisure » sport and outdoor games » types of sport or game » ball game » noun</branch>
+  <branch id="237157">society » leisure » sport and outdoor games » types of sport or game » ball game » adjective</branch>
+  <branch id="237188">society » leisure » sport and outdoor games » types of sport or game » ball game » vt</branch>
+  <branch id="236056">society » leisure » sport and outdoor games » types of sport or game » ball game » characteristics of team ball games</branch>
+</class>
+
+
+<class name="Law">
+  <branch id="173525">society » authority » (the) law</branch>
+  <branch id="169752">society » authority » office » holder of office » magistrate</branch>
+</class>
+
+
+<class name="Lawn Tennis">
+  <branch id="236810">society » leisure » sport and outdoor games » types of sport or game » ball game » racket games</branch>
+</class>
+
+
+<class name="Leather-making">
+  <branch id="209224">society » occupation » industry » working with specific materials » working with skins</branch>
+  <branch id="212906">society » occupation » equipment for work » equipment for working with skins or leather</branch>
+  <branch id="216146">society » occupation » material worked with or upon » derived or manufactured material » leather</branch>
+  <branch id="215296">society » occupation » material worked with or upon » raw material » skin or hide</branch>
+  <branch id="211799">society » occupation » workplace » places for working with specific materials » place for working with skins or hides</branch>
+  <branch id="211170">society » occupation » worker » workers according to type of work » manual or industrial worker » workers with specific materials » worker with skins or hides</branch>
+</class>
+
+
+<class name="Life Sciences">
+  <branch id="17696">the external world » the living world » living creature</branch>
+  <branch id="19397">the external world » the living world » living creature » biological processes » evolution</branch>
+</class>
+
+
+<class name="Linguistics">
+  <branch id="149851">the mind » language » study of language</branch>
+</class>
+
+
+<class name="Literary and Textual Criticism" redirect="Literature"/>
+
+
+<class name="Literature">
+  <branch id="229947">society » leisure » the arts » literature</branch>
+</class>
+
+
+<class name="Liturgical">
+  <branch id="187109">society » religion » worship » parts of service</branch>
+  <branch id="187803">society » religion » worship » canonical hours</branch>
+  <branch id="187864">society » religion » worship » sacrament</branch>
+</class>
+
+
+<class name="Locksmithing">
+  <branch id="213179">society » occupation » equipment for work » building and constructing equipment » fastenings » lock</branch>
+</class>
+
+
+<class name="Logging">
+  <branch id="53724">the external world » the living world » food and drink » farming » forestry or arboriculture » lumbering</branch>
+</class>
+
+
+<class name="Logic">
+  <branch id="140737">the mind » philosophy » logic</branch>
+</class>
+
+
+<class name="Magnetism">
+  <branch id="78039">the external world » matter » physical science » electromagnetic radiation » magnetism</branch>
+</class>
+
+
+<class name="Mah-jong">
+  <branch id="222667">society » leisure » amusement or entertainment » pastimes » game » table game » mah-jong</branch>
+</class>
+
+
+<class name="Malting">
+  <branch id="50996">the external world » the living world » food and drink » beverage » manufacture of alcoholic drink » malting</branch>
+</class>
+
+
+<class name="Manufacturing">
+  <branch id="209531">society » occupation » industry » working with specific materials » working with coating/covering materials</branch>
+  <branch id="209301">society » occupation » industry » working with specific materials » working with metal</branch>
+  <branch id="209261">society » occupation » industry » working with specific materials » working with rubber or plastic</branch>
+</class>
+
+
+<class name="Martial Arts">
+  <branch id="234876">society » leisure » sport and outdoor games » types of sport or game » fighting sports » martial arts</branch>
+</class>
+
+
+<class name="Masonry">
+  <branch id="209761">society » occupation » industry » building or constructing » building or constructing with stone</branch>
+  <branch id="211250">society » occupation » worker » workers according to type of work » manual or industrial worker » workers with specific materials » worker with stone</branch>
+</class>
+
+
+<class name="Massage">
+  <branch id="13970">the external world » the living world » health » healing or cure » medical treatment » physiotherapy</branch>
+</class>
+
+
+<class name="Mathematics">
+  <branch id="114066">the external world » relative properties » number</branch>
+</class>
+
+
+<class name="Measurement">
+  <branch id="116971">the external world » relative properties » measurement » measurement of length</branch>
+  <branch id="117153">the external world » relative properties » measurement » measurement of area</branch>
+  <branch id="117219">the external world » relative properties » measurement » the scientific measurement of volume</branch>
+  <branch id="117571">the external world » relative properties » measurement » measurement by weighing</branch>
+  <branch id="117449">the external world » relative properties » measurement » measuring instrument</branch>
+</class>
+
+
+<class name="Mechanics">
+  <branch id="213839">society » occupation » equipment for work » machine</branch>
+</class>
+
+
+<class name="Medicine">
+  <branch id="9301">the external world » the living world » health</branch>
+</class>
+
+
+<class name="Medieval Law" redirect="Law"/>
+
+
+<class name="Metal Industry">
+  <branch id="212954">society » occupation » equipment for work » metalworking equipment</branch>
+  <branch id="209301">society » occupation » industry » working with specific materials » working with metal</branch>
+  <branch id="216276">society » occupation » material worked with or upon » derived or manufactured material » metal</branch>
+  <branch id="216774">society » occupation » material worked with or upon » derived or manufactured material » materials produced from metalworking</branch>
+  <branch id="212762">society » occupation » equipment for work » furnace or kiln » furnace » furnaces for melting/refining metals</branch>
+  <branch id="211819">society » occupation » workplace » places for working with specific materials » place for working with metal</branch>
+</class>
+
+
+<class name="Metalwork">
+  <branch id="229346">society » leisure » the arts » visual arts » ornamental art and craft » artistic work in metal</branch>
+</class>
+
+
+<class name="Metals" redirect="Metal Industry"/>
+
+
+<class name="Methodism" redirect="Christianity"/>
+
+
+<class name="Microbiology">
+  <branch id="17709">the external world » the living world » living creature » organism » micro-organism</branch>
+  <branch id="31531">the external world » the living world » animal » Invertebrata » protozoa</branch>
+</class>
+
+
+<class name="Military">
+  <branch id="160439">society » armed hostility</branch>
+</class>
+
+
+<class name="Minerals">
+  <branch id="6191">the external world » the earth » minerals</branch>
+</class>
+
+
+<class name="Mining">
+  <branch id="211854">society » occupation » workplace » places where raw materials are extracted » mine</branch>
+  <branch id="6268">the external world » the earth » minerals » mineral deposits</branch>
+  <branch id="210289">society » occupation » industry » mining</branch>
+  <branch id="213304">society » occupation » equipment for work » mining equipment</branch>
+  <branch id="212923">society » occupation » equipment for work » equipment for treating ores</branch>
+  <branch id="211370">society » occupation » worker » workers according to type of work » manual or industrial worker » miner</branch>
+</class>
+
+
+<class name="Motor Racing">
+  <branch id="235405">society » leisure » sport and outdoor games » types of sport or game » racing or race » racing with vehicles » motor racing</branch>
+  <branch id="235460">society » leisure » sport and outdoor games » types of sport or game » racing or race » racing with vehicles » motorcycle racing or race</branch>
+</class>
+
+
+<class name="Motorcycling">
+  <branch id="202253">society » travel » means of travel or transport » a conveyance » vehicle » powered vehicle » motorcycle</branch>
+  <branch id="199814">society » travel » conveyance of people or goods » motorcycling</branch>
+  <branch id="235460">society » leisure » sport and outdoor games » types of sport or game » racing or race » racing with vehicles » motorcycle racing or race</branch>
+</class>
+
+
+<class name="Motoring">
+  <branch id="201885">society » travel » means of travel or transport » a conveyance » vehicle » powered vehicle</branch>
+  <branch id="200373">society » travel » conveyance of people or goods » transport or conveyance in a vehicle » movement of vehicles</branch>
+  <branch id="200468">society » travel » conveyance of people or goods » transport or conveyance in a vehicle » vehicular traffic</branch>
+  <branch id="213973">society » occupation » equipment for work » machine » machines which impart power » engine » internal-combustion engine</branch>
+  <branch id="214009" negated="true">society » occupation » equipment for work » machine » machines which impart power » engine » internal-combustion engine » rocket</branch>
+  <branch id="214012" negated="true">society » occupation » equipment for work » machine » machines which impart power » engine » internal-combustion engine » jet</branch>
+</class>
+
+
+<class name="Music">
+  <branch id="224620">society » leisure » the arts » music</branch>
+</class>
+
+
+<class name="Mythology">
+  <branch id="120781">the external world » the supernatural » supernatural being</branch>
+</class>
+
+
+<class name="Drug use">
+  <branch id="63476">the external world » sensation » use of drugs</branch>
+  <branch id="63799" negated="true">the external world » sensation » use of drugs » poison</branch>
+  <branch id="24749">the external world » the living world » plant » particular plants » particular cultivated/valued plants » yielding drug or narcotic</branch>
+  <branch id="24751" negated="true">the external world » the living world » plant » particular plants » particular cultivated/valued plants » yielding drug or narcotic » tobacco-plant</branch>
+</class>
+
+
+<class name="Nautical">
+  <branch id="202986">society » travel » travel by water</branch>
+</class>
+
+
+<class name="Navy">
+  <branch id="164899">society » armed hostility » hostilities at sea</branch>
+  <branch id="204804">society » travel » travel by water » vessel, ship, or boat » war vessel</branch>
+</class>
+
+
+<class name="Needlework">
+  <branch id="57532">the external world » the living world » textile material » textile fabric/an article of textile fabric » sewn or ornamented textile fabric</branch>
+  <branch id="58250">the external world » the living world » textile material » textile manufacture » manufacture textile fabric/that which consists of » sewing or ornamenting textile fabric</branch>
+</class>
+
+
+<class name="Neurology">
+  <branch id="18468">the external world » the living world » living creature » biological processes » action of nervous system</branch>
+  <branch id="29123">the external world » the living world » body » study of body » study of nervous system</branch>
+  <branch id="28804">the external world » the living world » body » nervous system</branch>
+</class>
+
+
+<class name="North American Law" redirect="Law"/>
+
+
+<class name="Nuclear Physics" redirect="Physical Sciences"/>
+
+
+<class name="Obstetrics">
+  <branch id="8912">the external world » the living world » life » birth</branch>
+  <branch id="15616">the external world » the living world » health » healing or cure » medical appliances or equipment » obstetrical equipment</branch>
+  <branch id="11198">the external world » the living world » health » ill health » a disease » disorders of internal organs » disorders of pregnancy or birth</branch>
+  <branch id="18778">the external world » the living world » living creature » biological processes » procreation or reproduction » pregnancy or gestation</branch>
+</class>
+
+
+<class name="Occult">
+  <branch id="120346">the external world » the supernatural » the occult</branch>
+  <branch id="128997">the mind » mental capacity » expectation, looking forward » foresight, foreknowledge » prediction, foretelling » divination</branch>
+  <branch id="129069">the mind » mental capacity » expectation, looking forward » foresight, foreknowledge » prediction, foretelling » divination by symbols, letters, figures, etc.</branch>
+</class>
+
+
+<class name="Oceanography">
+  <branch id="3076">the external world » the earth » water » sea or ocean</branch>
+  <branch id="7640">the external world » the earth » earth science » hydrography</branch>
+  <branch id="3594">the external world » the earth » water » flow or flowing » current</branch>
+</class>
+
+
+<class name="Oil and Gas Industry">
+  <branch id="210437">society » occupation » industry » drilling for oil or gas</branch>
+  <branch id="213348">society » occupation » equipment for work » oil and natural gas recovery equipment</branch>
+  <branch id="211431">society » occupation » worker » workers according to type of work » manual or industrial worker » worker in oil industry</branch>
+  <branch id="211963">society » occupation » workplace » places where raw materials are extracted » oil rig</branch>
+  <branch id="215499">society » occupation » material worked with or upon » raw material » mineral material » mineral oil</branch>
+  <branch id="216795">society » occupation » material worked with or upon » derived or manufactured material » extracted or refined oil</branch>
+  <branch id="217226">society » occupation » material worked with or upon » fuel » gas or types of gas</branch>
+</class>
+
+
+<class name="Ophthalmology">
+  <branch id="16285">the external world » the living world » health » healing or cure » ophthalmology or optometry</branch>
+  <branch id="10043">the external world » the living world » health » ill health » a disease » disorders of eye</branch>
+</class>
+
+
+<class name="Optics">
+  <branch id="64740">the external world » sensation » sight » optical instruments</branch>
+  <branch id="76276">the external world » matter » physical science » electromagnetic radiation » light</branch>
+</class>
+
+
+<class name="Organ-playing">
+  <branch id="227051">society » leisure » the arts » music » musical instrument » keyboard instrument » organ</branch>
+  <branch id="227123">society » leisure » the arts » music » musical instrument » keyboard instrument » types of organ</branch>
+</class>
+
+
+<class name="Organic Chemistry">
+  <branch id="69255">the external world » matter » general chemistry » organic chemistry</branch>
+  <branch id="18160">the external world » the living world » living creature » substance » proteins</branch>
+</class>
+
+
+<class name="Orthodox Church" redirect="Christianity"/>
+
+
+<class name="Oxford University" redirect="University"/>
+
+
+<class name="Painting">
+  <branch id="227682">society » leisure » the arts » visual arts » painting and drawing</branch>
+</class>
+
+
+<class name="Painting and Drawing">
+  <branch id="227682">society » leisure » the arts » visual arts » painting and drawing</branch>
+</class>
+
+
+<class name="Palaeontology">
+  <branch id="37796">the external world » the living world » animal » reptiles » extinct reptiles and dinosaurs</branch>
+  <branch id="17807">the external world » the living world » living creature » organism » fossil</branch>
+  <branch id="44209">the external world » the living world » people » early man/fossil hominid</branch>
+</class>
+
+
+<class name="Palmistry">
+  <branch id="129212">the mind » mental capacity » expectation, looking forward » foresight, foreknowledge » prediction, foretelling » divination by natural phenomena » palmistry</branch>
+  <branch id="26518">the external world » the living world » body » skin » mark on skin » line in palmistry</branch>
+</class>
+
+
+<class name="Papermaking">
+  <branch id="212860">society » occupation » equipment for work » paper-making equipment</branch>
+  <branch id="216015">society » occupation » material worked with or upon » derived or manufactured material » material for making paper</branch>
+  <branch id="208959">society » occupation » industry » manufacturing processes » paper-making</branch>
+  <branch id="211041">society » occupation » worker » workers according to type of work » manual or industrial worker » producer » maker of paper</branch>
+</class>
+
+
+<class name="Parachuting">
+  <branch id="207415">society » travel » travel by air or in space » parachuting</branch>
+  <branch id="208007">society » travel » travel by air or in space » a means of conveyance through the air » parachute</branch>
+</class>
+
+
+<class name="Parapsychology">
+  <branch id="122460">the mind » mental capacity » the psyche » parapsychology</branch>
+</class>
+
+
+<class name="Parliament">
+  <branch id="167242">society » authority » rule or government » ruler or governor » deliberative, legislative, or administrative assembly</branch>
+</class>
+
+
+<class name="Particle Physics" redirect="Physical Sciences"/>
+
+
+<class name="Pathology">
+  <branch id="9301">the external world » the living world » health</branch>
+</class>
+
+
+<class name="Perfumery">
+  <branch id="64287">the external world » sensation » odours » fragrance</branch>
+</class>
+
+
+<class name="Pharmacology">
+  <branch id="9301">the external world » the living world » health</branch>
+</class>
+
+
+<class name="Postage Stamps">
+  <branch id="222461">society » leisure » amusement or entertainment » pastimes » hobby » collecting stamps</branch>
+  <branch id="197652">society » communication » correspondence » postal services</branch>
+</class>
+
+
+<class name="Philology">
+  <branch id="147450">the mind » language</branch>
+</class>
+
+
+<class name="Philosophy">
+  <branch id="139859">the mind » philosophy</branch>
+</class>
+
+
+<class name="Phonetics">
+  <branch id="147450">the mind » language</branch>
+</class>
+
+
+<class name="Photography">
+  <branch id="229563">society » leisure » the arts » visual arts » photography</branch>
+</class>
+
+
+<class name="Phrenology">
+  <branch id="122996">the mind » mental capacity » the psyche » faculty psychology » psychological study of the skull</branch>
+</class>
+
+
+<class name="Physical Sciences">
+  <branch id="67134">the external world » matter</branch>
+  <branch id="71649" negated="true">the external world » matter » alchemy</branch>
+</class>
+
+
+<class name="Physical Geography">
+  <branch id="7302">the external world » the earth » earth science » geography</branch>
+  <branch id="4696">the external world » the earth » structure of the earth</branch>
+</class>
+
+
+<class name="Physics" redirect="Physical Sciences"/>
+
+
+<class name="Physiology">
+  <branch id="18214">the external world » the living world » living creature » biological processes</branch>
+  <branch id="25507">the external world » the living world » body</branch>
+  <branch id="9301">the external world » the living world » health</branch>
+</class>
+
+
+<class name="Piquet" redirect="Cards"/>
+
+
+<class name="Plant Pathology">
+  <branch id="20470">the external world » the living world » plant</branch>
+</class>
+
+
+<class name="Plant Physiology">
+  <branch id="20470">the external world » the living world » plant</branch>
+</class>
+
+
+<class name="Plants">
+  <branch id="20470">the external world » the living world » plant</branch>
+</class>
+
+
+<class name="Plastering">
+  <branch id="217063">society » occupation » material worked with or upon » derived or manufactured material » plaster</branch>
+</class>
+
+
+<class name="Plumbing">
+  <branch id="210178">society » occupation » industry » conducting of water, etc., by channels or pipes</branch>
+</class>
+
+
+<class name="Poker" redirect="Cards"/>
+
+
+<class name="Politics">
+  <branch id="166197">society » authority » rule or government</branch>
+  <branch id="170071">society » authority » office » appointment to office » choosing or fact of being chosen for office » election of representative body by vote</branch>
+</class>
+
+
+<class name="Polo">
+  <branch id="235681">society » leisure » sport and outdoor games » types of sport or game » equestrian sports except racing » polo</branch>
+</class>
+
+
+<class name="Popular Music" redirect="Music"/>
+
+
+<class name="Printing and Typography">
+  <branch id="195084">society » communication » printing</branch>
+</class>
+
+
+<class name="Printmaking">
+  <branch id="228280">society » leisure » the arts » visual arts » printmaking</branch>
+</class>
+
+
+<class name="Prosody">
+  <branch id="231212">society » leisure » the arts » literature » poetry</branch>
+</class>
+
+
+<class name="Psychiatry" redirect="Psychology"/>
+
+
+<class name="Psychoanalysis" redirect="Psychology"/>
+
+
+<class name="Psychology">
+  <branch id="122418">the mind » mental capacity » the psyche</branch>
+  <branch id="12916">the external world » the living world » health » mental health or sanity</branch>
+  <branch id="16214">the external world » the living world » health » healing or cure » psychiatry</branch>
+</class>
+
+
+<class name="Publishing">
+  <branch id="196270">society » communication » book</branch>
+  <branch id="196000">society » communication » printing » publishing</branch>
+</class>
+
+
+<class name="Quakerism" redirect="Christianity"/>
+
+
+<class name="Quarrying">
+  <branch id="211367">society » occupation » worker » workers according to type of work » manual or industrial worker » quarrier</branch>
+  <branch id="210279">society » occupation » industry » quarrying</branch>
+  <branch id="211848">society » occupation » workplace » places where raw materials are extracted » quarry</branch>
+</class>
+
+
+<class name="Quoits">
+  <branch id="237201">society » leisure » sport and outdoor games » types of sport or game » quoits</branch>
+</class>
+
+
+<class name="Racket Sports">
+  <branch id="236810">society » leisure » sport and outdoor games » types of sport or game » ball game » racket games</branch>
+</class>
+
+
+<class name="Radar">
+  <branch id="130004">the mind » mental capacity » curiosity » finding out, discovery » instrument for detection » radar system</branch>
+</class>
+
+
+<class name="Radio" redirect="Broadcasting"/>
+
+
+<class name="Radiology">
+  <branch id="13546">the external world » the living world » health » healing or cure » diagnosis or prognosis » radiography or radiology</branch>
+  <branch id="13935">the external world » the living world » health » healing or cure » medical treatment » treatment by radiation</branch>
+</class>
+
+
+<class name="Railways">
+  <branch id="202583">society » travel » travel by railway</branch>
+</class>
+
+
+<class name="Real Tennis">
+  <branch id="236810">society » leisure » sport and outdoor games » types of sport or game » ball game » racket games</branch>
+</class>
+
+
+<class name="Recording">
+  <branch id="193665">society » communication » record » recording/reproducing sound/visual material</branch>
+</class>
+
+
+<class name="Religion">
+  <branch id="181560">society » religion</branch>
+</class>
+
+
+<class name="Rhetoric">
+  <branch id="148890">the mind » language » speech or act of speaking » speech-making » rhetoric</branch>
+</class>
+
+
+<class name="Roman Catholic Church" redirect="Christianity"/>
+
+
+<class name="Roman Law" redirect="Law"/>
+
+
+<class name="Roofing">
+  <branch id="209668">society » occupation » industry » building or constructing » building or providing with specific parts » roofing</branch>
+</class>
+
+
+<class name="Rope-making">
+  <branch id="212885">society » occupation » equipment for work » rope-making equipment</branch>
+  <branch id="209010">society » occupation » industry » manufacturing processes » rope-making</branch>
+</class>
+
+
+<class name="Roulette">
+  <branch id="223242">society » leisure » amusement or entertainment » pastimes » game » games of chance » roulette</branch>
+</class>
+
+
+<class name="Rowing">
+  <branch id="203568">society » travel » travel by water » propelling boat by oars, paddle, or pole</branch>
+  <branch id="235494">society » leisure » sport and outdoor games » types of sport or game » racing or race » boat racing or race</branch>
+  <branch id="235518" negated="true">society » leisure » sport and outdoor games » types of sport or game » racing or race » boat racing or race » canoe race</branch>
+  <branch id="235520" negated="true">society » leisure » sport and outdoor games » types of sport or game » racing or race » boat racing or race » sailing race</branch>
+  <branch id="235521" negated="true">society » leisure » sport and outdoor games » types of sport or game » racing or race » boat racing or race » other types of race</branch>
+  <branch id="205865">society » travel » travel by water » vessel, ship, or boat » equipment of vessel » rowing apparatus</branch>
+</class>
+
+
+<class name="Rugby Football">
+  <branch id="236186">society » leisure » sport and outdoor games » types of sport or game » ball game » football » rugby football</branch>
+  <branch id="237164">society » leisure » sport and outdoor games » types of sport or game » ball game » noun</branch>
+  <branch id="237157">society » leisure » sport and outdoor games » types of sport or game » ball game » adjective</branch>
+  <branch id="237188">society » leisure » sport and outdoor games » types of sport or game » ball game » vt</branch>
+  <branch id="236056">society » leisure » sport and outdoor games » types of sport or game » ball game » characteristics of team ball games</branch>
+</class>
+
+
+<class name="Saddles and Harness" redirect="Horses and Riding"/>
+
+
+<class name="Sailing">
+  <branch id="203311">society » travel » travel by water » directing or managing a ship » use of sails, spars, or rigging</branch>
+</class>
+
+
+<class name="Salt-making">
+  <branch id="48494">the external world » the living world » food and drink » food » food manufacture and preparation » salt manufacture</branch>
+</class>
+
+
+<class name="Science Fiction">
+  <branch id="232581">society » leisure » the arts » literature » prose » narrative or story » science fiction, etc.</branch>
+  <branch id="200639">society » travel » conveyance of people or goods » transport by psychic/futuristic means</branch>
+</class>
+
+
+<class name="Scottish Church" redirect="Christianity"/>
+
+
+<class name="Scottish Law" redirect="Law"/>
+
+
+<class name="Sculpture">
+  <branch id="228679">society » leisure » the arts » visual arts » plastic art » statuary</branch>
+  <branch id="228581">society » leisure » the arts » visual arts » plastic art » sculpture or carving</branch>
+</class>
+
+
+<class name="Sheep-shearing">
+  <branch id="54302">the external world » the living world » food and drink » farming » animal husbandry » sheep-farming » sheep-shearing</branch>
+  <branch id="215395">society » occupation » material worked with or upon » raw material » fleece</branch>
+</class>
+
+
+<class name="Shells and Shellfish">
+  <branch id="32261">the external world » the living world » animal » Invertebrata » subkingdom Metazoa » grade Triploblastica or Coelomata</branch>
+</class>
+
+
+<class name="Shinto">
+  <branch id="184992">society » religion » sect » non-Christian religions » Shinto</branch>
+</class>
+
+
+<class name="Shipbuilding">
+  <branch id="204466">society » travel » travel by water » vessel, ship, or boat</branch>
+</class>
+
+
+<class name="Shoes">
+  <branch id="60447">the external world » the living world » clothing » tailoring or making clothes » making footwear</branch>
+  <branch id="59409">the external world » the living world » clothing » types or styles of clothing » footwear</branch>
+</class>
+
+
+<class name="Shooting">
+  <branch id="55493">the external world » the living world » food and drink » hunting » shooting</branch>
+</class>
+
+
+<class name="Silk">
+  <branch id="57138">the external world » the living world » textile material » textile fabric/an article of textile fabric » textile or fabric » textile fabric made from specific material » made from silk</branch>
+  <branch id="56441">the external world » the living world » textile material » silk</branch>
+  <branch id="56563">the external world » the living world » textile material » treated or processed textiles » silk</branch>
+</class>
+
+
+<class name="Skateboarding">
+  <branch id="236024">society » leisure » sport and outdoor games » types of sport or game » skateboarding</branch>
+</class>
+
+
+<class name="Skating">
+  <branch id="235904">society » leisure » sport and outdoor games » types of sport or game » winter sports » skating</branch>
+</class>
+
+
+<class name="Skiing">
+  <branch id="235842">society » leisure » sport and outdoor games » types of sport or game » winter sports » skiing</branch>
+  <branch id="235550">society » leisure » sport and outdoor games » types of sport or game » racing or race » ski racing or race</branch>
+</class>
+
+
+<class name="Soap-making">
+  <branch id="209003">society » occupation » industry » manufacturing processes » soap-making</branch>
+</class>
+
+
+<class name="Social Sciences">
+  <branch id="153073">society » the community</branch>
+</class>
+
+
+<class name="Sociology" redirect="Social Sciences"/>
+
+
+<class name="Soil Science">
+  <branch id="4696">the external world » the earth » structure of the earth</branch>
+  <branch id="7628">the external world » the earth » earth science » soil science</branch>
+</class>
+
+
+<class name="Sound Recording">
+  <branch id="193666">society » communication » record » recording/reproducing sound/visual material » sound recording and reproduction</branch>
+</class>
+
+
+<class name="Spectroscopy">
+  <branch id="78877">the external world » matter » physical science » atomic physics » decomposition of light, spectrum</branch>
+</class>
+
+
+<class name="Spinning">
+  <branch id="57802">the external world » the living world » textile material » textile manufacture » manufacture of thread or yarn</branch>
+  <branch id="56583">the external world » the living world » textile material » thread or yarn</branch>
+</class>
+
+
+<class name="Spiritualism">
+  <branch id="120347">the external world » the supernatural » the occult » spiritualism</branch>
+</class>
+
+
+<class name="Sport">
+  <branch id="234326">society » leisure » sport and outdoor games</branch>
+</class>
+
+
+<class name="Squash">
+  <branch id="236810">society » leisure » sport and outdoor games » types of sport or game » ball game » racket games</branch>
+</class>
+
+
+<class name="Statistics">
+  <branch id="116071">the external world » relative properties » number » probability or statistics</branch>
+</class>
+
+
+<class name="Steam Engines">
+  <branch id="213921">society » occupation » equipment for work » machine » machines which impart power » engine » steam engine</branch>
+</class>
+
+
+<class name="Stock Market">
+  <branch id="222063">society » occupation » trade and commerce » dealing in stocks and shares</branch>
+</class>
+
+
+<class name="Sugar Industry">
+  <branch id="48462">the external world » the living world » food and drink » food » food manufacture and preparation » sugar manufacture</branch>
+</class>
+
+
+<class name="Surfing">
+  <branch id="235772">society » leisure » sport and outdoor games » types of sport or game » water sports except racing » surfing</branch>
+</class>
+
+
+<class name="Surgery">
+  <branch id="14110">the external world » the living world » health » healing or cure » medical treatment » surgery</branch>
+</class>
+
+
+<class name="Surveying">
+  <branch id="7364">the external world » the earth » earth science » geography » map-making » surveying</branch>
+</class>
+
+
+<class name="Swimming">
+  <branch id="235729">society » leisure » sport and outdoor games » types of sport or game » water sports except racing » swimming</branch>
+  <branch id="235225">society » leisure » sport and outdoor games » types of sport or game » racing or race » swimming race</branch>
+  <branch id="107067">the external world » abstract properties » motion or movement » progressive movement » moving with current of air or water » movement in/on water » swimming</branch>
+  <branch id="107047">the external world » abstract properties » motion or movement » progressive movement » moving with current of air or water » movement in/on water » swimming</branch>
+</class>
+
+
+<class name="Tailoring">
+  <branch id="60394">the external world » the living world » clothing » tailoring or making clothes</branch>
+</class>
+
+
+<class name="Taxonomy">
+  <branch id="20008">the external world » the living world » living creature » taxonomy</branch>
+</class>
+
+
+<class name="Telecommunications">
+  <branch id="197810">society » communication » telecommunication</branch>
+</class>
+
+
+<class name="Telegraphy">
+  <branch id="197948">society » communication » telecommunication » telegraphy or telephony » telegraphy</branch>
+</class>
+
+
+<class name="Telephony">
+  <branch id="198011">society » communication » telecommunication » telegraphy or telephony » telephony</branch>
+</class>
+
+
+<class name="Television" redirect="Broadcasting"/>
+
+
+<class name="Textiles">
+  <branch id="56407">the external world » the living world » textile material</branch>
+</class>
+
+
+<class name="Thatching">
+  <branch id="213258">society » occupation » equipment for work » building and constructing equipment » thatching equipment</branch>
+  <branch id="215206">society » occupation » material worked with or upon » raw material » plants, grasses, or reeds » for thatching</branch>
+  <branch id="209673">society » occupation » industry » building or constructing » building or providing with specific parts » roofing » thatching</branch>
+</class>
+
+
+<class name="Theatre">
+  <branch id="232933">society » leisure » the arts » performance arts</branch>
+</class>
+
+
+<class name="Thermodynamics" redirect="Physical Sciences"/>
+
+
+<class name="Tobacco">
+  <branch id="63608">the external world » sensation » use of drugs » tobacco</branch>
+  <branch id="24751">the external world » the living world » plant » particular plants » particular cultivated/valued plants » yielding drug or narcotic » tobacco-plant</branch>
+</class>
+
+
+<class name="United States Law" redirect="Law"/>
+
+
+<class name="United States Politics" redirect="Politics"/>
+
+
+<class name="University">
+  <branch id="180277">society » education</branch>
+</class>
+
+
+<class name="Veterinary Medicine">
+  <branch id="11933">the external world » the living world » health » ill health » animal disease or disorder</branch>
+  <branch id="16415">the external world » the living world » health » healing or cure » veterinary medicine and surgery</branch>
+</class>
+
+
+<class name="Video Recording">
+  <branch id="193665">society » communication » record » recording/reproducing sound/visual material</branch>
+</class>
+
+
+<class name="Viruses">
+  <branch id="17744">the external world » the living world » living creature » organism » micro-organism » virus</branch>
+</class>
+
+
+<class name="Visual Arts">
+  <branch id="227402">society » leisure » the arts » visual arts</branch>
+</class>
+
+
+<class name="Weaponry">
+  <branch id="163207">society » armed hostility » military equipment</branch>
+</class>
+
+
+<class name="Weather">
+  <branch id="7706">the external world » the earth » atmosphere</branch>
+</class>
+
+
+<class name="Weaving">
+  <branch id="56698">the external world » the living world » textile material » threads in process of weaving</branch>
+  <branch id="58058">the external world » the living world » textile material » textile manufacture » manufacture textile fabric/that which consists of » manufacture of textile fabric » weaving</branch>
+  <branch id="58043">the external world » the living world » textile material » textile manufacture » manufacture textile fabric/that which consists of » manufacture of textile fabric » weaving</branch>
+  <branch id="56867">the external world » the living world » textile material » textile fabric/an article of textile fabric » textile or fabric » textile fabric manufactured in specific way » woven</branch>
+  <branch id="56809">the external world » the living world » textile material » textile fabric/an article of textile fabric » textile or fabric » textile fabric manufactured in specific way » woven</branch>
+</class>
+
+
+<class name="Whaling">
+  <branch id="56225">the external world » the living world » food and drink » hunting » whaling</branch>
+</class>
+
+
+<class name="Whist" redirect="Cards"/>
+
+
+<class name="Wine">
+  <branch id="50320">the external world » the living world » food and drink » beverage » intoxicating liquor » wine</branch>
+  <branch id="50895">the external world » the living world » food and drink » beverage » manufacture of alcoholic drink » wine-making</branch>
+</class>
+
+
+<class name="Winter Sports">
+  <branch id="235841">society » leisure » sport and outdoor games » types of sport or game » winter sports</branch>
+</class>
+
+
+<class name="Woodworking">
+  <branch id="214879">society » occupation » material worked with or upon » raw material » wood</branch>
+  <branch id="212102">society » occupation » equipment for work » shaping tools or equipment » plane</branch>
+  <branch id="212091">society » occupation » equipment for work » shaping tools or equipment » file</branch>
+  <branch id="212312">society » occupation » equipment for work » machine tool » lathe</branch>
+  <branch id="211262">society » occupation » worker » workers according to type of work » manual or industrial worker » workers with specific materials » woodworker</branch>
+  <branch id="209831">society » occupation » industry » building or constructing » constructing or working with wood</branch>
+  <branch id="211088">society » occupation » worker » workers according to type of work » manual or industrial worker » producer » maker of furniture or furnishings</branch>
+</class>
+
+
+<class name="Wool">
+  <branch id="56407">the external world » the living world » textile material</branch>
+</class>
+
+
+<class name="World Music" redirect="Music"/>
+
+
+<class name="Wrestling">
+  <branch id="234759">society » leisure » sport and outdoor games » types of sport or game » fighting sports</branch>
+</class>
+
+</classes>

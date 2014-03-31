@@ -67,7 +67,7 @@ class EntryIterator(object):
 
     def __init__(self, **kwargs):
         self.verbosity = kwargs.get('verbosity', None)
-        self.dict = kwargs.get('dictType', None)
+        self.dict = kwargs.get('dictType') or kwargs.get('dict_type', None)
         self.path = kwargs.get('path') or _default_source(self.dict)
         self.fix_ligatures = kwargs.get('fixLigatures', False)
         self.entry_count = 0

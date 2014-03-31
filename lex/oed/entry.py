@@ -28,7 +28,8 @@ class Entry(MultiSenseComponent):
         MultiSenseComponent.__init__(self, node, **kwargs)
         self.id = self.attribute('id')
 
-        # self.is_revised = False by default; set to 'True' if the
+        # self.is_revised (inherited from OedComponent) is set to
+        #  False by default; we reset it to True if the
         #  publication info says "Third edition"
         pub_statement = self.node.findtext('./publicationInfo/pubStatement')
         if pub_statement is not None and REVISED_PATTERN.search(pub_statement):
@@ -125,11 +126,15 @@ class Entry(MultiSenseComponent):
         """
         header_node = self.node.find('./senseSect/header')
         if header_node is not None:
-            return etree.tostring(header_node,
-                                  method='text',
-                                  encoding='unicode')
+            return etree.tounicode(header_node, method='text')
         else:
             return None
+
+    def sensesect_senses(self):
+        """
+        Return only senses in <senseSect>
+        """
+        return [s for s in self.senses() if s.is_in_sensesect()]
 
     def lemsect_senses(self):
         """
@@ -148,11 +153,11 @@ class Entry(MultiSenseComponent):
         Return a list of quotation objects from the main senseSect.
         """
         try:
-            return self.__quotations_main
+            return self._quotations_main
         except AttributeError:
-            self.__quotations_main = [q for q in self.quotations()
+            self._quotations_main = [q for q in self.quotations()
                                      if q.has_ancestor('senseSect')]
-            return self.__quotations_main
+            return self._quotations_main
 
     def num_quotations_main(self):
         """
@@ -205,12 +210,12 @@ class Entry(MultiSenseComponent):
             return self._s1blocks
         except AttributeError:
             self._s1blocks = [S1block(n, self.headword, self.id)
-                               for n in self.node.findall('./senseSect/s1')]
+                              for n in self.node.findall('./senseSect/s1')]
             for block in self._s1blocks:
                 block.is_revised = self.is_revised
 
             # If the entry is obsolete, then all blocks must be obsolete
-            if self.is_marked_obsolete() == True:
+            if self.is_marked_obsolete():
                 for block in self._s1blocks:
                     block.set_obsolete_marker(True)
 
@@ -243,8 +248,8 @@ class Entry(MultiSenseComponent):
             if len(self.etymology().etyma()) == 1:
                 etymon = self.etymology().etyma()[0]
                 if (etymon.type() == 'cross-reference' and
-                    etymon.lemma == self.lemma and
-                    etymon.wordclass() != self.primary_wordclass().penn):
+                        etymon.lemma == self.lemma and
+                        etymon.wordclass() != self.primary_wordclass().penn):
                     self._paired = etymon.refentry()
             return self._paired
 
@@ -281,7 +286,7 @@ class Entry(MultiSenseComponent):
             if len(penn_set) == 2 and 'NN' in penn_set and 'JJ' in penn_set:
                 for block in blocks:
                     if (block.primary_wordclass() is not None and
-                        block.primary_wordclass().penn in penn_set):
+                            block.primary_wordclass().penn in penn_set):
                         ratio = block.num_quotations() / total_quotations
                         block.num_quotations_adjusted += int(ratio * delta)
             else:

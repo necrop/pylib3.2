@@ -45,14 +45,15 @@ class TestStringtools(unittest.TestCase):
         """
         Test stringtools.prefix()
         """
-        pass
+        for source, num, result in self.prefix_tests:
+            self.assertEqual(stringtools.prefix(source, num), result)
 
     def test_suffix(self):
         """
         Test stringtools.suffix()
         """
         for source, num, result in self.suffix_tests:
-            self.assertEqual(stringtools.test_suffix(source, num), result)
+            self.assertEqual(stringtools.suffix(source, num), result)
 
 
 

@@ -93,11 +93,11 @@ class Sense(SemanticComponent):
         if self._lemma_object is None:
             lemma = self.characteristic_first('lemma')
             if not lemma and self.is_subentry():
-                lemma = self.node.findtext('./lemUnit/lemVersions/lm') or\
-                        self.node.findtext('./lm') or ''
+                lemma = (self.node.findtext('./lemUnit/lemVersions/lm') or
+                         self.node.findtext('./lm') or '')
             elif not lemma and self.is_subentry_like():
-                lemma = self.node.findtext('./sub/lemUnit/lemVersions/lm') or\
-                        self.node.findtext('./sub/lm') or ''
+                lemma = (self.node.findtext('./sub/lemUnit/lemVersions/lm') or
+                         self.node.findtext('./sub/lm') or '')
             self._lemma_object = Lemma(lemma)
         return self._lemma_object
 
@@ -138,20 +138,19 @@ class Sense(SemanticComponent):
 
     def is_compound_of(self, **kwargs):
         headword = kwargs.get('headword', '').lower()
-        components = kwargs.get('lemmas') or [kwargs.get('lemma')]
+        components = kwargs.get('lemmas') or [kwargs.get('lemma'),]
         components = [word.lower() for word in components]
         lemma = self.lemma.lower()
         if self.is_phrase():
             return False
         for word in components:
             if (lemma.startswith(word + '-') or
-                lemma.startswith(word + ' ') or
-                lemma.endswith('-' + word) or
-                lemma.endswith(' ' + word)):
+                    lemma.startswith(word + ' ') or
+                    lemma.endswith('-' + word) or
+                    lemma.endswith(' ' + word)):
                 return True
             if (headword and
-                (lemma == headword + word or
-                 lemma == word + headword)):
+                    (lemma == headword + word or lemma == word + headword)):
                 return True
         return False
 
@@ -159,7 +158,7 @@ class Sense(SemanticComponent):
         if self.lemma == self.headword:
             return True
         elif (kwargs.get('loose') and
-                self.lemma_manager().lexical_sort() ==\
+                self.lemma_manager().lexical_sort() ==
                 self.headword_manager().lexical_sort()):
             return True
         else:
@@ -171,17 +170,14 @@ class Sense(SemanticComponent):
     #   has the feature being tested for.
     #============================================================
 
+    def is_in_sensesect(self):
+        return any([a.tag == 'senseSect' for a in self.ancestor_nodes()])
+
     def is_in_lemsect(self):
-        if any([a.tag == 'lemSect' for a in self.ancestor_nodes()]):
-            return True
-        else:
-            return False
+        return any([a.tag == 'lemSect' for a in self.ancestor_nodes()])
 
     def is_in_revsect(self):
-        if any([a.tag == 'revSect' for a in self.ancestor_nodes()]):
-            return True
-        else:
-            return False
+        return any([a.tag == 'revSect' for a in self.ancestor_nodes()])
 
     def is_subentry(self):
         return self.tag == 'sub'
@@ -204,9 +200,9 @@ class Sense(SemanticComponent):
         Return True if this is a derivative subentry.
         """
         if (self.is_subentry() and
-            any([ancestor.tag == 'lemSect' and
-                 ancestor.get('type') == 'Derivatives'
-                 for ancestor in self.ancestor_nodes()])):
+                any([ancestor.tag == 'lemSect' and
+                    ancestor.get('type') == 'Derivatives'
+                    for ancestor in self.ancestor_nodes()])):
             return True
         else:
             return False
@@ -233,17 +229,11 @@ class Sense(SemanticComponent):
             return False
 
     def is_phrase(self):
-        if (self.primary_wordclass.source == 'phrase' or
-            self.lemma_manager().is_phrasal()):
-            return True
-        else:
-            return False
+        return (self.primary_wordclass.source == 'phrase' or
+                self.lemma_manager().is_phrasal())
 
     def is_simple(self):
-        if self.is_sublemma() or self.is_phrase():
-            return False
-        else:
-            return True
+        return not self.is_sublemma() and not self.is_phrase()
 
     def is_figurative(self):
         """
@@ -253,12 +243,10 @@ class Sense(SemanticComponent):
         """
         labels = self.node.find('./labels')
         if labels is not None:
-            labels = etree.tostring(labels,
-                                    method='text',
-                                    encoding='unicode')
+            labels = etree.tounicode(labels, method='text')
             if ('fig.' in labels and
-                not 'also fig.' in labels and
-                not 'and fig.' in labels):
+                    not 'also fig.' in labels and
+                    not 'and fig.' in labels):
                 return True
         if len(self.definition()) > 10:
             j = int(len(self.definition()) * 0.5)
@@ -267,8 +255,8 @@ class Sense(SemanticComponent):
             halfdef = ' ' + self.definition()
         halfdef = halfdef.split('; ')[0]
         if (' fig.' in halfdef and
-            not 'also fig.' in halfdef and
-            not 'and fig.' in halfdef):
+                not 'also fig.' in halfdef and
+                not 'and fig.' in halfdef):
             return True
         if any([marker in halfdef for marker in FIG_INDICATORS]):
             return True
@@ -277,8 +265,8 @@ class Sense(SemanticComponent):
             if any([marker in header for marker in FIG_INDICATORS]):
                 return True
             if ('fig.' in header and
-                not 'also fig.' in header and
-                not 'and fig.' in header):
+                    not 'also fig.' in header and
+                    not 'and fig.' in header):
                 return True
         return False
 
@@ -299,13 +287,11 @@ class Sense(SemanticComponent):
         'see'-type cross-reference but no quotations);
         otherwise return False.
         """
-        if (self.num_quotations() == 0 and
+        xrefs = self.definition_manager().cross_references()
+        return (self.num_quotations() == 0 and
                 not self.has_shared_quotations() and
-                self.definition_manager().cross_references() and
-                self.definition_manager().cross_references()[0].type == 'see'):
-            return True
-        else:
-            return False
+                xrefs and
+                xrefs[0].type == 'see')
 
     #====================================================
     # Thesaurus-related functions

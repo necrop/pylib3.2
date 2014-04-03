@@ -292,3 +292,45 @@ class Entry(MultiSenseComponent):
             else:
                 largest = max(blocks, key=lambda block: block.num_quotations())
                 largest.num_quotations_adjusted += delta
+
+    def check_revised_status(self):
+        """
+        Rechecks whether the entry really does seem to be unrevised.
+
+        This can be useful when working with entries which may be in
+        revision; since these are essentially revised, but won't yet
+        be formally registered as such (i.e. won't have 'third edition'
+        in the publication statement.
+
+        We test the entry by looking for senses with last dates after 1950.
+        If these predominate, we take the entry to be revised.
+
+        If you're going to do this, do it as soon as possible after
+        initializing the Entry object, to avoid the risk that the
+        revision status originally assigned to the entry has already
+        propagated out to child blocks, senses, etc.
+        """
+        # Don't bother if the entry *is* registered as revised
+        if self.is_revised:
+            return
+        # Don't both if the entry is obsolete - it might be revised, but
+        #  we'll have no way of telling.
+        if self.is_marked_obsolete():
+            return
+        relevant_senses = [s for s in self.sensesect_senses()
+                           if not s.is_marked_obsolete()]
+        if len(relevant_senses) >= 3:
+            revised, unrevised = (0, 0)
+            for sense in relevant_senses:
+                if sense.date().end > 1950:
+                    revised += 1
+                else:
+                    unrevised +=1
+            if revised > unrevised:
+                self.is_revised = True
+
+                # Now that we've changed the entry's revised status,
+                #  we have to delete any cached senses, since these will
+                #  already have been marked with the original status
+                #  inherited from the entry
+                self.delete_senses()

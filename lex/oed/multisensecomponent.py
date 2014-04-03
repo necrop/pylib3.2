@@ -34,6 +34,9 @@ class MultiSenseComponent(SemanticComponent):
                     sense.set_obsolete_marker(True)
         return self._senses
 
+    def delete_senses(self):
+        del self._senses
+
     def current_senses(self):
         return [s for s in self.senses() if not s.is_marked_obsolete()]
 

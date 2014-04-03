@@ -54,7 +54,7 @@ def store_content(content_dir):
 
     # Store the lemmas for each thesaurus instance (using
     #  refentry+refid+classid as the identifier)
-    lemmas = _cache_thesaurus_lemmas(content_dir)
+    lemmas = {}  # = _cache_thesaurus_lemmas(content_dir)
 
     from lex.entryiterator import EntryIterator
     iterator = EntryIterator(dictType='oed',
@@ -62,6 +62,7 @@ def store_content(content_dir):
                              verbosity='low')
     buffer_size = 0
     for entry in iterator.iterate():
+        entry.check_revised_status()
         for block in entry.s1blocks():
             block.share_quotations()
             entry_size = block.weighted_size()
@@ -69,14 +70,14 @@ def store_content(content_dir):
             senses.sort(key=_sortable_date)
             for i, s in enumerate(senses):
                 records = _prepare_records(s, entry.id, entry.node_id(),
-                                           lemmas, i + 1, entry_size)
+                                           lemmas, i + 1, entry_size,)
                 for r in records:
                     DB_SESSION.add(r)
                     buffer_size += 1
         for s in [s for s in entry.senses() if not s.is_in_sensesect()
                   and not s.is_xref_sense()]:
             records = _prepare_records(s, entry.id, entry.node_id(),
-                                       lemmas, 5, 1.0)
+                                       lemmas, 5, 1.0,)
             for r in records:
                 DB_SESSION.add(r)
                 buffer_size += 1
@@ -165,7 +166,8 @@ def _cache_thesaurus_lemmas(content_dir):
 
 
 def _prepare_records(sense, entry_id, entry_lexid, lemmas, count, entry_size):
-    sense_size = sense.weighted_size()
+    sense_size = sense.weighted_size(revised=sense.is_revised)
+
     if sense.date().end and sense.date().end < 1750:
         sense_size *= 0.5
     elif sense.date().end and sense.date().end < 1600:
@@ -178,8 +180,10 @@ def _prepare_records(sense, entry_id, entry_lexid, lemmas, count, entry_size):
         sense_size *= 0.8
     if sense.is_current_sense():
         sense_size += 5
-    # Downscore supplement senses
+    # Downscore supplement senses in unrevised entries
     if sense.is_supplement_sense():
+        sense_size *= 0.5
+    if _is_heavily_deprecated(sense):
         sense_size *= 0.5
     if _is_deprecated(sense):
         sense_size *= 0.8
@@ -237,13 +241,19 @@ def _prepare_records(sense, entry_id, entry_lexid, lemmas, count, entry_size):
     return records
 
 
+def _is_heavily_deprecated(sense):
+    if (sense.has_rare_indicator() or
+            sense.is_grammatically_atypical() or
+            sense.has_phrasal_indicator()):
+        return True
+    else:
+        return False
+
+
 def _is_deprecated(sense):
     if (sense.characteristic_list('usage') or
             sense.is_regional() or
-            sense.is_figurative() or
-            sense.has_rare_indicator() or
-            sense.is_grammatically_atypical() or
-            sense.has_phrasal_indicator()):
+            sense.is_figurative()):
         return True
     else:
         return False

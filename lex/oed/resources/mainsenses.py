@@ -365,6 +365,7 @@ def store_main_senses(**kwargs):
 
         doc = etree.Element('entries')
         for entry in iterator.iterate():
+            entry.check_revised_status()
             entry_node = etree.SubElement(doc, 'e',
                                           refentry=entry.id,)
             label_node = etree.SubElement(entry_node, 'label')

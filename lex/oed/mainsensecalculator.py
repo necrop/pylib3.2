@@ -1,60 +1,4 @@
 
-import re
-
-CURRENT_SENSE_INDICATORS = {
-    'current usual sense', 'now the usual sense',
-    '(the usual sense', 'most usual sense',
-    'more usual sense', 'usual modern sense', 'ordinary modern sense',
-    'prevailing modern sense', 'chief modern sense',
-    'most frequent modern use', 'ordinary current sense',
-    'now the most common sense', 'leading sense', 'leading current sense',
-    'now the most frequent sense', 'now the ordinary sense',
-    'the current sense', 'the chief current sense', 'main current sense',
-    'the prevailing sense', 'the usual current sense'
-}
-RARE_INDICATORS = (
-    re.compile(r'now only [a-z]+\.?(| (or|and) [a-z]+\.?)$', re.I),
-    re.compile(r'now (|chiefly )(rare|hist|arch|regional|dial)\.*(| (and|or) [a-z]+\.?)$', re.I),
-    re.compile(r'[( ](rare|hist|arch|regional)\.?\)\.?$', re.I),
-    re.compile(r'now (rare|hist|arch|regional|dial)\.? (exc\.|except) [a-z -]+\.$', re.I),
-    re.compile(r'(\.| and| or| exc\.) (rare|hist|arch|regional|dial)\.*$', re.I),
-    re.compile(r'(rare|hist\.|arch\.|dial\.) or obs\.$', re.I),
-    re.compile(r'perh\. obs[.)]*$', re.I),
-    re.compile(r' (obs\.|rare|hist\.|arch\.|regional|dial\.) exc\. (|in )[a-z]+\.?(| [a-z]+\.?)$', re.I),
-    re.compile(r'obs\. exc\. [a-z]+\.?(| (or|and) [a-z]+\.?)$', re.I),
-)
-EXTENDED_USE_INDICATORS = (
-    re.compile('^in (proverb|figurative|fig\.|extended)', re.I),
-    re.compile('^(transf|fig)\. ', re.I),
-    re.compile('^(proverb|hence[: ])', re.I),
-)
-ATTRIB_INDICATOR = re.compile(r'^(|gen\. |general )(attrib\.|attributive)', re.I)
-PHRASAL_INDICATOR = re.compile(r'^(in |)(phrase|compound)', re.I)
-
-
-def has_current_sense_indicator(sense):
-    definition = sense.definition().lower()
-    headers = ''.join([h.lower() for h in sense.header_strings()])
-    if any([marker in definition or marker in headers
-            for marker in CURRENT_SENSE_INDICATORS]):
-        return True
-    else:
-        return False
-
-
-def has_rare_indicator(sense):
-    definition = sense.definition()
-    definition2 = re.sub(r'\([^()]+\)\.?$', '', definition)
-    definition2 = definition2.strip()
-    if any([pattern.search(definition) for pattern in RARE_INDICATORS]):
-        return True
-    elif (definition2 != definition and
-            any([pattern.search(definition2) for pattern in RARE_INDICATORS])):
-        return True
-    else:
-        return False
-
-
 def calculate_main_sense(block):
     # Determine whether this block is revised or not (which matters
     #  if we have to do weighted-size calculations)
@@ -77,14 +21,6 @@ def calculate_main_sense(block):
         # Count (adjusted) quotes in each sense - use as a proxy score
         sense.qcount = len(sense.thinned_year_list(revised=revised))
         sense.marked = False
-        sense.definition_start1 = sense.definition_manager().text(
-            with_header=False,
-            length=30)
-        sense.definition_start2 = sense.definition_manager().text(
-            with_header=True,
-            length=30)
-        if sense.definition_start1 == sense.definition_start2:
-            sense.definition_start2 = None
     senses = _downscore_extended_uses(senses)
     senses = _downscore_supplement_senses(senses, revised)
     num_quotations = sum([s.qcount for s in senses])
@@ -100,7 +36,7 @@ def calculate_main_sense(block):
                                      block.primary_wordclass().penn)
 
     # Remove minor senses to leave large senses only
-    large_senses = _remove_minor_senses(senses_filtered, revised)
+    large_senses = _remove_minor_senses(senses_filtered)
     large_senses = _remove_low_grade_senses(large_senses, primary_s2_senses)
 
     ranking = []
@@ -111,7 +47,7 @@ def calculate_main_sense(block):
         # Check if any of the remaining senses are explicitly indicated as
         #  the current sense
         for sense in senses_filtered:
-            if has_current_sense_indicator(sense):
+            if sense.has_current_sense_indicator():
                 sense.marked = True
                 marked_main_sense = sense
                 break
@@ -136,11 +72,7 @@ def calculate_main_sense(block):
 
 
 def _remove_nonmatching_senses(senses):
-    senses = [s for s in senses if
-              not PHRASAL_INDICATOR.search(s.definition_start1)]
-    senses = [s for s in senses if
-              not s.definition_start2 or
-              not PHRASAL_INDICATOR.search(s.definition_start2)]
+    senses = [s for s in senses if not s.has_phrasal_indicator()]
     return [s for s in senses if
             not s.is_in_lemsect() and
             s.lemma_matches_headword(loose=True)]
@@ -159,20 +91,8 @@ def _remove_obsolete_senses(senses, revised):
 
 
 def _remove_attrib(senses, wordclass):
-    if wordclass in ('NN', 'JJ'):
-        senses2 = []
-        for sense in senses:
-            definition = sense.definition_start1
-            if sense.dict_order == 0:
-                pass
-            elif wordclass == 'NN' and ATTRIB_INDICATOR.search(definition):
-                continue
-            elif wordclass == 'JJ' and definition.startswith('absol.'):
-                continue
-            senses2.append(sense)
-        return senses2
-    else:
-        return senses
+    return [s for s in senses if s.primary_wordclass().penn == wordclass
+            and not s.is_grammatically_atypical()]
 
 
 def _downscore_extended_uses(senses):
@@ -180,11 +100,8 @@ def _downscore_extended_uses(senses):
     If a sense is figurative, extended, proverbial, etc., we downscore it -2.
     """
     for sense in senses:
-        for pattern in EXTENDED_USE_INDICATORS:
-            if (pattern.search(sense.definition_start1) or
-                    (sense.definition_start2 and pattern.search(sense.definition_start2))):
-                sense.qcount -= 2
-                break
+        if sense.is_figurative():
+            sense.qcount -= 2
     return senses
 
 
@@ -195,14 +112,14 @@ def _downscore_supplement_senses(senses, revised):
     """
     if not revised:
         for sense in senses:
-            if sense.end > 1950:
+            if sense.is_supplement_sense():
                 sense.qcount -= 2
     return senses
 
 
-def _remove_minor_senses(senses, revised):
+def _remove_minor_senses(senses):
     # Remove senses with 'now rare' etc.
-    large_senses = [s for s in senses if not has_rare_indicator(s)]
+    large_senses = [s for s in senses if not s.has_rare_indicator()]
 
     # Remove below-average size senses
     if len(large_senses) >= 3:

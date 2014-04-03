@@ -4,14 +4,42 @@ Sense -- OED sense unit (sense or subentry)
 @author: James McCracken
 """
 
-from lxml import etree  # @UnresolvedImport
+import re
 
 from lex.oed.semanticcomponent import SemanticComponent
 from lex.lemma import Lemma
-from lex.oed.mainsensecalculator import has_current_sense_indicator
 
-FIG_INDICATORS = {'allusive', 'extended use', 'transferred',
-                  'transf.', 'figurative'}
+CURRENT_SENSE_INDICATORS = {
+    'current usual sense', 'now the usual sense',
+    '(the usual sense', 'most usual sense',
+    'more usual sense', 'usual modern sense', 'ordinary modern sense',
+    'prevailing modern sense', 'chief modern sense',
+    'most frequent modern use', 'ordinary current sense',
+    'now the most common sense', 'leading sense', 'leading current sense',
+    'now the most frequent sense', 'now the ordinary sense',
+    'the current sense', 'the chief current sense', 'main current sense',
+    'the prevailing sense', 'the usual current sense'
+}
+RARE_INDICATORS = (
+    re.compile(r'now only [a-z]+\.?(| (or|and) [a-z]+\.?)$', re.I),
+    re.compile(r'now (|chiefly )(rare|hist|arch|regional|dial)\.*(| (and|or) [a-z]+\.?)$', re.I),
+    re.compile(r'[( ](rare|hist|arch|regional)\.?\)\.?$', re.I),
+    re.compile(r'now (rare|hist|arch|regional|dial)\.? (exc\.|except) [a-z -]+\.$', re.I),
+    re.compile(r'(\.| and| or| exc\.) (rare|hist|arch|regional|dial)\.*$', re.I),
+    re.compile(r'(rare|hist\.|arch\.|dial\.) or obs\.$', re.I),
+    re.compile(r'perh\. obs[.)]*$', re.I),
+    re.compile(r' (obs\.|rare|hist\.|arch\.|regional|dial\.) exc\. (|in )[a-z]+\.?(| [a-z]+\.?)$', re.I),
+    re.compile(r'obs\. exc\. [a-z]+\.?(| (or|and) [a-z]+\.?)$', re.I),
+)
+EXTENDED_USE_INDICATORS = (
+    re.compile('^in (proverb|figurative|fig\.|extended)', re.I),
+    re.compile('^(transf|fig)\. ', re.I),
+    re.compile('^(proverb|hence[: ])', re.I),
+)
+ATTRIB_INDICATOR = re.compile(r'^(|gen\. |general )(attrib\.|attributive)', re.I)
+PHRASAL_INDICATOR = re.compile(r'^(in |)(phrase|compound)', re.I)
+REGIONAL = {'Scotland', 'Ireland', 'Northern England', 'Caribbean',
+            'India', 'Australia', 'New Zealand', 'Africa'}
 
 
 class Sense(SemanticComponent):
@@ -241,36 +269,15 @@ class Sense(SemanticComponent):
         suggest that this sense is figurative or extended.
         Returns False otherwise.
         """
-        labels = self.node.find('./labels')
-        if labels is not None:
-            labels = etree.tounicode(labels, method='text')
-            if ('fig.' in labels and
-                    not 'also fig.' in labels and
-                    not 'and fig.' in labels):
-                return True
-        if len(self.definition()) > 10:
-            j = int(len(self.definition()) * 0.5)
-            halfdef = ' ' + self.definition()[0:j]
+        definition1 = self.definition_manager().text_start()
+        definition2 = self.definition_manager().text_start(with_header=True)
+        if any([pattern.search(definition1) or pattern.search(definition2)
+                for pattern in EXTENDED_USE_INDICATORS]):
+            return True
         else:
-            halfdef = ' ' + self.definition()
-        halfdef = halfdef.split('; ')[0]
-        if (' fig.' in halfdef and
-                not 'also fig.' in halfdef and
-                not 'and fig.' in halfdef):
-            return True
-        if any([marker in halfdef for marker in FIG_INDICATORS]):
-            return True
-        for header in self.header_strings():
-            header = header.lower()
-            if any([marker in header for marker in FIG_INDICATORS]):
-                return True
-            if ('fig.' in header and
-                    not 'also fig.' in header and
-                    not 'and fig.' in header):
-                return True
-        return False
+            return False
 
-    def is_current_sense(self):
+    def has_current_sense_indicator(self):
         """
         Test the definition for markers indicating that this is the
         prevailing modern sense. Returns True if such a marker is found,
@@ -279,7 +286,72 @@ class Sense(SemanticComponent):
         False does not necessarily mean that this is *not* the prevailing
         modern sense, just that it's not explicitly marked as such.
         """
-        return has_current_sense_indicator(self)
+        definition = self.definition().lower()
+        headers = ''.join([h.lower() for h in self.header_strings()])
+        if any([marker in definition or marker in headers
+                for marker in CURRENT_SENSE_INDICATORS]):
+            return True
+        else:
+            return False
+
+    is_current_sense = has_current_sense_indicator
+
+    def has_rare_indicator(self):
+        definition1 = self.definition_manager().text_start()
+        definition2 = re.sub(r'\([^()]+\)\.?$', '', definition1)
+        definition2 = definition2.strip()
+        if any([pattern.search(definition1) for pattern in RARE_INDICATORS]):
+            return True
+        elif (definition2 != definition1 and
+                any([pattern.search(definition2) for pattern in RARE_INDICATORS])):
+            return True
+        else:
+            return False
+
+    def is_grammatically_atypical(self):
+        if (self.primary_wordclass().penn == 'NN' and
+                self.has_attributive_indicator()):
+            return True
+        elif (self.primary_wordclass().penn == 'JJ' and
+                self.has_absol_indicator()):
+            return True
+        else:
+            return False
+
+    def has_attributive_indicator(self):
+        if ATTRIB_INDICATOR.search(self.definition()):
+            return True
+        else:
+            return False
+
+    def has_absol_indicator(self):
+        return self.definition().startswith('absol.')
+
+    def is_supplement_sense(self):
+        """
+        Return True if this appears to be a supplement sense in an
+        unrevised OED1 entry
+        """
+        if not self.is_revised and self.date().end > 1950:
+            return True
+        else:
+            return False
+
+    def is_regional(self):
+        regions = set(self.characteristic_list('region'))
+        if regions.intersection(REGIONAL):
+            return True
+        else:
+            return False
+
+    def has_phrasal_indicator(self):
+        definition1 = self.definition_manager().text_start()
+        definition2 = self.definition_manager().text_start(with_header=True)
+        if (PHRASAL_INDICATOR.search(definition1) or
+                PHRASAL_INDICATOR.search(definition2)):
+            return True
+        else:
+            return False
 
     def is_xref_sense(self):
         """

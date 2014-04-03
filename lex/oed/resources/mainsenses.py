@@ -310,7 +310,7 @@ def _parse_entry(entry, with_definition, max_senses):
             num_large_senses,
             num_quotations,
             [],
-            )
+        )
 
         for sense_node in s1_node.findall('./sense'):
             sense_id = int(sense_node.get('refid'))
@@ -333,7 +333,7 @@ def _parse_entry(entry, with_definition, max_senses):
                 marked,
                 definition,
                 thes_ids,
-                )
+            )
             block.senses.append(sense)
 
         while len(block.senses) > max_senses:
@@ -351,8 +351,8 @@ def store_main_senses(**kwargs):
     Store main-sense data for OED entries as XML documents.
     """
     from lex.entryiterator import EntryIterator
-    oed_dir = kwargs.get('oedDir') or DEFAULT_INPUT
-    out_dir = kwargs.get('outDir') or DEFAULT_OUTPUT
+    oed_dir = kwargs.get('oed_dir') or DEFAULT_INPUT
+    out_dir = kwargs.get('out_dir') or DEFAULT_OUTPUT
 
     for letter in LETTERS:
         print('Collecting main-sense data in %s...' % letter)
@@ -377,7 +377,7 @@ def store_main_senses(**kwargs):
                     calculate_main_sense(block)
 
                 if ranking:
-                    wordclass = block.primary_wordclass().penn or'null'
+                    wordclass = block.primary_wordclass().penn or 'null'
                     num_senses = len(block.senses())
                     s1_node = etree.SubElement(entry_node, 's1',
                         wordclass=wordclass,
@@ -402,9 +402,7 @@ def store_main_senses(**kwargs):
                             sense_node.set('thesaurus', thes_links)
 
         with open(os.path.join(out_dir, letter + '.xml'), 'w') as filehandle:
-            filehandle.write(etree.tostring(doc,
-                                            pretty_print=True,
-                                            encoding='unicode'))
+            filehandle.write(etree.tounicode(doc, pretty_print=True))
 
 if __name__ == '__main__':
     store_main_senses()

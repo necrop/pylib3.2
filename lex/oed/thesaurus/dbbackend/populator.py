@@ -49,27 +49,6 @@ def store_taxonomy(tax_dir):
 
 
 def store_content(content_dir):
-    def sortable_date(sense):
-        year = None
-        try:
-            sense.shared
-        except AttributeError:
-            pass
-        else:
-            if sense.shared and sense.quotations():
-                for q in sense.quotations():
-                    if not q.is_bracketed():
-                        year = q.year()
-                        break
-        if year is None:
-            year = sense.date().start
-        if year is None or year < 500:
-            return 2000
-        elif year < 1100:
-            return 1100
-        else:
-            return year
-
     ThesInstance.__table__.drop(DB_ENGINE, checkfirst=True)
     ThesInstance.__table__.create(DB_ENGINE, checkfirst=True)
 
@@ -87,16 +66,17 @@ def store_content(content_dir):
             block.share_quotations()
             entry_size = block.weighted_size()
             senses = [s for s in block.senses() if not s.is_xref_sense()]
-            senses.sort(key=sortable_date)
+            senses.sort(key=_sortable_date)
             for i, s in enumerate(senses):
                 records = _prepare_records(s, entry.id, entry.node_id(),
                                            lemmas, i + 1, entry_size)
                 for r in records:
                     DB_SESSION.add(r)
                     buffer_size += 1
-        for s in [s for s in entry.senses() if (s.is_subentry() or
-                  s.is_in_revsect()) and not s.is_xref_sense()]:
-            records = _prepare_records(s, entry.id, entry.node_id(), lemmas, 5, 1.0)
+        for s in [s for s in entry.senses() if not s.is_in_sensesect()
+                  and not s.is_xref_sense()]:
+            records = _prepare_records(s, entry.id, entry.node_id(),
+                                       lemmas, 5, 1.0)
             for r in records:
                 DB_SESSION.add(r)
                 buffer_size += 1
@@ -115,8 +95,8 @@ def store_superordinates(superordinates_dir):
     for letter in string.ascii_lowercase:
         print('\tPopulating superordinate database for %s...' % letter)
         FILEPATH = os.path.join(superordinates_dir, letter + '.csv')
-        with open(FILEPATH, 'r') as fh:
-            csvreader = csv.reader(fh)
+        with open(FILEPATH, 'r') as filehandle:
+            csvreader = csv.reader(filehandle)
             for row in csvreader:
                 superordinate = row.pop(0)
                 total = int(row.pop(0))
@@ -198,6 +178,11 @@ def _prepare_records(sense, entry_id, entry_lexid, lemmas, count, entry_size):
         sense_size *= 0.8
     if sense.is_current_sense():
         sense_size += 5
+    # Downscore supplement senses
+    if sense.is_supplement_sense():
+        sense_size *= 0.5
+    if _is_deprecated(sense):
+        sense_size *= 0.8
 
     refid_alt = []
     if ((sense.is_subentry() or sense.is_subentry_like()) and
@@ -253,17 +238,34 @@ def _prepare_records(sense, entry_id, entry_lexid, lemmas, count, entry_size):
 
 
 def _is_deprecated(sense):
-    if sense.characteristic_list('usage'):
+    if (sense.characteristic_list('usage') or
+            sense.is_regional() or
+            sense.is_figurative() or
+            sense.has_rare_indicator() or
+            sense.is_grammatically_atypical() or
+            sense.has_phrasal_indicator()):
         return True
-    for r in sense.characteristic_list('region'):
-        for place in ('Scotland', 'Ireland', 'Northern England', 'Caribbean',
-                      'India', 'Australia', 'New Zealand', 'Africa'):
-            if place in r:
-                return True
-    if sense.is_figurative():
-        return True
-    if sense.primary_wordclass().penn == 'NN':
-        d = sense.definition().lower()
-        if d.startswith('attrib') or d.startswith('also attrib'):
-            return True
-    return False
+    else:
+        return False
+
+
+def _sortable_date(sense):
+    year = None
+    try:
+        sense.shared
+    except AttributeError:
+        pass
+    else:
+        if sense.shared and sense.quotations():
+            for q in sense.quotations():
+                if not q.is_bracketed():
+                    year = q.year()
+                    break
+    if year is None:
+        year = sense.date().start
+    if year is None or year < 500:
+        return 2000
+    elif year < 1100:
+        return 1100
+    else:
+        return year

@@ -177,7 +177,7 @@ def ranked_search(**kwargs):
             # Filter to senses from the largest entry only
             candidates.sort(key=lambda i: i.entry_size, reverse=True)
             candidates = [instance for instance in candidates
-                if instance.refentry == candidates[0].refentry]
+                          if instance.refentry == candidates[0].refentry]
 
         # Sort so that the highest-rated is top
         candidates.sort(key=lambda i: i.branch_size(), reverse=True)
@@ -187,9 +187,9 @@ def ranked_search(**kwargs):
             # Move any instances matching the promoted refid
             #  to the top of the list
             promotion = [instance for instance in candidates
-                if instance.refid == promoted_refid]
+                         if instance.refid == promoted_refid]
             candidates = [instance for instance in candidates
-                if instance.refid != promoted_refid]
+                          if instance.refid != promoted_refid]
             # Make sure that promoted instances have a higher rating
             #  than the instance that was previously top
             if candidates:

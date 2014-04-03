@@ -107,9 +107,8 @@ class Quotation(OedComponent):
             return self._text
         except AttributeError:
             if self.node.find('.//qt') is not None:
-                self._text = etree.tostring(self.node.find('.//qt'),
-                                            method='text',
-                                            encoding='unicode')
+                self._text = etree.tounicode(self.node.find('.//qt'),
+                                             method='text')
             else:
                 self._text = None
             return self._text
@@ -326,9 +325,8 @@ class Quotation(OedComponent):
             if self._bibmain() is not None:
                 tnode = self._bibmain().find('.//w')
                 if tnode is not None:
-                    text = etree.tostring(tnode,
-                                          method='text',
-                                          encoding='unicode')
+                    text = etree.tounicode(tnode,
+                                           method='text')
                     self._title_forms.append(text)
                     if tnode.get('ch_fullTitle') is not None:
                         self._title_forms.extend(

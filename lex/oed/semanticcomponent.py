@@ -211,6 +211,26 @@ class SemanticComponent(OedComponent):
                                              key=lambda q: q.year())
             return self._quotations_sorted
 
+    def first_quotation(self):
+        """
+        Return the (chronologically) first quotation, if any;
+        return None if not quotations.
+        """
+        try:
+            return self.quotations_sorted()[0]
+        except IndexError:
+            return None
+
+    def last_quotation(self):
+        """
+        Return the (chronologically) last quotation, if any;
+        return None if not quotations.
+        """
+        try:
+            return self.quotations_sorted()[-1]
+        except IndexError:
+            return None
+
     def num_quotations(self, force_recount=False):
         """
         Return a count of all the quotations in the component.

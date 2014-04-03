@@ -183,6 +183,12 @@ class Definition(object):
         else:
             return _truncate(self._text_versions[with_header], length)
 
+    def text_start(self, with_header=False):
+        """
+        Just the first 30 characters of the definition
+        """
+        return self.text(length=30, with_header=with_header)
+
     def is_truncated(self, length=None, with_header=True):
         """
         Return True if the given length means that the definition will

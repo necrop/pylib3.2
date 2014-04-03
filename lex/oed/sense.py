@@ -338,7 +338,7 @@ class Sense(SemanticComponent):
             return False
 
     def is_regional(self):
-        regions = set(self.characteristic_list('region'))
+        regions = set(self.characteristic_nodes('region'))
         if regions.intersection(REGIONAL):
             return True
         else:

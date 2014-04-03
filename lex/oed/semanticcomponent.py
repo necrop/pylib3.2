@@ -361,6 +361,21 @@ class SemanticComponent(OedComponent):
         """
         return [c.split('/')[-1] for c in self.characteristic_list(att)]
 
+    def characteristic_nodes(self, att):
+        """
+        Return all the nodes from a set of characteristics.
+
+        Arguments:
+         - Name of the has_feature (with or without the 'ch_' prefix)
+
+        Returns a set (empty if the characteristic does not exist)
+        """
+        nodes = set()
+        for c in self.characteristic_list(att):
+            for node in c.split('/'):
+                nodes.add(node)
+        return nodes
+
     def characteristic_heads(self, att):
         """
         Return the head nodes from a set of characteristic.

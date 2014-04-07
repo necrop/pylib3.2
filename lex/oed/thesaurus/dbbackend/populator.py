@@ -63,7 +63,7 @@ def store_content(content_dir):
 
     # Store the lemmas for each thesaurus instance (using
     #  refentry+refid+classid as the identifier)
-    lemmas = _cache_thesaurus_lemmas(content_dir)
+    lemmas = {}  # = _cache_thesaurus_lemmas(content_dir)
 
     from lex.entryiterator import EntryIterator
     iterator = EntryIterator(dictType='oed',

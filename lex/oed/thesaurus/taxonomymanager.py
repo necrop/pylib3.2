@@ -26,7 +26,7 @@ class TaxonomyManager(object):
         self.verbosity = kwargs.get('verbosity', None)
         self.fix_ligatures = kwargs.get('fixLigatures', True)
         self.lazyload = kwargs.get('lazy', False)
-        self._file = None
+        self._files = None
         self._classmap = None
         self._load_data()
 
@@ -34,25 +34,25 @@ class TaxonomyManager(object):
         """
         Return the list of files that will be processed.
         """
-        if self._file is None:
+        if self._files is None:
             if isinstance(self.path, list):
-                self._file = self.path[:]
+                self._files = self.path[:]
             elif os.path.isfile(self.path) and self.path.endswith('.xml'):
-                self._file = [self.path, ]
+                self._files = [self.path, ]
             elif os.path.isdir(self.path):
-                self._file = [os.path.join(self.path, fname) for fname in
+                self._files = [os.path.join(self.path, fname) for fname in
                               os.listdir(self.path)]
             else:
-                self._file = []
-            self._file = [f for f in self._file if self._filecheck(f)]
-        return self._file
+                self._files = []
+            self._files = [f for f in self._files if self._filecheck(f)]
+        return self._files
 
-    def _filecheck(self, fname):
+    def _filecheck(self, filepath):
         """
         Check whether a given file is usable -- return True if so,
         otherwise return False.
         """
-        if fname.lower().endswith('.xml'):
+        if filepath.lower().endswith('.xml'):
             return True
         else:
             return False
@@ -94,7 +94,7 @@ class TaxonomyManager(object):
         """
         Return a particular class from the taxonomy, identified by its ID.
 
-        Returns a ThesaurusClass instance, or None if the IDis not found.
+        Returns a ThesaurusClass instance, or None if the ID is not found.
         """
         try:
             class_id = int(class_id)

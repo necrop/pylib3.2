@@ -103,6 +103,4 @@ class ContentIterator(object):
                 filename = os.path.basename(filepath)
                 out_file = os.path.join(self.out_dir, filename)
                 with open(out_file, 'w') as filehandle:
-                    filehandle.write(etree.tostring(doc,
-                                                    pretty_print=True,
-                                                    encoding='unicode'))
+                    filehandle.write(etree.tounicode(doc, pretty_print=True))

@@ -59,11 +59,11 @@ class ThesClass(Base):
     def __hash__(self):
         return int(self.id)
 
-    def signature(self):
+    def signature(self, with_wordclass=True):
         sig = ''
-        if self.wordclass is not None:
+        if self.wordclass and with_wordclass:
             sig += '[' + self.wordclass + '] '
-        if self.label is not None and self.label:
+        if self.label:
             sig += self.label
         return sig.strip()
 
@@ -78,23 +78,40 @@ class ThesClass(Base):
     #========================================================
 
     def breadcrumb_components(self):
+        """
+        Return the list of component strings that will be used to make up
+        the breadcrumb
+        """
         try:
             return self._breadcrumb_components
         except AttributeError:
             self._breadcrumb_components = []
+            # wordclass_seen is sentinel value to make sure we only include
+            #  the wordclass the first time we hit it.
+            wordclass_seen = False
             for ancestor in reversed(self.ancestors()):
-                self._breadcrumb_components.append(ancestor.signature())
+                if wordclass_seen:
+                    component = ancestor.signature(with_wordclass=False)
+                else:
+                    component = ancestor.signature(with_wordclass=True)
+                self._breadcrumb_components.append(component)
+                if ancestor.wordclass:
+                    wordclass_seen = True
+
             return self._breadcrumb_components
 
     def breadcrumb(self):
-        return ' > '.join(self.breadcrumb_components()[1:])
+        if len(self.breadcrumb_components()) <= 3:
+            return ' » '.join(self.breadcrumb_components())
+        else:
+            return ' » '.join(self.breadcrumb_components()[1:])
 
     def breadcrumb_tail(self):
-        return ' > '.join(self.breadcrumb_components()[-3:])
+        return ' » '.join(self.breadcrumb_components()[-3:])
 
     def breadcrumb_short(self):
-        return ' > '.join(self.breadcrumb_components()[1:3]) + ' ... ' + \
-            ' > '.join(self.breadcrumb_components()[-3:])
+        return ' » '.join(self.breadcrumb_components()[1:3]) + ' ... ' + \
+            ' » '.join(self.breadcrumb_components()[-3:])
 
     #========================================================
     # Functions for finding descendants and ancestors

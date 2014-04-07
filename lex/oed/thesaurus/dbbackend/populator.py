@@ -35,6 +35,15 @@ def store_taxonomy(tax_dir):
     ThesClass.__table__.create(DB_ENGINE, checkfirst=True)
 
     tree_manager = TaxonomyManager(dir=tax_dir, lazy=True, verbosity=None)
+
+    # Check that the correct attributes are in place
+    for thesclass in tree_manager.classes[0:100]:
+        if thesclass.size(branch=True) and thesclass.size(branch=False):
+            break
+    else:
+        print('Thesaurus data has no size attributes; exiting.')
+        exit()
+
     for level in range(1, 20):
         classes = [c for c in tree_manager.classes if c.level() == level]
         print(level, len(classes))

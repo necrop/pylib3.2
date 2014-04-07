@@ -118,5 +118,5 @@ def remove_redundant_classes(classes):
 
 
 if __name__ == '__main__':
-    store_taxonomy()
+    #store_taxonomy()
     store_content()

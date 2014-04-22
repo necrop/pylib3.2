@@ -7,7 +7,6 @@ SemanticComponent -- OED semantic component base class
 import string
 import copy
 
-import numpy
 from lxml import etree
 
 from lex.oed.oedcomponent import OedComponent
@@ -183,12 +182,6 @@ class SemanticComponent(OedComponent):
 
         Every quotation in the component, in document order.
         """
-        def is_in_vfsect(quotation):
-            if quotation.node.iterancestors(tag='vfSect'):
-                return True
-            else:
-                return False
-
         try:
             return self._quotations
         except AttributeError:
@@ -197,7 +190,7 @@ class SemanticComponent(OedComponent):
                 self._quotations.extend(qpara.quotations())
             if self.tag == 'e':
                 self._quotations = [q for q in self._quotations
-                                    if not is_in_vfsect(q)]
+                                    if not q.is_in_vfsect()]
             return self._quotations
 
     def quotations_sorted(self):
@@ -231,25 +224,32 @@ class SemanticComponent(OedComponent):
         except IndexError:
             return None
 
-    def num_quotations(self, force_recount=False):
+    def num_quotations(self, force_recount=False, include_derivatives=True):
         """
         Return a count of all the quotations in the component.
         """
-        try:
-            return self._num_quotations
-        except AttributeError:
-            num = 0
-            # To save time, we first try taking the value
-            #  from the ch_numQuotations characteristic
-            if self.characteristic_first('numQuotations') and not force_recount:
-                num = int(self.characteristic_first('numQuotations'))
-            # If we've got a zero value so far, re-check by actually
-            #  counting the quotations
-            if not num:
-                num = len([q for q in self.quotations()
-                            if not q.is_bracketed()])
-            self._num_quotations = num
-            return self._num_quotations
+        if not force_recount:
+            try:
+                return self._num_quotations
+            except AttributeError:
+                pass
+
+        num = 0
+        # To save time, we first try taking the value
+        #  from the ch_numQuotations characteristic
+        if self.characteristic_first('numQuotations') and not force_recount:
+            num = int(self.characteristic_first('numQuotations'))
+        # If we've got a zero value so far, re-check by actually
+        #  counting the quotations
+        if not num and include_derivatives:
+            num = len([q for q in self.quotations()
+                       if not q.is_bracketed()])
+        elif not num:
+            num = len([q for q in self.quotations()
+                       if not q.is_bracketed() and
+                       not q.is_in_derivatives_section()])
+        self._num_quotations = num
+        return self._num_quotations
 
     def insert_quotations(self, new_qparas):
         self._quotation_paragraphs = new_qparas
@@ -258,7 +258,7 @@ class SemanticComponent(OedComponent):
         for has_feature in ('_quotations', '_quotations_sorted',
                             '_num_quotations'):
             try:
-                del(self.__dict__[has_feature])
+                del self.__dict__[has_feature]
             except KeyError:
                 pass
 
@@ -488,7 +488,7 @@ class SemanticComponent(OedComponent):
         """
         self.quotations.extend(other.quotations)
         try:
-            del(self._quotations_sorted)
+            del self._quotations_sorted
         except AttributeError:
             pass
         date1, date2 = self.recompute_dates()
@@ -500,8 +500,8 @@ class SemanticComponent(OedComponent):
         return
 
     def is_cross_reference(self):
-        if (self.num_quotations == 0 and
-            self.definition_manager().is_cross_reference()):
+        if (self.num_quotations() == 0 and
+                self.definition_manager().is_cross_reference()):
             return True
         else:
             return False
@@ -530,49 +530,50 @@ class SemanticComponent(OedComponent):
 
             senses = []
             for qpara in self.quotation_paragraphs():
-                local_years = [q.year() for q in qpara.quotations()
-                               if q.year() and q.year() > 0 and
-                               not q.is_bracketed()]
-                local_years.sort()
-                if local_years:
-                    senses.append(local_years)
+                date_list = [q.year() for q in qpara.quotations()
+                             if q.year() and q.year() > 0 and
+                             not q.is_bracketed()]
+                date_list.sort()
+                if date_list:
+                    senses.append(date_list)
 
             years = []
-            for sense in senses:
+            for date_list in senses:
                 # Thin out to avoid artificial clustering: if two consecutive
                 #  quotations are within x years of each other, skip the second
-                sense2 = []
-                for year in sense:
-                    if not sense2:
+                date_list_modified = []
+                for year in date_list:
+                    if not date_list_modified:
                         pass
-                    elif year < sense2[-1] + 5:
+                    elif year < date_list_modified[-1] + 5:
                         continue
-                    elif 1550 < year < sense2[-1] + THIN_DISTANCE:
+                    elif 1550 < year < date_list_modified[-1] + THIN_DISTANCE:
                         continue
-                    sense2.append(year)
+                    date_list_modified.append(year)
 
                 # Add 'fake' C20 years if it's unrevised and has no C20 quotes
-                if not revised and 1840 < sense2[-1] < 1915:
-                    if len(sense2) <= 2:
+                if not revised and 1840 < date_list_modified[-1] < 1915:
+                    if len(date_list_modified) <= 2:
                         pass
-                    elif len(sense2) <= 4:
-                        sense2.extend((1960,))
-                    elif len(sense2) <= 7:
-                        sense2.extend((1940, 1990))
+                    elif len(date_list_modified) <= 4:
+                        date_list_modified.extend((1960,))
+                    elif len(date_list_modified) <= 7:
+                        date_list_modified.extend((1940, 1990))
                     else:
-                        sense2.extend((1935, 1965, 1990))
+                        date_list_modified.extend((1935, 1965, 1990))
 
                 # Take the midpoint between consecutive dates (to avoid
                 # clustering around last dates, e.g. 1890 or 2000)
-                if len(senses) == 1 or len(sense2) == 1:
-                    sense3 = sense2
+                if len(senses) == 1 or len(date_list_modified) == 1:
+                    date_list_middled = date_list_modified
                 else:
-                    sense3 = []
-                    for i, year in enumerate(sense2):
-                        if i > 0:
-                            average = int(numpy.mean([year, sense2[i - 1]]))
-                            sense3.append(average)
-                years.extend(sense3)
+                    date_list_middled = []
+                    for i, year in enumerate(date_list_modified):
+                        if i == 0:
+                            continue
+                        midpoint = (year + date_list_modified[i-1]) / 2
+                        date_list_middled.append(int(midpoint))
+                years.extend(date_list_middled)
 
             # sort into date order
             years.sort()

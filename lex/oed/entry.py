@@ -52,7 +52,7 @@ class Entry(MultiSenseComponent):
             # If the headword contains internal bracketing, then we
             # uncompress this as two different headwords
             if (len(self._headwords) == 1 and
-                HWBRACKET_PATTERN.search(self._headwords[0].text)):
+                    HWBRACKET_PATTERN.search(self._headwords[0].text)):
                 match = HWBRACKET_PATTERN.search(self._headwords[0].text)
                 hw1 = etree.XML('<hw>%s</hw>' % match.group(1))
                 hw2 = etree.XML('<hw>%s%s</hw>' % (match.group(1),
@@ -334,3 +334,23 @@ class Entry(MultiSenseComponent):
                 #  already have been marked with the original status
                 #  inherited from the entry
                 self.delete_senses()
+
+    def first_published(self):
+        """
+        Return the date of first publication, as given in the publication
+        statement at the end of the entry.
+
+        This may be useful e.g. for assigning dates to unevidenced
+        subentries.
+        """
+        try:
+            return self._first_published
+        except AttributeError:
+            self._first_published = None
+            pub_statements = [etree.tounicode(s, method='text') for s in
+                              self.node.findall('./publicationInfo/pubStatement')]
+            if pub_statements:
+                match = re.search(r'((18|19|20)\d\d)\.?$', pub_statements[-1])
+                if match:
+                    self._first_published = int(match.group(1))
+            return self._first_published

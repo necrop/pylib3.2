@@ -41,6 +41,11 @@ class MmhCache(object):
             for node in doc.findall('//morphSet'):
                 morphset = MorphSet(node=node)
                 MmhCache.cache[morphset.sortcode].append(morphset)
+        filename = os.path.join(IN_DIR, 'corrections.xml')
+        doc = etree.parse(filename)
+        for node in doc.findall('//morphSet'):
+            morphset = MorphSet(node=node)
+            MmhCache.cache[morphset.sortcode].append(morphset)
 
     def cache_size(self):
         return len(MmhCache.cache)

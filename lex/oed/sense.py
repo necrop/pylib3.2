@@ -198,15 +198,6 @@ class Sense(SemanticComponent):
     #   has the feature being tested for.
     #============================================================
 
-    def is_in_sensesect(self):
-        return any([a.tag == 'senseSect' for a in self.ancestor_nodes()])
-
-    def is_in_lemsect(self):
-        return any([a.tag == 'lemSect' for a in self.ancestor_nodes()])
-
-    def is_in_revsect(self):
-        return any([a.tag == 'revSect' for a in self.ancestor_nodes()])
-
     def is_subentry(self):
         return self.tag == 'sub'
 
@@ -227,10 +218,7 @@ class Sense(SemanticComponent):
         """
         Return True if this is a derivative subentry.
         """
-        if (self.is_subentry() and
-                any([ancestor.tag == 'lemSect' and
-                    ancestor.get('type') == 'Derivatives'
-                    for ancestor in self.ancestor_nodes()])):
+        if self.is_subentry() and self.is_in_derivatives_section():
             return True
         else:
             return False
@@ -238,26 +226,26 @@ class Sense(SemanticComponent):
     def subentry_type(self):
         if not self.is_subentry():
             return None
+        elif self.is_in_derivatives_section():
+            return 'derivative'
+        elif self.is_in_compounds_section():
+            return 'compound'
+        elif self.is_in_phrases_section():
+            return 'phrase'
         else:
-            for ancestor_type in [a.get('type').lower() for a in
-                                  self.ancestor_nodes()
-                                  if a.tag == 'lemSect' and a.get('type')]:
-                atype = ancestor_type.rstrip('s').replace('_', ' ')
-                if atype == 'special use':
-                    atype = 'compound'
-                return atype
-        return None
+            return None
 
     def is_sublemma(self):
         if (self.is_subentry() or
-            (self.is_subentry_like() and self.lemma != self.headword) or
-            self.lemma_manager().length() > self.headword_manager().length() + 3):
+                (self.is_subentry_like() and self.lemma != self.headword) or
+                self.lemma_manager().length() > self.headword_manager().length() + 3):
             return True
         else:
             return False
 
     def is_phrase(self):
-        return (self.primary_wordclass.source == 'phrase' or
+        return (self.is_in_phrases_section() or
+                self.primary_wordclass.source == 'phrase' or
                 self.lemma_manager().is_phrasal())
 
     def is_simple(self):
@@ -361,9 +349,9 @@ class Sense(SemanticComponent):
         """
         xrefs = self.definition_manager().cross_references()
         return (self.num_quotations() == 0 and
-                not self.has_shared_quotations() and
-                xrefs and
-                xrefs[0].type == 'see')
+                    not self.has_shared_quotations() and
+                    xrefs and
+                    xrefs[0].type == 'see')
 
     #====================================================
     # Thesaurus-related functions

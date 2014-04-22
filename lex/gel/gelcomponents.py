@@ -57,7 +57,7 @@ class _GelComponent(object):
             return self._date
         except AttributeError:
             date_node = self.node.find('./dateRange')
-            self._date = DateRange(node=date_node)
+            self._date = DateRange(node=date_node, hardEnd=True)
             return self._date
 
     def fuzz_dates(self):
@@ -414,6 +414,9 @@ class MorphSet(_GelComponent):
 
     def is_nonstandard(self):
         return self.is_regional() or self.is_irregular()
+
+    def is_oed_headword(self):
+        return self.attribute('oedHeadword') == 'true'
 
 
 class TypeUnit(_GelComponent):

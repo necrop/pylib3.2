@@ -63,6 +63,12 @@ class Ngram(object):
         self.data = _parse_line(line, int(gramCount))
         self.ranges = {}
 
+    def __repr__(self):
+        return '<Ngram %s %s (%d) (%.2g)>' % (self.lemma,
+                                              self.wordclass,
+                                              self.gram_count,
+                                              self.frequency('1970-2007'))
+
     @property
     def line(self):
         return self.data[0]

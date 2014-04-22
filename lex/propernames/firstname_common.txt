@@ -101,6 +101,7 @@ Bernadette
 Bernard
 Bert
 Bertie
+Bessie
 Beth
 Bethany
 Betsy
@@ -381,6 +382,7 @@ Evan
 Evelyn
 Everett
 Fabian
+Fanny
 Farrah
 Felicia
 Felipe
@@ -861,6 +863,7 @@ Phil
 Philip
 Phillip
 Phyllis
+Polly
 Preston
 Priscilla
 Quentin

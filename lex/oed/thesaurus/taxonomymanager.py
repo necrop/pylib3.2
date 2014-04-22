@@ -41,7 +41,7 @@ class TaxonomyManager(object):
                 self._files = [self.path, ]
             elif os.path.isdir(self.path):
                 self._files = [os.path.join(self.path, fname) for fname in
-                              os.listdir(self.path)]
+                               os.listdir(self.path)]
             else:
                 self._files = []
             self._files = [f for f in self._files if self._filecheck(f)]
@@ -83,7 +83,7 @@ class TaxonomyManager(object):
                             self.classes.append(thesaurus_class)
             else:
                 tree = etree.parse(filename, PARSER)
-                for cnode in tree.findall('class'):
+                for cnode in tree.findall('.//class'):
                     thesaurus_class = ThesaurusClass(cnode)
                     if (self.levels is None or
                             thesaurus_class.level() <= self.levels):

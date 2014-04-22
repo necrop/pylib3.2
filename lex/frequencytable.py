@@ -481,7 +481,7 @@ def _parse_label(label):
         match = ReMatcher(label_lower)
         if match.search(r'^(modern|mod)$'):
             start = 1970
-            end = 2008
+            end = 2007
         elif match.search(r'^(\d{4})-(\d\d)$'):
             start = int(match.group(1))
             end = (int(start / 100) * 100) + int(match.group(2))
@@ -490,7 +490,7 @@ def _parse_label(label):
             end = (int(start / 10) * 10) + int(match.group(2))
         elif match.search(r'^(\d{4})-$'):
             start = int(match.group(1))
-            end = 2008
+            end = 2007
         elif match.search(r'^(\d{4})$'):
             start = end = int(match.group(1))
         else:

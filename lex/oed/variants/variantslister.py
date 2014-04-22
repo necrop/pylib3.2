@@ -43,8 +43,8 @@ class VariantsLister(object):
     """
 
     def __init__(self, **kwargs):
-        self.in_dir = kwargs.get('inDir') or DEFAULT_INPUT
-        self.out_dir = kwargs.get('outDir') or DEFAULT_OUTPUT
+        self.in_dir = kwargs.get('in_dir') or DEFAULT_INPUT
+        self.out_dir = kwargs.get('out_dir') or DEFAULT_OUTPUT
         self.filecount = 0
         self.entry = None
         self.root = None
@@ -142,7 +142,6 @@ class VariantsLister(object):
             else:
                 wordclass = block.primary_wordclass().penn
                 inflection_set = block.primary_wordclass().inflections_max()
-
 
             if wordclass is not None:
                 s1_node = etree.Element('s1',
@@ -247,7 +246,6 @@ class VariantsLister(object):
         self.filecount += 1
         filename = '%04d.xml' % self.filecount
         return os.path.join(self.out_dir, filename)
-
 
 
 if __name__ == '__main__':

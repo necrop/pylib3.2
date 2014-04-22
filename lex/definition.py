@@ -206,12 +206,15 @@ class Definition(object):
         Return True if the definition consists solely or mainly
         of a cross-reference.
         """
-        if re.search(r'^=', self.text()):
+        text = self.text().strip(': .,;()').lower()
+        text2 = re.sub(r'^\(.*?\)', '', self.text()).strip(': .,;()').lower()
+        if text.startswith('=') or text2.startswith('='):
             return True
-        if (re.search('^[Ss]ee ', self.text()) and
-            self.node.find('xr') is not None):
+        elif (self.node.find('xr') is not None and
+                (text.startswith('see ') or text2.startswith('see '))):
             return True
-        return False
+        else:
+            return False
 
     def biodate(self):
         """

@@ -10,6 +10,7 @@ from lex.gbn.ngram import Ngram
 
 DIRECTORY = lexconfig.NGRAMS_TABLES_DIR
 
+
 class TableIterator(object):
 
     """

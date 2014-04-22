@@ -1,32 +1,31 @@
-#-------------------------------------------------------------------------------
-# Name: NgramFinder
-# Purpose:
-#
-# Author: James McCracken
-#
-# Created: 12/01/2012
-#-------------------------------------------------------------------------------
+"""
+NgramFinder - find the ngram for a given word
+"""
 
-import glob
-import re
 import os
 from collections import defaultdict
 
-from .ngram import Ngram
-from ..lemma import Lemma
+from lex import lexconfig
+from lex.gbn.ngram import Ngram
+from lex.lemma import Lemma
+
+DEFAULT_DIR = lexconfig.NGRAMS_TABLES_DIR
+DEFAULT_CACHE_SIZE = 5
+
 
 class NgramFinder(object):
+
     """
+    Find the ngram for a given word
     """
 
     cache = {}
     cache_size = 5
     call_num = 0
 
-    def __init__(self, dir=None, cacheSize=None):
-        if cacheSize is not None and isinstance(cacheSize, int):
-            NgramFinder.cache_size = cacheSize
-        self.dir = dir
+    def __init__(self, **kwargs):
+        self.cache_size = int(kwargs.get('cache_size', DEFAULT_CACHE_SIZE))
+        self.dir = kwargs.get('dir', DEFAULT_DIR)
 
     def find_exact(self, word, wordclass=None):
         if wordclass is None:
@@ -43,10 +42,10 @@ class NgramFinder(object):
         return ngramset
 
     def generic_find(self, word):
-        lemObj = Lemma(word)
-        initial = lemObj.initial
-        prefix = lemObj.prefix
-        dsort = lemObj.dictionary_sort
+        lemma_manager = Lemma(word)
+        initial = lemma_manager.initial()
+        prefix = lemma_manager.prefix()
+        dsort = lemma_manager.lexical_sort()
         if not prefix in NgramFinder.cache:
             self.update_cache(initial, prefix)
         NgramFinder.call_num += 1
@@ -70,10 +69,9 @@ class NgramFinder(object):
 
         for gram_num in (1, 2, 3):
             fname = "%s-%dgram.txt" % (prefix, gram_num)
-            file = os.path.join(self.dir, str(gram_num), initial, fname)
-            if os.path.isfile(file):
-                with open(file, "r") as fh:
-                    for line in fh:
-                        line = line.decode("utf8")
+            filepath = os.path.join(self.dir, str(gram_num), initial, fname)
+            if os.path.isfile(filepath):
+                with open(filepath) as filehandle:
+                    for line in filehandle:
                         n = Ngram(line, gramCount=gram_num)
                         NgramFinder.cache[prefix]["grams"][n.sortcode].append(n)

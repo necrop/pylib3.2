@@ -69,7 +69,7 @@ class EntryIterator(object):
         self.verbosity = kwargs.get('verbosity', None)
         self.dict = kwargs.get('dictType') or kwargs.get('dict_type', None)
         self.path = kwargs.get('path') or _default_source(self.dict)
-        self.fix_ligatures = kwargs.get('fixLigatures', False)
+        self.fix_ligatures = kwargs.get('fixLigatures') or kwargs.get('fix_ligatures', False)
         self.entry_count = 0
 
         if self.dict is not None:
@@ -81,7 +81,7 @@ class EntryIterator(object):
 
         # Probably only used for diagnostics - if you just want to
         # process one or two files in the directory
-        file_filter = kwargs.get('fileFilter', None)
+        file_filter = kwargs.get('fileFilter') or kwargs.get('file_filter', None)
         if file_filter is not None:
             self._filecheck_pattern = re.compile(file_filter)
         else:
@@ -143,7 +143,7 @@ class EntryIterator(object):
             with open(filepath, encoding='utf-8') as filehandle:
                 for line in filehandle:
                     entry = self._parse_line(line)
-                    if entry is not None:
+                    if entry:
                         yield entry
 
     def _parse_line(self, line):

@@ -45,7 +45,6 @@ class DateRange(object):
             self.last_documented = kwargs.get('lastDocumented', None)
             if self.last_documented is not None:
                 self.last_documented = int(self.last_documented)
-            self.hard_enddate = False
             if node.get('startExact'):
                 self.set_exact('start', node.get('startExact'))
                 self.set_exact('end', node.get('endExact'))
@@ -63,12 +62,10 @@ class DateRange(object):
             self.last_documented = kwargs.get('lastDocumented', None)
             self.is_estimated = bool(kwargs.get('estimated', False))
             self.explicit_obs = bool(kwargs.get('obs', False))
-            self.hard_enddate = bool(kwargs.get('hardEnd', False))
 
-        if self.explicit_obs or self.end < 1700:
-            self.assumed_obs = True
-        else:
-            self.assumed_obs = False
+        self.hard_enddate = bool(kwargs.get('hardEnd', False))
+        self.set_assumed_obs()
+
         # Keep track of the original start and end dates
         # (in case self.start and self.end get adjusted later on).
         self.src = {'start': self.start, 'end': self.end}
@@ -128,6 +125,12 @@ class DateRange(object):
 
     projected = projected_end
 
+    def set_assumed_obs(self):
+        if self.explicit_obs or self.end < 1700:
+            self.assumed_obs = True
+        else:
+            self.assumed_obs = False
+
     def span(self):
         """
         Return the span (number of years between start date and
@@ -148,6 +151,7 @@ class DateRange(object):
             self.start = int(value)
         elif year_type == 'end':
             self.end = int(value)
+            self.set_assumed_obs()
 
     def to_xml(self, **kwargs):
         """
@@ -191,7 +195,7 @@ class DateRange(object):
             node.set('obsolete', 'True')
 
         if serialized:
-            return etree.tostring(node, encoding='unicode')
+            return etree.tounicode(node)
         else:
             return node
 
@@ -315,20 +319,20 @@ class DateRange(object):
         """
         # If one date range is a subset of the other
         if (self.start >= other.start and
-            self.projected_end() <= other.projected_end()):
+                self.projected_end() <= other.projected_end()):
             return DateRange(start=self.start, end=self.end, hardEnd=True)
         if (other.start >= self.start and
-            other.projected_end() <= self.projected_end()):
+                other.projected_end() <= self.projected_end()):
             return DateRange(start=other.start, end=other.end, hardEnd=True)
 
         # If there's no overlap at all
         if (self.projected_end() and
-            other.start and
-            self.projected_end() < other.start):
+                other.start and
+                self.projected_end() < other.start):
             return None
         if (self.start and
-            other.projected_end() and
-            self.start > other.projected_end()):
+                other.projected_end() and
+                self.start > other.projected_end()):
             return None
 
         # If one date range overlaps the other

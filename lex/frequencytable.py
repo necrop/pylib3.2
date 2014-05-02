@@ -482,6 +482,9 @@ def _parse_label(label):
         if match.search(r'^(modern|mod)$'):
             start = 1970
             end = 2007
+        elif match.search(r'^(\d{4})-(\d{4})$'):
+            start = int(match.group(1))
+            end = int(match.group(2))
         elif match.search(r'^(\d{4})-(\d\d)$'):
             start = int(match.group(1))
             end = (int(start / 100) * 100) + int(match.group(2))

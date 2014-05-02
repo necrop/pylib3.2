@@ -18,6 +18,9 @@ def parse_html(filepath):
     html_paras = soup.find_all('p')
     paras = []
     for para in html_paras:
+        classes = para.get('class')
+        if classes and set(classes).intersection({'page', 'intro', 'toc'}):
+            continue
         text = ' '.join(para.stripped_strings)
         paras.append(text)
 

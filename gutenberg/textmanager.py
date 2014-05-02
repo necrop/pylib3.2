@@ -16,6 +16,16 @@ class TextManager:
         self._metadata = None
         self._text = None
 
+    @property
+    def metadata(self):
+        if not self._metadata:
+            self._metadata = Metadata(self.metadata_file)
+        return self._metadata
+
+    def citation(self, **kwargs):
+        return self.metadata.citation(**kwargs)
+
+    @property
     def source_file(self):
         html_files = [f for f in os.listdir(self.directory) if
                       f.lower().endswith('.htm') or
@@ -25,16 +35,20 @@ class TextManager:
         except IndexError:
             return None
 
-    def convert_source(self):
-        fillet_file(self.source_file(), self.text_file)
+    def convert_source(self, check_first=True):
+        """
+        Convert the HTML source file to a plain-text file. Returns True
+        once the conversion has been carried out.
 
-    def metadata(self):
-        if not self._metadata:
-            self._metadata = Metadata(self.metadata_file)
-        return self._metadata
-
-    def citation(self, **kwargs):
-        return self.metadata().citation(**kwargs)
+        If the check_first arg is True, the process will first check
+        whether the output text file already exists; if so, no action is taken
+        (the source is not re-converted), and the method returns False.
+        """
+        if check_first and os.path.isfile(self.text_file):
+            return False
+        else:
+            fillet_file(self.source_file, self.text_file)
+            return True
 
     def text(self):
         if self._text is None:

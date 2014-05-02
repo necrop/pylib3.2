@@ -521,24 +521,39 @@ class SemanticComponent(OedComponent):
         Adjusted from actual list of years, (a) to thin out clustering
         and (b) to infer C20 years in the case of unrevised blocks.
 
+        If the 'disregard_obsolete' argument is True, quotation paragraphs
+        in obsolete senses or blocks are skipped.
+
         Returns list of ints (each int being a year)
         """
         try:
             return self._year_list
         except AttributeError:
             revised = kwargs.get('revised', False)
+            disregard_obsolete = kwargs.get('disregard_obsolete')
 
-            senses = []
-            for qpara in self.quotation_paragraphs():
-                date_list = [q.year() for q in qpara.quotations()
-                             if q.year() and q.year() > 0 and
-                             not q.is_bracketed()]
-                date_list.sort()
-                if date_list:
-                    senses.append(date_list)
+            # Build a list of all senses in the block
+            try:
+                senses = self.senses()
+            except AttributeError:
+                # We assume that if self.senses() raises an exception,
+                # self must itself be a sense
+                senses = [self, ]
+            if disregard_obsolete:
+                senses = [s for s in senses if not s.is_marked_obsolete()]
+
+            quote_paras = []
+            for sense in senses:
+                for qpara in sense.quotation_paragraphs():
+                    date_list = [q.year() for q in qpara.quotations()
+                                 if q.year() and q.year() > 0 and
+                                 not q.is_bracketed()]
+                    date_list.sort()
+                    if date_list:
+                        quote_paras.append(date_list)
 
             years = []
-            for date_list in senses:
+            for date_list in quote_paras:
                 # Thin out to avoid artificial clustering: if two consecutive
                 #  quotations are within x years of each other, skip the second
                 date_list_modified = []
@@ -564,7 +579,7 @@ class SemanticComponent(OedComponent):
 
                 # Take the midpoint between consecutive dates (to avoid
                 # clustering around last dates, e.g. 1890 or 2000)
-                if len(senses) == 1 or len(date_list_modified) == 1:
+                if len(quote_paras) == 1 or len(date_list_modified) == 1:
                     date_list_middled = date_list_modified
                 else:
                     date_list_middled = []

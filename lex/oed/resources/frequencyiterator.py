@@ -133,9 +133,9 @@ class FrequencyEntry(EntryComponent):
         elif self.wordclass_sets():
             return self.wordclass_sets()[0].frequency_table()
 
-    def todict(self):
+    def todict(self, **kwargs):
         return {'ft': self.frequencies(),
-                'wordclasses': [w.todict() for w in self.wordclass_sets()]}
+                'wordclasses': [w.todict(**kwargs) for w in self.wordclass_sets()]}
 
 
 class WordclassSet(EntryComponent):
@@ -158,10 +158,10 @@ class WordclassSet(EntryComponent):
         elif self.types():
             return self.types()[0].frequency_table()
 
-    def todict(self):
+    def todict(self, **kwargs):
         return {'ft': self.frequencies(),
                 'pos': self.wordclass,
-                'types': [t.todict() for t in self.types()]}
+                'types': [t.todict(**kwargs) for t in self.types()]}
 
 
 class Type(EntryComponent):
@@ -174,6 +174,10 @@ class Type(EntryComponent):
     def frequency_table(self):
         return self.direct_frequency_table()
 
-    def todict(self):
+    def todict(self, **kwargs):
+        mask_quotes = kwargs.get('mask_quotes', False)
+        wordform = self.form
+        if mask_quotes:
+            wordform = wordform.replace('"', '.').replace("'", '.')
         return {'ft': self.frequencies(),
-                'form': self.form, 'pos': self.wordclass}
+                'form': wordform, 'pos': self.wordclass}

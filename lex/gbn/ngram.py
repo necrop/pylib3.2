@@ -151,7 +151,7 @@ class Ngram(object):
                 total = self.decade_count(dec)
             elif start and end and end > start:
                 for k in self.decades:
-                    if k >= start and k <= end:
+                    if start <= k <= end:
                         total += self.decades[k]
             self.ranges[range_string] = total
         return self.ranges[range_string]
@@ -169,21 +169,6 @@ class Ngram(object):
             decade=year,
             gram=self.gram_count,
         )
-
-    def merge(self, other):
-        for decade in other.decades:
-            if not decade in self.decades:
-                self.decades[decade] = 0
-            self.decades[decade] += other.decades[decade]
-        self.refresh_line()
-
-    def refresh_line(self):
-        decades_string = '\t'.join(['%d:%d' % (dec, value) for dec, value
-                                    in sorted(self.decades.items())])
-        self.line = '%s\t%s\t%s\t%s' % (self.sortcode,
-                                        self.lemma,
-                                        self.wordclass,
-                                        decades_string)
 
     def has_longs_signature(self):
         tmp = self.lemma + ' '
@@ -230,6 +215,37 @@ class Ngram(object):
             return WORDCLASS_TO_PENN[self.wordclass]
         except KeyError:
             return None
+
+    #=======================================================
+    # Methods to adjust change the set of values (e.g. by merging in
+    #  another ngram, or mutliplying all values by a given amount)
+    #=======================================================
+
+    def multiply_values(self, multiplier):
+        new_values = {decade: value * multiplier
+                      for decade, value in self.decades.items()}
+        self.data[4] = new_values
+        # Delete any cached range values, since these will need to be
+        #  recalculated
+        self.ranges = {}
+
+    def merge(self, other):
+        for decade in other.decades:
+            if not decade in self.decades:
+                self.decades[decade] = 0
+            self.decades[decade] += other.decades[decade]
+        self.refresh_line()
+        # Delete any cached range values, since these will need to be
+        #  recalculated
+        self.ranges = {}
+
+    def refresh_line(self):
+        decades_string = '\t'.join(['%d:%d' % (dec, value) for dec, value
+                                    in sorted(self.decades.items())])
+        self.line = '%s\t%s\t%s\t%s' % (self.sortcode,
+                                        self.lemma,
+                                        self.wordclass,
+                                        decades_string)
 
 
 def _parse_line(line, gram_count):

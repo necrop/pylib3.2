@@ -409,14 +409,19 @@ class MorphSet(_GelComponent):
     def is_irregular(self):
         return self.attribute('irregular') == 'true'
 
+    is_nonstandard = is_irregular
+
     def is_regional(self):
         return self.attribute('regional') == 'true'
 
-    def is_nonstandard(self):
-        return self.is_regional() or self.is_irregular()
-
     def is_oed_headword(self):
         return self.attribute('oedHeadword') == 'true'
+
+    def wordclass(self):
+        try:
+            return self.types()[0].wordclass()
+        except IndexError:
+            return None
 
 
 class TypeUnit(_GelComponent):

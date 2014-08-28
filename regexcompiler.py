@@ -17,7 +17,7 @@ class ReplacementListCompiler(object):
     the form (pattern, replacement), e.g. (r"abc", r"xyz").
     """
 
-    def __init__(self, uncompiled, caseInsensitive=None):
+    def __init__(self, uncompiled, caseInsensitive=False):
         self.uncompiled = uncompiled
         self.case_insensitive = caseInsensitive
         self.compiled = self._compile_list()
@@ -29,12 +29,12 @@ class ReplacementListCompiler(object):
         Arguments:
         None
         """
-        if self.case_insensitive is not None and self.case_insensitive:
+        if self.case_insensitive:
             return [(re.compile(pattern, re.I), replacement) for
-                pattern, replacement in self.uncompiled]
+                    pattern, replacement in self.uncompiled]
         else:
             return [(re.compile(pattern), replacement) for
-                pattern, replacement in self.uncompiled]
+                    pattern, replacement in self.uncompiled]
 
     def edit(self, text):
         """
@@ -58,7 +58,8 @@ class ReplacementListCompiler(object):
         return self._edit_engine(text, break_on_success=False)
 
     def edit_once(self, text):
-        """Edit a string, list, or tuple by running the compiled regexes.
+        """
+        Edit a string, list, or tuple by running the compiled regexes.
 
         If the argument is none of these types, it will be returned unchanged.
         Similarly, if any element within a list or tuple is not a string, that
@@ -76,7 +77,8 @@ class ReplacementListCompiler(object):
         return self._edit_engine(text, break_on_success=True)
 
     def _edit_engine(self, text, break_on_success=False):
-        """Main substitution engine.
+        """
+        Main substitution engine.
         """
         output = text
         if isinstance(text, (list, tuple)):
@@ -88,7 +90,7 @@ class ReplacementListCompiler(object):
                         break
                 output.append(string)
             if isinstance(text, tuple):
-                output = tuple(output) # convert back to a tuple
+                output = tuple(output)  # convert back to a tuple
         else:
             for pattern, replacement in self.compiled:
                 output, matches = pattern.subn(replacement, output)

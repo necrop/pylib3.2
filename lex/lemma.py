@@ -15,8 +15,7 @@ from lex.inflections.inflection import Inflection
 
 REGEXES = {
     'stress': re.compile('(\u02c8|\u02cc|\u2020)'),
-    'unreverse': re.compile(r'^([^,]+), ([^,]+ (of|in|de|du|d\'|de la|von))$',
-                            re.I),
+    'unreverse': re.compile(r'^([^,]+), ([^,]+)$'),
     'phrasal': re.compile(r'^(not |)to .+ .'),
     'compound': re.compile(r'.[ ~-].'),
     'closed_compound': re.compile(r'.~.'),
@@ -36,7 +35,7 @@ class Lemma(object):
 
     inflector = Inflection()
 
-    def __init__(self, arg):
+    def __init__(self, arg, **kwargs):
         # Test whether a node or a string has been passed in.
         # If a string, then self.node is set to None
         try:
@@ -45,15 +44,13 @@ class Lemma(object):
         except AttributeError:
             self.text = arg
             self.node = None
-        if self.text == None:
+        if self.text is None:
             try:
-                self.text = etree.tostring(arg,
-                                           method='text',
-                                           encoding='unicode')
+                self.text = etree.tounicode(arg, method='text')
             except AttributeError:
                 self.text = ''
         self.text = self.text.strip()
-        self.lemma = _parse_lemma(self.text)
+        self.lemma = _parse_lemma(self.text, **kwargs)
 
     def parenstripped(self):
         return self.lemma.replace('(', '').replace(')', '')
@@ -79,7 +76,6 @@ class Lemma(object):
 
     def length(self):
         return len(self.lexical_sort())
-
 
     #======================================================
     # Functions relating to substrings
@@ -117,9 +113,8 @@ class Lemma(object):
         except AttributeError:
             lemma = re.sub(r'~', '', self.parenstripped())
             self._slices = [self.SliceTuple(Lemma(start), Lemma(end),)
-                             for start, end in stringtools.bisect(lemma)]
+                            for start, end in stringtools.bisect(lemma)]
             return self._slices
-
 
     #======================================================
     # Functions testing for various characteristics
@@ -211,7 +206,6 @@ class Lemma(object):
 
     cap_type = capitalization_type
 
-
     def plurals(self):
         try:
             return self._plurals
@@ -256,13 +250,16 @@ class Lemma(object):
         return Abstractor().abstract(self.lexical_sort(), level)
 
 
-def _parse_lemma(text):
+def _parse_lemma(text, **kwargs):
     # Remove stress marks and initial asterisks
     destressed = REGEXES['stress'].sub('', text)
     destressed = destressed.strip(' *')
 
     # Unreverse proper names
-    return REGEXES['unreverse'].sub(r'\2 \1', destressed)
+    if kwargs.get('reversible', False):
+        return REGEXES['unreverse'].sub(r'\2 \1', destressed)
+    else:
+        return destressed
 
 
 class Abstractor(object):

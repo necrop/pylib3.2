@@ -20,7 +20,8 @@ WordclassBlock = namedtuple('WordclassBlock', ['wordclass', 'definition',
 MorphGroup = namedtuple('MorphGroup', ['wordclass', 'variant_type',
                                        'score', 'morphunits'])
 MorphUnit = namedtuple('MorphUnit', ['form', 'wordclass'])
-SubEntry = namedtuple('SubEntry', ['lexid', 'lemma', 'wordclass'])
+SubEntry = namedtuple('SubEntry', ['lexid', 'lemma', 'wordclass',
+                                   'morphgroups'])
 
 
 class Distiller(object):
@@ -44,7 +45,6 @@ class Distiller(object):
 
     def distil(self):
         iterator = EntryIterator(dictType=self.dict_name)
-
         with open(self.pickle_file, 'wb') as filehandle:
             for entry in iterator.iterate():
                 distilled = _parse_source_entry(entry, self.definition_length)
@@ -83,7 +83,7 @@ def _parse_source_entry(entry, definition_length):
         if block.wordclass is None or not block.morphgroups():
             continue
         definition = block.definition(definition_length)
-        if not definition :
+        if not definition:
             continue
         def_truncation = block.definition_manager().is_truncated(definition_length)
         morphgroups = _parse_morphgroups(block.morphgroups())
@@ -91,11 +91,13 @@ def _parse_source_entry(entry, definition_length):
                              morphgroups, block.paired_id())
         wordclass_blocks.append(wcb)
 
-    subentries = [SubEntry(sub.lexid(), sub.lemma, sub.wordclass)
+    subentries = [SubEntry(sub.lexid(), sub.lemma, sub.wordclass,
+                  _parse_morphgroups(sub.morphgroups()))
                   for sub in entry.subentries()]
 
     return Entry(entry.id, entry.headword, entry.headword_us,
                  entry.date(), wordclass_blocks, subentries)
+
 
 def _parse_morphgroups(source):
     output = []
@@ -120,4 +122,3 @@ def check_contents():
                 print('\t\t%s %d----------------' % (mg.variant_type, mg.score))
                 for unit in mg.morphunits:
                     print('\t\t', unit.form, unit.wordclass)
-

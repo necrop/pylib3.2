@@ -22,7 +22,7 @@ class TaxonomyManager(object):
 
     def __init__(self, **kwargs):
         self.levels = kwargs.get('levels', None)
-        self.path = kwargs.get('dir', DEFAULT_PATH)
+        self.path = kwargs.get('dir') or DEFAULT_PATH
         self.verbosity = kwargs.get('verbosity', None)
         self.fix_ligatures = kwargs.get('fixLigatures', True)
         self.lazyload = kwargs.get('lazy', False)

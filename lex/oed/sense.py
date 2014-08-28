@@ -365,8 +365,9 @@ class Sense(SemanticComponent):
 
     def thesaurus_nodes(self):
         """
-        Return the end-node IDs from the list of thesaurus branches.
+        Return the node IDs from the list of thesaurus branches.
         """
-        return self.characteristic_leaves('thesaurus')
+        return set([int(n) for n in self.characteristic_nodes('thesaurus')])
 
-    thesaurus_leaves = thesaurus_nodes
+    def thesaurus_leaves(self):
+        return [int(n) for n in self.characteristic_leaves('thesaurus')]

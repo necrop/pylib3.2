@@ -85,6 +85,30 @@ VOWELS = {'a', 'e', 'i', 'o', 'u'}
 
 PORTER_STEM = PorterStemmer()
 
+METAPHONE_TRANS = {
+    'b': 'b',
+    'c': 'k',
+    'd': 't',
+    'g': 'k',
+    'h': 'h',
+    'k': 'k',
+    'p': 'p',
+    'q': 'k',
+    's': 's',
+    't': 't',
+    'v': 'f',
+    'w': 'w',
+    'x': 'ks',
+    'y': 'y',
+    'z': 's', }
+METAPHONE_FIRSTCHARS = {
+    'ae': 'e',
+    'gn': 'n',
+    'kn': 'n',
+    'pn': 'n',
+    'wr': 'n',
+    'wh': 'w', }
+
 
 def strip_diacritics(text):
     """
@@ -351,3 +375,167 @@ def word_tokens(text):
     Return a list of tokenized words only (no punctuation) from the string.
     """
     return [t for t in tokens(text) if not t in string.punctuation]
+
+
+def metaphone(text):
+    """
+    Return the metaphone code for a given string
+    """
+    # implementation of the original algorithm from Lawrence Philips
+    # extended/rewritten by M. Kuhn
+    # improvements with thanks to John Machin <sjmachin@lexicon.net>
+
+    # define return value
+    text = lexical_sort(text)
+    code = ''
+
+    # Bail if it's an empty string
+    if not text:
+        return code
+
+    # conflate repeated letters
+    deduped = text[0]
+    for x in text:
+        if x != deduped[-1]:
+            deduped += x
+
+    # remove any vowels unless a vowel is the first letter
+    vowelless = deduped[0]
+    for x in deduped[1:]:
+        if re.search(r'[^aeiou]', x):
+            vowelless += x
+
+    text = vowelless
+    # Bail if it's an empty string
+    if not text:
+        return code
+
+    # check for exceptions
+    text_length = len(text)
+    if text_length > 1:
+        # get first two characters
+        first_chars = text[0:2]
+        if first_chars in METAPHONE_FIRSTCHARS:
+            text = text[2:]
+            code = METAPHONE_FIRSTCHARS[first_chars]
+            text_length = len(text)
+        
+    elif text[0] == 'x':
+        text = ''
+        code = 's'
+        text_length = 0
+
+    i = 0
+    while i < text_length:
+        # initialize character to add, initialize basic patterns
+        add_char = ''
+        part_n_2 = ''
+        part_n_3 = ''
+        part_n_4 = ''
+        part_c_2 = ''
+        part_c_3 = ''
+
+        # extract a number of patterns, if possible
+        if i < (text_length - 1):
+            part_n_2 = text[i:i+2]
+
+            if i > 0:
+                part_c_2 = text[i-1:i+1]
+                part_c_3 = text[i-1:i+2]
+
+        if i < (text_length - 2):
+            part_n_3 = text[i:i+3]
+
+        if i < (text_length - 3):
+            part_n_4 = text[i:i+4]
+
+        # use table with conditions for translations
+        if text[i] == 'b':
+            add_char = METAPHONE_TRANS['b']
+            if i > 0 and i == (text_length - 1) and text[i-1] == 'm':
+                add_char = ''
+
+        elif text[i] == 'c':
+            add_char = METAPHONE_TRANS['c']
+            if part_n_2 == 'ch':
+                add_char = 'x'
+            elif re.search(r'c[iey]', part_n_2):
+                add_char = 's'
+
+            if part_n_3 == 'cia':
+                add_char = 'x'
+
+            if re.search(r'sc[iey]', part_c_3):
+                add_char = ''
+
+        elif text[i] == 'd':
+            add_char = METAPHONE_TRANS['d']
+            if re.search(r'dg[eyi]', part_n_3):
+                add_char = 'j'
+
+        elif text[i] == 'g':
+            add_char = METAPHONE_TRANS['g']
+            if part_n_2 == 'gh':
+                if i == (text_length - 2):
+                    add_char = ''
+            elif re.search(r'gh[aeiouy]', part_n_3):
+                add_char = ''
+            elif part_n_2 == 'gn':
+                add_char = ''
+            elif part_n_4 == 'gned':
+                add_char = ''
+            elif re.search(r'dg[eyi]',part_c_3):
+                add_char = ''
+            elif part_n_2 == 'gi':
+                if part_c_3 != 'ggi':
+                    add_char = 'j'
+            elif part_n_2 == 'ge':
+                if part_c_3 != 'gge':
+                    add_char = 'j'
+            elif part_n_2 == 'gy':
+                if part_c_3 != 'ggy':
+                    add_char = 'j'
+            elif part_n_2 == 'gg':
+                add_char = ''
+        elif text[i] == 'h':
+            add_char = METAPHONE_TRANS['h']
+            if re.search(r'[aeiouy]h[^aeiouy]', part_c_3):
+                add_char = ''
+            elif re.search(r'[csptg]h', part_c_2):
+                add_char = ''
+        elif text[i] == 'k':
+            add_char = METAPHONE_TRANS['k']
+            if part_c_2 == 'ck':
+                add_char = ''
+        elif text[i] == 'p':
+            add_char = METAPHONE_TRANS['p']
+            if part_n_2 == 'ph':
+                add_char = 'f'
+        elif text[i] == 's':
+            add_char = METAPHONE_TRANS['s']
+            if part_n_2 == 'sh':
+                add_char = 'x'
+            if re.search(r'si[ao]', part_n_3):
+                add_char = 'x'
+        elif text[i] == 't':
+            add_char = METAPHONE_TRANS['t']
+            if part_n_2 == 'th':
+                add_char = '0'
+            if re.search(r'ti[ao]', part_n_3):
+                add_char = 'x'
+        elif text[i] == 'w':
+            add_char = METAPHONE_TRANS['w']
+            if re.search(r'w[^aeiouy]', part_n_2):
+                add_char = ''
+        elif text[i] in ('q', 'v', 'x', 'y', 'z'):
+            add_char = METAPHONE_TRANS[text[i]]
+
+        else:
+            # alternative
+            add_char = text[i]
+
+        code += add_char
+        i += 1
+
+    return code
+

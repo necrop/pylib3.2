@@ -226,7 +226,6 @@ class FormsList(OedComponent):
         return 0
 
 
-
 def _massage_header(header_text):
     """
     Clean up header text from the start of a section.
@@ -235,6 +234,7 @@ def _massage_header(header_text):
     if len(header_text) > 80:
         header_text = ''
     return header_text
+
 
 def _check_dating(vf_list, headword_manager):
     """
@@ -255,7 +255,8 @@ def _check_dating(vf_list, headword_manager):
                 headword_manager.lexical_sort()):
                 variant_form.undated = True
 
-def _version_forms_list(instance, mode):
+
+def _version_forms_list(formslist_object, mode):
     """
     Return a list of VariantForm instances representing a
     variant forms section.
@@ -276,19 +277,19 @@ def _version_forms_list(instance, mode):
     Returns a list of VariantForm objects.
     """
     if mode == 'base':
-        vf_list = _parse_forms_list(instance)
+        vf_list = _parse_forms_list(formslist_object)
 
     elif mode == 'detruncated':
-        tcheck = TruncationChecker(instance.headword_manager,
-                                   instance.formslist('base'))
+        tcheck = TruncationChecker(formslist_object.headword_manager,
+                                   formslist_object.formslist('base'))
         vf_list = tcheck.check_truncation()
-        if instance.num_truncated_forms('base') > 0:
-            vf_list = _detruncate(vf_list, instance.headword_manager)
+        if formslist_object.num_truncated_forms('base') > 0:
+            vf_list = _detruncate(vf_list, formslist_object.headword_manager)
 
     elif mode == 'uniqued':
         vf_list = []
         idx = dict()
-        for variant_form in instance.formslist('detruncated'):
+        for variant_form in formslist_object.formslist('detruncated'):
             signature = '%s#%s' % (variant_form.form,
                                    variant_form.grammar_signature())
             if not signature in idx:
@@ -299,40 +300,42 @@ def _version_forms_list(instance, mode):
                 vf_list[i].merge(variant_form)
 
     elif mode == 'unmarked':
-        vf_list = [x for x in instance.formslist('uniqued') if
+        vf_list = [x for x in formslist_object.formslist('uniqued') if
                    x.is_unmarked()]
-        _check_dating(vf_list, instance.headword_manager)
+        _check_dating(vf_list, formslist_object.headword_manager)
 
     elif mode == 'marked':
-        vf_list = [x for x in instance.formslist('uniqued') if
+        vf_list = [x for x in formslist_object.formslist('uniqued') if
                    not x.is_unmarked()]
 
     else:
-        vf_list = [x for x in instance.formslist('marked') if
+        vf_list = [x for x in formslist_object.formslist('marked') if
                    x.is_grammar_type(mode) and
                    not x.is_grammar_type('compound') and
                    not x.is_grammar_type('negative')]
 
     return vf_list
 
-def _parse_forms_list(instance):
+
+def _parse_forms_list(formslist_object):
     """
     Return a list of VariantForm instances representing a
     variant forms section.
     """
     vf_list = []
-    if instance.revised_status() == 'revised':
-        vf_list = ParserRevised(instance.node).parse()
-    elif instance.revised_status() == 'unrevised':
-        vf_list = ParserUnrevised(instance.node).parse()
+    if formslist_object.revised_status() == 'revised':
+        vf_list = ParserRevised(formslist_object.node).parse()
+    elif formslist_object.revised_status() == 'unrevised':
+        vf_list = ParserUnrevised(formslist_object.node).parse()
 
     for variant_form in vf_list:
-        variant_form.set_headers(instance.list_headers(variant_form))
-        variant_form.header_labels = instance.list_labels(variant_form)
-        variant_form.structural_id = instance.find_structural_id(variant_form)
+        variant_form.set_headers(formslist_object.list_headers(variant_form))
+        variant_form.header_labels = formslist_object.list_labels(variant_form)
+        variant_form.structural_id = formslist_object.find_structural_id(variant_form)
         variant_form.determine_regionality()
         variant_form.determine_irregularity()
     return vf_list
+
 
 def _detruncate(vf_list, headword_manager):
     """

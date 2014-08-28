@@ -53,6 +53,7 @@ class FileIterator(object):
         self.clear_output = kwargs.get('clearOutput') or kwargs.get('clear_output')
         self.files = sorted([f for f in os.listdir(self.in_dir)
                              if os.path.splitext(f)[1] == '.xml'])
+        self.current_file = None
 
     def clear_outdir(self):
         """
@@ -69,9 +70,9 @@ class FileIterator(object):
         if self.clear_output and self.out_dir:
             self.clear_outdir()
         for i, in_file in enumerate(self.files):
-            self.in_file = in_file
+            self.current_file = in_file
             if (self.file_filter and
-                    not re.search(self.file_filter, self.in_file)):
+                    not re.search(self.file_filter, self.current_file)):
                 continue
             if (self.first_file and
                     self.file_number() < int(self.first_file)):
@@ -81,11 +82,11 @@ class FileIterator(object):
                 continue
 
             if self.verbosity:
-                print('Doing %s from %s (%d/%d)' % (self.in_file,
+                print('Doing %s from %s (%d/%d)' % (self.current_file,
                                                     self.in_dir,
                                                     i + 1,
                                                     len(self.files)))
-            fpath = os.path.join(self.in_dir, self.in_file)
+            fpath = os.path.join(self.in_dir, self.current_file)
             node = etree.parse(fpath, PARSER)
             self.filecontent = GelFileContent(node, fpath)
             yield self.filecontent
@@ -96,14 +97,14 @@ class FileIterator(object):
         """
         Return the number of the file currently being processed.
         """
-        full = os.path.basename(self.in_file)
+        full = os.path.basename(self.current_file)
         return int(os.path.splitext(full)[0])
 
     def write_output(self):
         """
         Write a (version of) the current file to the output directory.
         """
-        filepath = os.path.join(self.out_dir, self.in_file)
+        filepath = os.path.join(self.out_dir, self.current_file)
         with open(filepath, 'w') as filehandle:
             filehandle.write('<?xml version="1.0" encoding="UTF-8"?>\n')
             filehandle.write(etree.tounicode(self.filecontent.node,

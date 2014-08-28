@@ -33,6 +33,7 @@ OED_LINKS_DIR = os.path.join(OED_RESOURCES_DIR, 'link_tables')
 OED_VARIANTS_DIR = os.path.join(OED_RESOURCES_DIR, 'variants')
 OED_FREQUENCY_DIR = os.path.join(OED_RESOURCES_DIR, 'frequency_tables')
 OED_LANGUAGE_TAXONOMY = os.path.join(OED_RESOURCES_DIR, 'etymology', 'languages.xml')
+OED_PROJECTS_DIR = os.path.join(OED_DIR, 'projects')
 
 
 #======================================================
@@ -60,7 +61,6 @@ HTOED_TAXONOMY_DIR = os.path.join(HTOED_DIR, 'taxonomies')
 #======================================================
 
 GEL_DATA_DIR = os.path.join(GEL_DIR, 'globalEnglishLexicon/data')
-
 
 
 #======================================================

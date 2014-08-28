@@ -34,9 +34,11 @@ class EntryComponent(object):
         except AttributeError:
             pass
         else:
-            if kwargs.get('fixLigatures', False):
-                for subs in LIGATURE_FIXES:
-                    node = node.replace(subs[0], subs[1])
+            fixl = (kwargs.get('fix_ligatures') or
+                    kwargs.get('fixLigatures') or False)
+            if fixl:
+                for before, after in LIGATURE_FIXES:
+                    node = node.replace(before, after)
             node = etree.fromstring(node)
 
         self.node = node
@@ -44,19 +46,21 @@ class EntryComponent(object):
         self.attributes = node.attrib
         self.tag = node.tag
 
-    def to_string(self):
+    def serialized(self):
         """
         Return the node serialized in string form.
 
-        (Wrapper for etree.tostring())
+        (Wrapper for etree.tounicode())
         """
-        return etree.tostring(self.node)
+        return etree.tounicode(self.node)
+
+    to_string = serialized
 
     def as_text(self):
         """
         Return the node serialized as text (with tags removed).
         """
-        return etree.tostring(self.node, method='text', encoding='unicode')
+        return etree.tounicode(self.node, method='text')
 
     def strip_elements(self, elements):
         """

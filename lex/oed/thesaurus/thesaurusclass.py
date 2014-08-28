@@ -88,8 +88,8 @@ class ThesaurusClass(object):
                 text += ' [%s]' % node.get('pos')
             return text.strip()
 
-        return ' > '.join([nodal_text(p) for p in
-                           self.node.findall('./fullpath/node')])
+        return ' \u00bb '.join([nodal_text(p) for p in
+                                self.node.findall('./fullpath/node')])
 
     def parent(self):
         """

@@ -9,6 +9,9 @@ import re
 
 from regexcompiler import ReplacementListCompiler
 
+CONSONANT_DOUBLING = r'([bcdfghlmnprstvwz][aeiou])([bdfglmnpstz])$'
+CONSONANT_DOUBLING_US = r'([bcdfghlmnprstvwz][aeiou])([bdfgmnpstz])$'
+R_DOUBLING = r'([bcdfghlmnprstvwz][aiou])r$'
 
 INFLECTION_PATTERNS = {
     'VBZ': ReplacementListCompiler((
@@ -17,14 +20,25 @@ INFLECTION_PATTERNS = {
         (r'$', r's'))),
     'VBG': ReplacementListCompiler((
         (r'e$', r'ing'),
-        (r'([bcdfghlmnprstvwz][aeiou])([bdfglmnpstz])$', r'\1\2\2ing'),
-        (r'([bcdfghlmnprstvwz][aiou])r$', r'\1rring'),
+        (CONSONANT_DOUBLING, r'\1\2\2ing'),
+        (R_DOUBLING, r'\1rring'),
+        (r'$', r'ing'))),
+    'VBGus': ReplacementListCompiler((
+        (r'e$', r'ing'),
+        (CONSONANT_DOUBLING_US, r'\1\2\2ing'),
+        (R_DOUBLING, r'\1rring'),
         (r'$', r'ing'))),
     'VBD': ReplacementListCompiler((
         ('(e|\u00e9)$', r'\1d'),
         (r'([^aeiou])y$', r'\1ied'),
-        (r'([bcdfghlmnprstvwz][aeiou])([bdfglmnpstz])$', r'\1\2\2ed'),
-        (r'([bcdfghlmnprstvwz][aiou])r$', r'\1rred'),
+        (CONSONANT_DOUBLING, r'\1\2\2ed'),
+        (R_DOUBLING, r'\1rred'),
+        (r'$', r'ed'))),
+    'VBDus': ReplacementListCompiler((
+        ('(e|\u00e9)$', r'\1d'),
+        (r'([^aeiou])y$', r'\1ied'),
+        (CONSONANT_DOUBLING_US, r'\1\2\2ed'),
+        (R_DOUBLING, r'\1rred'),
         (r'$', r'ed'))),
     'NNS': ReplacementListCompiler((
         (r'([aoy])sis$', r'\1ses'),
@@ -43,6 +57,7 @@ INFLECTION_PATTERNS = {
         (r'(l|w|kn)ife$', r'\1ives'),
         (r'lf$', r'lves'),
         (r'eaf$', r'eaves'),
+        (r'loaf$', r'loaves'),
         (r'([^\'][sxz]|sh|ch)$', r'\1es'),
         (r'([^aeiou])y$', r'\1ies'),
         (r'([^A-Z\' 0-9.,?!-])$', r'\1s'))),
@@ -55,19 +70,34 @@ INFLECTION_PATTERNS = {
     'JJR': ReplacementListCompiler((
         (r'e$', r'er'),
         (r'([^aeiou])y$', r'\1ier'),
-        (r'([bcdfghlmnprstvwz][aeiou])([bdfglmnpstz])$', r'\1\2\2er'),
-        (r'([bcdfghlmnprstvwz][aiou])r$', r'\1rrer'),
+        (CONSONANT_DOUBLING, r'\1\2\2er'),
+        (R_DOUBLING, r'\1rrer'),
         (r'$', r'er'))),
     'JJS': ReplacementListCompiler((
         (r'e$', r'est'),
         (r'([^aeiou])y$', r'\1iest'),
-        (r'([bcdfghlmnprstvwz][aeiou])([bdfglmnpstz])$', r'\1\2\2est'),
-        (r'([bcdfghlmnprstvwz][aiou])r$', r'\1rrest'),
-        (r'$', r'est')))
+        (CONSONANT_DOUBLING, r'\1\2\2est'),
+        (R_DOUBLING, r'\1rrest'),
+        (r'$', r'est'))),
+    'JJRus': ReplacementListCompiler((
+        (r'e$', r'er'),
+        (r'([^aeiou])y$', r'\1ier'),
+        (CONSONANT_DOUBLING_US, r'\1\2\2er'),
+        (R_DOUBLING, r'\1rrer'),
+        (r'$', r'er'))),
+    'JJSus': ReplacementListCompiler((
+        (r'e$', r'est'),
+        (r'([^aeiou])y$', r'\1iest'),
+        (CONSONANT_DOUBLING_US, r'\1\2\2est'),
+        (R_DOUBLING, r'\1rrest'),
+        (r'$', r'est'))),
 }
 INFLECTION_PATTERNS['RBR'] = INFLECTION_PATTERNS['JJR']
 INFLECTION_PATTERNS['RBS'] = INFLECTION_PATTERNS['JJS']
 INFLECTION_PATTERNS['VBN'] = INFLECTION_PATTERNS['VBD']
+INFLECTION_PATTERNS['RBRus'] = INFLECTION_PATTERNS['JJRus']
+INFLECTION_PATTERNS['RBSus'] = INFLECTION_PATTERNS['JJSus']
+INFLECTION_PATTERNS['VBNus'] = INFLECTION_PATTERNS['VBDus']
 
 COMPOUND_PATTERN = re.compile(r'^([^ -]+)([ -](of|in|with)[ -].*|-general)$', re.I)
 PLURALIZED_PATTERN = re.compile(r'([^aiouys]s|men|mice|children|brethren|cattle|teeth|eaux)(| of .+)$')
@@ -82,6 +112,7 @@ ARCHAIC_ENDINGS = [
 
 VERBISH = set(('VBZ', 'VBD', 'VBN', 'VBG'))
 PHRASAL_VERB_PATTERN = re.compile(r'^(.{3,})([ -](up|down|back|away|in|out|off|on|to|for|by|after|against|again|with|upon))$')
+REGIONAL_DIFFERENCES = {'VBG', 'VBD', 'VBN', 'JJR', 'JJS', 'RBR', 'RBS'}
 
 
 class Inflection(object):
@@ -93,7 +124,7 @@ class Inflection(object):
     def __init__(self):
         pass
 
-    def compute_inflection(self, lemma, wordclass, archaic=None):
+    def compute_inflection(self, lemma, wordclass, **kwargs):
         """
         Compute the inflection of a lemma, for a given wordclass.
 
@@ -110,6 +141,9 @@ class Inflection(object):
 
         Returns a string representing the inflected form.
         """
+        archaic = kwargs.get('archaic', False)
+        region = kwargs.get('region', 'uk').lower()
+
         wordclass = wordclass.strip().upper()
         inf = lemma
         if wordclass == 'NNS':
@@ -120,6 +154,9 @@ class Inflection(object):
                 match = PHRASAL_VERB_PATTERN.search(lemma)
                 if match is not None:
                     lemma, tail = match.group(1, 2)
+
+            if region == 'us' and wordclass in REGIONAL_DIFFERENCES:
+                wordclass += 'us'
             try:
                 inf = INFLECTION_PATTERNS[wordclass].edit_once(lemma)
                 inf = inf + tail
@@ -127,7 +164,7 @@ class Inflection(object):
                 pass
         return inf
 
-    def pluralize(self, lemma, archaic=None):
+    def pluralize(self, lemma, archaic=False):
         """
         Return the plural of a singular noun.
 

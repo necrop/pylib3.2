@@ -10,11 +10,12 @@ import copy
 from lxml import etree
 
 from lex.oed.oedcomponent import OedComponent
-from lex.oed.quotationparagraph import QuotationParagraph
+from lex.oed.quotation.quotationparagraph import QuotationParagraph
 from lex.oed.daterange import DateRange
 from lex.oed.resources.mainsenses import MainSensesCache
 from lex.wordclass.wordclass import Wordclass
 from lex.definition import Definition
+
 
 DEFINITION_STRIP = ('n', 'etym', 'qp', 'q', 'lemVersions')
 THIN_DISTANCE = 15  # Used to thin out quotations for weighted size
@@ -176,38 +177,29 @@ class SemanticComponent(OedComponent):
                                           self.node.findall('.//qp')]
             return self._quotation_paragraphs
 
-    def quotations(self):
+    def quotations(self, **kwargs):
         """
         Return a list of quotation objects.
 
         Every quotation in the component, in document order.
         """
-        try:
-            return self._quotations
-        except AttributeError:
-            self._quotations = []
-            for qpara in self.quotation_paragraphs():
-                self._quotations.extend(qpara.quotations())
-            if self.tag == 'e':
-                self._quotations = [q for q in self._quotations
-                                    if not q.is_in_vfsect()]
-            return self._quotations
+        _quotations = []
+        for qpara in self.quotation_paragraphs():
+            _quotations.extend(qpara.quotations(**kwargs))
+        if self.tag == 'e':
+            _quotations = [q for q in _quotations if not q.is_in_vfsect()]
+        return _quotations
 
-    def quotations_sorted(self):
+    def quotations_sorted(self, **kwargs):
         """
         Return a list of quotation objects, sorted by year.
         """
-        try:
-            return self._quotations_sorted
-        except AttributeError:
-            self._quotations_sorted = sorted(self.quotations(),
-                                             key=lambda q: q.year())
-            return self._quotations_sorted
+        return sorted(self.quotations(**kwargs), key=lambda q: q.year)
 
     def first_quotation(self):
         """
         Return the (chronologically) first quotation, if any;
-        return None if not quotations.
+        return None if there are no quotations.
         """
         try:
             return self.quotations_sorted()[0]
@@ -265,32 +257,14 @@ class SemanticComponent(OedComponent):
     def has_shared_quotations(self):
         return bool(self._shared_quotations)
 
-    # def quotation_collocates(self, **kwargs):
-    #    min_date = kwargs.get('minimum_date', 1600)
-
-        # Collect collocates from each quotation
-        # collocates = []
-        # for q in [q for q in self.quotations() if q.year >= min_date]:
-        #    collocates.extend(q.ranked_collocates(self.lemma))
-
-        # Uniq any duplicates
-        # coll_uniq = defaultdict(list)
-        # for token, distance in collocates:
-        #    coll_uniq[token].append(distance)
-        # collrank = [(t, min(distances), len(distances)) for t, distances in
-        #    collocates.items()]
-
-        # collrank.sort(key=lambda c: c[1], reverse=True)
-        # return collrank
-
-    def quotations_binomials(self):
+    def quotations_binomials(self, **kwargs):
         """
         Return a set of any binomials/genus terms found in quotations
         """
         binomials = set()
-        for quotation in [quotation for quotation in self.quotations()
-                          if quotation.year() > 1800]:
-            for binomial in quotation.binomials():
+        for quotation in [q for q in self.quotations(**kwargs)
+                          if q.year > 1800]:
+            for binomial in quotation.text.binomials():
                 binomials.add(binomial)
         try:
             self.lemma
@@ -446,10 +420,10 @@ class SemanticComponent(OedComponent):
         for quotation in [q for q in self.quotations_sorted() if
                           not q.is_bracketed() and
                           not q.is_suppressed()]:
-            if quotation.year():
+            if quotation.year:
                 if not start:
-                    start = quotation.year()
-                end = quotation.year()
+                    start = quotation.year
+                end = quotation.year
         return start, end
 
     def is_marked_obsolete(self):
@@ -545,8 +519,8 @@ class SemanticComponent(OedComponent):
             quote_paras = []
             for sense in senses:
                 for qpara in sense.quotation_paragraphs():
-                    date_list = [q.year() for q in qpara.quotations()
-                                 if q.year() and q.year() > 0 and
+                    date_list = [q.year for q in qpara.quotations()
+                                 if q.year and q.year > 0 and
                                  not q.is_bracketed()]
                     date_list.sort()
                     if date_list:
@@ -646,7 +620,7 @@ class SemanticComponent(OedComponent):
             return self._labels
         except AttributeError:
             labels = set([la.text for la in self.node.findall('.//la')
-                if la.text is not None])
+                          if la.text is not None])
             for header in self.header_nodes():
                 for label in [la.text for la in header[0].findall('.//la')
                               if la.text is not None]:
@@ -698,7 +672,7 @@ class SemanticComponent(OedComponent):
         attached to parent nodes. The list is in ascending order, i.e.
         going upwards from the current node
         """
-        headers = [etree.tostring(n[0], method='text', encoding='unicode')
+        headers = [etree.tounicode(n[0], method='text')
                    for n in self.header_nodes()]
         headers = [h.strip() for h in headers if h.strip()]
         return headers
@@ -714,10 +688,10 @@ class SemanticComponent(OedComponent):
             self._parent_def = None
             if self.tag in ('s6', 's7'):
                 headers = [n[0] for n in self.header_nodes()
-                    if n[1] in ('s4', 's6')]
+                           if n[1] in ('s4', 's6')]
                 try:
                     self._parent_def = Definition(headers[0],
-                        omitList=DEFINITION_STRIP)
+                                                  omitList=DEFINITION_STRIP)
                 except IndexError:
                     pass
             return self._parent_def

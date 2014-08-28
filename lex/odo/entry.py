@@ -30,7 +30,8 @@ class Entry(SemanticComponent):
         except AttributeError:
             node = self.node.findtext('./hg/hw')
             if node is not None:
-                self._lemma_object = Lemma(node)
+                self._lemma_object = Lemma(node,
+                                           reversible=self.is_encyclopedic())
             else:
                 self._lemma_object = Lemma('')
             return self._lemma_object
@@ -38,6 +39,12 @@ class Entry(SemanticComponent):
     @property
     def headword(self):
         return self.lemma_manager().lemma
+
+    def is_encyclopedic(self):
+        if self.node.get('type') == 'encyclopedic':
+            return True
+        else:
+            return False
 
     def variant_group(self):
         try:

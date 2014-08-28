@@ -19,21 +19,21 @@ class Detruncator(object):
     def __init__(self):
         self.comparator = None
         self.truncation = None
-        self.__truncation_features = {}
+        self._truncation_features = {}
 
     def set_comparator(self, arg):
         self.comparator = _create_lemma_object(arg)
 
     def set_truncation(self, arg):
         self.truncation = _create_lemma_object(arg)
-        self.__truncation_features = {}
+        self._truncation_features = {}
 
     def set_feature(self, name, value):
-        self.__truncation_features[name] = bool(value)
+        self._truncation_features[name] = bool(value)
 
     def has_feature(self, name):
         try:
-            return self.__truncation_features[name]
+            return self._truncation_features[name]
         except KeyError:
             return False
 
@@ -49,12 +49,12 @@ class Detruncator(object):
             raise AttributeError('Truncation must be set before detruncating.')
 
         if (self.comparator.is_affix() or
-            not self.truncation.is_affix() or
+                not self.truncation.is_affix() or
             self.has_feature('compound')):
             return None
 
         # Handle infixes
-        if (full_form is None and self.truncation.is_infix()):
+        if full_form is None and self.truncation.is_infix():
             full_form = _infix_handler(self.comparator, self.truncation)
             return full_form  # Don't attempt anything further for infixes
 
@@ -77,7 +77,7 @@ class Detruncator(object):
 
         # Handle plurals
         if (full_form is None and
-            self.has_feature('plural') and
+                self.has_feature('plural') and
             self.truncation.is_suffix()):
             full_form = _plural_handler(self.comparator, self.truncation)
 
@@ -104,12 +104,13 @@ def _create_lemma_object(arg):
         else:
             return Lemma(arg)
 
+
 def _infix_handler(comparator, truncation):
     full_form = None
     ends = re.search(r'^(.)..?(.)$', truncation.lexical_sort())
     if ends is not None:
-        pattern = re.compile(r'^(.*)' + ends.group(1) + '.?.?' + \
-                        ends.group(2) + '(.*)$')
+        pattern = re.compile(r'^(.*)' + ends.group(1) + '.?.?' +
+                             ends.group(2) + '(.*)$')
         match = pattern.search(comparator.parenstripped())
         if match is not None:
             full_form = '%s%s%s' % (match.group(1),
@@ -118,8 +119,8 @@ def _infix_handler(comparator, truncation):
     else:
         ends = re.search(r'^(.)(.)$', truncation.lexical_sort())
         if ends is not None:
-            pattern = re.compile(r'^(.*)' + ends.group(1) + '.' + \
-                            ends.group(2) + '(.*)$')
+            pattern = re.compile(r'^(.*)' + ends.group(1) + '.' +
+                                 ends.group(2) + '(.*)$')
             match = pattern.search(comparator.parenstripped())
             if match is not None:
                 full_form = '%s%s%s' % (match.group(1),
@@ -187,24 +188,24 @@ def _plural_handler(comparator, truncation):
     terminator = comparator.terminator()
     full_form = None
     if ((truncation.lemma == '-s' and terminator != 's') or
-        (truncation.lemma == '-os' and terminator == 'o') or
-        (truncation.lemma == '-as' and terminator == 'a') or
-        (truncation.lemma == '-is' and terminator == 'i') or
-        (truncation.lemma == '-oes' and terminator == 'e')):
+            (truncation.lemma == '-os' and terminator == 'o') or
+            (truncation.lemma == '-as' and terminator == 'a') or
+            (truncation.lemma == '-is' and terminator == 'i') or
+            (truncation.lemma == '-oes' and terminator == 'e')):
         full_form = comparator.lemma + 's'
-    elif (truncation.lemma == '-oes' and terminator == 'o'):
+    elif truncation.lemma == '-oes' and terminator == 'o':
         full_form = comparator.lemma + 'es'
-    elif (truncation.lemma == '-i' and terminator == 'o'):
+    elif truncation.lemma == '-i' and terminator == 'o':
         full_form = re.sub(r'o$', 'i', comparator.lemma)
-    elif (truncation.lemma == '-ies' and terminator == 'y'):
+    elif truncation.lemma == '-ies' and terminator == 'y':
         full_form = re.sub(r'y$', 'ies', comparator.lemma)
-    elif (truncation.lemma == '-a' and re.search(r'um$', comparator.lemma)):
+    elif truncation.lemma == '-a' and re.search(r'um$', comparator.lemma):
         full_form = re.sub(r'um$', 'a', comparator.lemma)
     elif (truncation.lemma == '-man' and
-          re.search(r'man$', comparator.lemma)):
+            re.search(r'man$', comparator.lemma)):
         full_form = re.sub(r'man$', 'men', comparator.lemma)
     elif (re.search(r'^-[iyea][sz]$', truncation.lemma) and
-          re.search(r'[bdfgklmnptw]', terminator)):
+            re.search(r'[bdfgklmnptw]', terminator)):
         full_form = comparator.lemma + truncation.hyphenstripped()
     return full_form
 
@@ -222,12 +223,12 @@ def _fuzzy_matcher(comparator, truncation):
                 right_slice.starts_with_vowel()):
                 pass
             elif (truncation.is_prefix() and
-                  left_slice.text != truncation.hyphenstripped() and
-                  left_slice.abstract(i) == truncation.abstract(i)):
+                    left_slice.text != truncation.hyphenstripped() and
+                    left_slice.abstract(i) == truncation.abstract(i)):
                 matches.append(slicetuple)
             elif (truncation.is_suffix() and
-                  right_slice.text != truncation.hyphenstripped() and
-                  right_slice.abstract(i) == truncation.abstract(i)):
+                    right_slice.text != truncation.hyphenstripped() and
+                    right_slice.abstract(i) == truncation.abstract(i)):
                 matches.append(slicetuple)
         if matches:
             break
@@ -242,7 +243,6 @@ def _fuzzy_matcher(comparator, truncation):
             matches.sort(key=lambda x: len(x.right.text), reverse=True)
             full_form = matches[0].left.text + truncation.hyphenstripped()
     return full_form
-
 
 
 class TruncationChecker(object):
@@ -261,13 +261,13 @@ class TruncationChecker(object):
 
     def check_truncation(self):
         if (not self.headword_manager.is_compound() or
-            self.headword_manager.is_affix()):
+                self.headword_manager.is_affix()):
             return self.vf_list
 
         for variant_form in self.vf_list:
             if (not variant_form.lemma_manager().is_compound() and
-                not variant_form.is_truncated() and
-                variant_form.lemma_manager().length() <= self.headword_manager.length() - 3):
+                    not variant_form.is_truncated() and
+                    variant_form.lemma_manager().length() <= self.headword_manager.length() - 3):
                 match_index = self._match_component(variant_form.lemma_manager())
                 if match_index == 0:
                     variant_form.reset_form(variant_form.form + '-')
@@ -279,18 +279,18 @@ class TruncationChecker(object):
         match = None
         for word in self.components():
             if (word.prefix() == truncation.prefix() and
-                word.suffix() == truncation.suffix()):
+                    word.suffix() == truncation.suffix()):
                 match = self.components().index(word)
         for word in self.components():
             if (word.initial() == truncation.initial() and
-                word.terminator() == truncation.terminator() and
-                abs(word.length() - truncation.length()) < 3):
+                    word.terminator() == truncation.terminator() and
+                    abs(word.length() - truncation.length()) < 3):
                 match = self.components().index(word)
         if match is None:
             for word in self.components():
                 if ((word.prefix() == truncation.prefix() or
-                    word.suffix() == truncation.suffix()) and
-                    abs(word.length() - truncation.length()) < 3):
+                        word.suffix() == truncation.suffix()) and
+                        abs(word.length() - truncation.length()) < 3):
                     match = self.components().index(word)
         return match
 

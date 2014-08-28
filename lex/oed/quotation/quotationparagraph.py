@@ -5,7 +5,7 @@ QuotationParagraph -- OED quotation paragraph class
 """
 
 from lex.oed.oedcomponent import OedComponent
-from lex.oed.quotation import Quotation
+from lex.oed.quotation.quotation import Quotation
 
 OBS_CUTOFF = 1800
 END_DATE = 2020
@@ -27,26 +27,25 @@ class QuotationParagraph(OedComponent):
 
     def quotations(self, **kwargs):
         if self._quotations is None:
-            self._quotations = [Quotation(q) for q in
-                                self.node.findall('./q')]
-            self._quotations.sort(key=lambda q: q.year())
+            self._quotations = [Quotation(q) for q in self.node.findall('./q')]
+            self._quotations.sort(key=lambda q: q.year)
 
         quotations = self._quotations[:]
-        if kwargs.get('stripSuppressed', True):
+        if kwargs.get('strip_suppressed', True):
             quotations = [q for q in quotations if not q.is_suppressed()]
-        if kwargs.get('stripUndated'):
-            quotations = [q for q in quotations if q.year() > 0]
-        if kwargs.get('stripBracketed'):
+        if kwargs.get('strip_undated'):
+            quotations = [q for q in quotations if q.year > 0]
+        if kwargs.get('strip_bracketed'):
             quotations = [q for q in quotations if not q.is_bracketed()]
         if kwargs.get('thinned') or kwargs.get('thin'):
-            quotations = thin_quotations(quotations)
+            quotations = _thin_quotations(quotations)
         return quotations
 
     def is_obsolete(self):
         if self.obs is not None:
             return self.obs
-        elif (self.quotations(stripUndated=True) and
-              self.quotations(stripUndated=True)[-1] < OBS_CUTOFF):
+        elif (self.quotations(strip_undated=True) and
+                self.quotations(strip_undated=True)[-1] < OBS_CUTOFF):
             return True
         else:
             return False
@@ -57,7 +56,7 @@ class QuotationParagraph(OedComponent):
     def is_all_glossary(self):
         if not self.quotations():
             return False
-        elif any([q.is_glossary() for q in self.quotations()]):
+        elif any([q.citation.is_glossary() for q in self.quotations()]):
             return False
         else:
             return True
@@ -69,16 +68,16 @@ class QuotationParagraph(OedComponent):
         if not self.quotations(dated=True):
             return 0
         elif kwargs.get('projected') and not self.is_obsolete():
-            return END_DATE - self.quotations(stripUndated=True)[0].year()
-        elif len(self.quotations(stripUndated=True)) == 1:
+            return END_DATE - self.quotations(strip_undated=True)[0].year
+        elif len(self.quotations(strip_undated=True)) == 1:
             return 1
         else:
-            return (self.quotations(stripUndated=True)[-1] -
-                    self.quotations(stripUndated=True)[0])
+            return (self.quotations(strip_undated=True)[-1] -
+                    self.quotations(strip_undated=True)[0])
 
     def largest_gap(self, **kwargs):
         start = kwargs.get('start', GAPCHECKER_START)
-        quotations = [q for q in self.quotations() if q.year() >= start]
+        quotations = [q for q in self.quotations() if q.year >= start]
         if len(quotations) > 1:
             pass
         else:
@@ -99,15 +98,18 @@ class QuotationParagraph(OedComponent):
         be provided. If both are provided, they are ANDed, i.e. the
         function will only return True if the qp contains a quotation
         in which both conditions are met.
+
+        Returns the first matching quotation (if any); otherwise
+        returns False.
         """
-        quotations = self.quotations(stripBracketed=True)[:]
-        if kwargs.get('start') is not None:
+        quotations = self.quotations(strip_bracketed=True)[:]
+        if kwargs.get('start'):
             start_year = int(kwargs.get('start'))
-            quotations = [q for q in quotations if q.year() >= start_year]
-        if kwargs.get('firstOnly') == True and quotations:
+            quotations = [q for q in quotations if q.year >= start_year]
+        if (kwargs.get('firstOnly') or kwargs.get('first_only')) and quotations:
             quotations = quotations[0:1]
 
-        if kwargs.get('author') is not None:
+        if kwargs.get('author'):
             try:
                 kwargs.get('author').lower()
             except AttributeError:
@@ -116,7 +118,7 @@ class QuotationParagraph(OedComponent):
                 authors = list([kwargs.get('author'), ])
         else:
             authors = []
-        if kwargs.get('title') is not None:
+        if kwargs.get('title'):
             try:
                 kwargs.get('title').lower()
             except AttributeError:
@@ -126,15 +128,15 @@ class QuotationParagraph(OedComponent):
         else:
             titles = []
 
-        if any([q.citation_matches(authors=authors, titles=titles)
-                for q in quotations]):
-            return True
-        else:
+        matches = [q for q in quotations if
+                   q.citation.contains(authors=authors, titles=titles)]
+        try:
+            return matches[0]
+        except IndexError:
             return False
 
 
-
-def thin_quotations(quotations):
+def _thin_quotations(quotations):
     """
     Thin out quotations by removing any which are less than
     ten years apart.
@@ -142,9 +144,8 @@ def thin_quotations(quotations):
     quotations_thinned = []
     for quotation in quotations:
         if (quotations_thinned and
-            abs(quotations_thinned[-1].year() - quotation.year()) < 10):
+                abs(quotations_thinned[-1].year - quotation.year) < 10):
             pass
         else:
             quotations_thinned.append(quotation)
     return quotations_thinned
-

@@ -149,7 +149,6 @@ class LinkManager(object):
                             return posg.definition
         return None
 
-
     #===========================================================
     # Methods to test whether an OED lemma is included in ODE/NOAD as a
     # derivative; needs special handling since these aren't explicitly linked.
@@ -162,8 +161,8 @@ class LinkManager(object):
         for lexid in self.entry_content:
             e = self.entry_content[lexid]
             for sub in e.subentries:
-                j = sub[2].replace('-', '')
-                self.derivatives[j] = (lexid, sub[0], sub[1])
+                lemma = sub.lemma.replace('-', '')
+                self.derivatives[lemma] = (lexid, sub.lexid, sub.wordclass)
 
     def find_derivative(self, lemma, wordclass, end_date):
         if not self.derivatives:
@@ -171,11 +170,11 @@ class LinkManager(object):
         lemma = lemma.replace('-', '')
         lemma = lemma.replace('~', '')
         if (lemma in self.derivatives and
-            end_date is not None and
-            end_date > 1850 and
-            wordclass == self.derivatives[lemma][2]):
-            return (self.derivatives[lemma][0], self.derivatives[lemma][1])
-        return (None, None)
+                end_date is not None and
+                end_date > 1850 and
+                wordclass == self.derivatives[lemma][2]):
+            return self.derivatives[lemma][0], self.derivatives[lemma][1]
+        return None, None
 
 
 class LinkInferrer(object):

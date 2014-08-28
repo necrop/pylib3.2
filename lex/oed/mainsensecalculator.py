@@ -192,10 +192,10 @@ def _recalculate_dates(senses):
     for s in senses:
         quotes = [q for q in s.quotations() if not q.is_suppressed()
                   and not q.is_bracketed()]
-        quotes.sort(key=lambda q: q.year())
+        quotes.sort(key=lambda q: q.year)
         if quotes:
-            s.start = quotes[0].year()
-            s.end = quotes[-1].year()
+            s.start = quotes[0].year
+            s.end = quotes[-1].year
         else:
             s.start = s.date().start
             s.end = s.date().end

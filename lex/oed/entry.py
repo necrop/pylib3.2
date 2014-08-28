@@ -6,7 +6,7 @@ Author: James McCracken
 
 import re
 
-from lxml import etree  # @UnresolvedImport
+from lxml import etree
 
 from lex.oed.multisensecomponent import MultiSenseComponent
 from lex.oed.s1block import S1block
@@ -70,7 +70,7 @@ class Entry(MultiSenseComponent):
             try:
                 self._lemma_object = self.headwords()[0]
             except IndexError:
-                self._lemma_object = Lemma(etree.XML('<hw/>'))
+                self._lemma_object = Lemma(etree.Element('hw'))
             return self._lemma_object
 
     @property
@@ -176,7 +176,7 @@ class Entry(MultiSenseComponent):
         except AttributeError:
             node = self.node.find('./etymSect/etym')
             if node is None:
-                node = '<etym/>'
+                node = etree.Element('etym')
             self._etymology = Etymology(node)
             self._etymology.is_revised = self.is_revised
             return self._etymology
@@ -197,9 +197,11 @@ class Entry(MultiSenseComponent):
             if node is None:
                 node = self.node.find('./vfSect')
             if node is None:
-                node = '<vfSect/>'  # Dummy node
+                node = etree.Element('vfSect')  # Dummy node
             self._variants = FormsList(node, self.lemma_manager())
             return self._variants
+
+    forms_list = variants
 
     def s1blocks(self):
         """

@@ -228,7 +228,7 @@ class DateRange(object):
         else:
             return fuzzed_year
 
-    def constrain(self, window, in_place=False):
+    def constrain(self, window, kwargs):
         """
         Constrain the dates to a given start/end window.
 
@@ -242,16 +242,22 @@ class DateRange(object):
             whichever is the later.
          -- The DateRange's own (projected) end date or the window
             end date, whichever is the earlier.
+
+        If the 'in_place' keyword argument is used, the current
+        DateRange object will be updated so that its start and end
+        dates are now set to the constrained values.
         """
+        in_place = kwargs.get('in_place', False)
+
         window_start, window_end = (window[0], window[-1])
         if (not self.start or
-            (window_start and self.start < window_start)):
+                (window_start and self.start < window_start)):
             start = window_start
         else:
             start = self.start
 
         if (not self.projected_end() or
-            (window_end and self.projected_end() > window_end)):
+                (window_end and self.projected_end() > window_end)):
             end = window_end
         else:
             end = self.projected_end()
@@ -260,7 +266,7 @@ class DateRange(object):
             self.reset('start', start)
             self.reset('end', end)
 
-        return (start, end)
+        return start, end
 
     #==============================================
     # Functions related to obsoleteness
@@ -299,12 +305,12 @@ class DateRange(object):
         """
         # If necessary, extend the start date to an earlier start date
         if (other.start != 0 and
-            (other.start < self.start or self.start == 0)):
+                (other.start < self.start or self.start == 0)):
             self.reset('start', other.start)
         # If necessary, extend the end date to a later end date
         if other.end > self.end:
             self.reset('end', other.end)
-        # If necessary, reset obsoleteness marker to False
+        # If necessary, reset the obsoleteness marker to False
         if self.is_obsolete() and not other.is_obsolete():
             self.set_obsolete(False)
 
